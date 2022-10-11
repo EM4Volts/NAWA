@@ -825,8 +825,50 @@
 				<Sell>5000</Sell>
 			</State_2>
 		</weapon_white_sword>
-        <weapon_jdecmloryhk>
-            <ObjID>wp0602</ObjID>
+        <weapon_lebgpjqwkkl>
+            <ObjID>wp0402</ObjID>
+            <UniqueID>1008</UniqueID>
+            <MaxNum>1</MaxNum>
+            <NoTrash>1</NoTrash>
+            <DieDiscard>0</DieDiscard>
+            <IdType>1</IdType>
+            <Category>-1</Category>
+            <State_0>
+                <Buy>10000</Buy>
+                <Sell>5000</Sell>
+            </State_0>
+            <State_1>
+                <Buy>10000</Buy>
+                <Sell>5000</Sell>
+            </State_1>
+            <State_2>
+                <Buy>10000</Buy>
+                <Sell>5000</Sell>
+            </State_2>
+        </weapon_lebgpjqwkkl>
+        <weapon_glmshmlebbp>
+            <ObjID>wp0002</ObjID>
+            <UniqueID>1007</UniqueID>
+            <MaxNum>1</MaxNum>
+            <NoTrash>1</NoTrash>
+            <DieDiscard>0</DieDiscard>
+            <IdType>1</IdType>
+            <Category>-1</Category>
+            <State_0>
+                <Buy>10000</Buy>
+                <Sell>5000</Sell>
+            </State_0>
+            <State_1>
+                <Buy>10000</Buy>
+                <Sell>5000</Sell>
+            </State_1>
+            <State_2>
+                <Buy>10000</Buy>
+                <Sell>5000</Sell>
+            </State_2>
+        </weapon_glmshmlebbp>
+        <weapon_vuwtggzjhpr>
+            <ObjID>wp0601</ObjID>
             <UniqueID>1006</UniqueID>
             <MaxNum>1</MaxNum>
             <NoTrash>1</NoTrash>
@@ -845,9 +887,9 @@
                 <Buy>10000</Buy>
                 <Sell>5000</Sell>
             </State_2>
-        </weapon_jdecmloryhk>
-        <weapon_ayksgfpnvvn>
-            <ObjID>wp0601</ObjID>
+        </weapon_vuwtggzjhpr>
+        <weapon_dgmcundhajl>
+            <ObjID>wp0401</ObjID>
             <UniqueID>1005</UniqueID>
             <MaxNum>1</MaxNum>
             <NoTrash>1</NoTrash>
@@ -866,9 +908,9 @@
                 <Buy>10000</Buy>
                 <Sell>5000</Sell>
             </State_2>
-        </weapon_ayksgfpnvvn>
-        <weapon_egrifxdtadz>
-            <ObjID>wp0600</ObjID>
+        </weapon_dgmcundhajl>
+        <weapon_uvqubvhoejq>
+            <ObjID>wp0001</ObjID>
             <UniqueID>1004</UniqueID>
             <MaxNum>1</MaxNum>
             <NoTrash>1</NoTrash>
@@ -887,7 +929,7 @@
                 <Buy>10000</Buy>
                 <Sell>5000</Sell>
             </State_2>
-        </weapon_egrifxdtadz>
+        </weapon_uvqubvhoejq>
 		<weapon_black_sword>
 			<ObjID>wp0071</ObjID>
 			<UniqueID>1071</UniqueID>

@@ -13005,13 +13005,91 @@
             ]
         },
         {
-            "event_name": "CORE_WP_HELP_S_1006",
+            "event_name": "CORE_WP_HELP_S_1008",
             "texts": [
                 {
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
                     "line": "by Jaynooooooooo"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_1008",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "."
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_NAME_1008",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Call of Duty Staff of Ice"
+                },
+                {
+                    "vpos": 1,
+                    "hpos": 0,
+                    "font": 5,
+                    "line": "Call of Duty Staff of Ice"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_S_1007",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "from Genshit Imoct"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_1007",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "."
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_NAME_1007",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Mistspliter"
+                },
+                {
+                    "vpos": 1,
+                    "hpos": 0,
+                    "font": 5,
+                    "line": "Mistspliter"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_S_1006",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": ""
                 }
             ]
         },
@@ -13033,13 +13111,13 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "Call of Duty Staff of Ice"
+                    "line": "Bloodroot bracers"
                 },
                 {
                     "vpos": 1,
                     "hpos": 0,
                     "font": 5,
-                    "line": "Call of Duty Staff of Ice"
+                    "line": "Bloodroot bracers"
                 }
             ]
         },
@@ -13050,7 +13128,7 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "from Genshit Imoct"
+                    "line": ""
                 }
             ]
         },
@@ -13072,13 +13150,13 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "Mistspliter"
+                    "line": "Bloodroot Twinblade"
                 },
                 {
                     "vpos": 1,
                     "hpos": 0,
                     "font": 5,
-                    "line": "Mistspliter"
+                    "line": "Bloodroot Twinblade"
                 }
             ]
         },
@@ -13089,7 +13167,7 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "spear"
+                    "line": ""
                 }
             ]
         },
@@ -13111,13 +13189,13 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "Bloodroot Twinblade"
+                    "line": "NAMC Weapon"
                 },
                 {
                     "vpos": 1,
                     "hpos": 0,
                     "font": 5,
-                    "line": "Bloodroot Twinblade"
+                    "line": "NAMC Weapon"
                 }
             ]
         },

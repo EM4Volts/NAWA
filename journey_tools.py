@@ -62,19 +62,19 @@ wpidBlacklistFile.close()
 defaultWPConf = {"weaponname": "NAMC Weapon", "weapondescshort": "", "weapondesclong": "", "weapontype": "0", "lv1": "150", "lv2": "270", "lv3": "440", "lv4": "570"}
 
 def getWPfileName(wpC):
-    if wpC == 0:
+    if wpC == "0":
         cName = "Small Sword"
         indexStart = 1
         indexEnd = 199
-    if wpC == 1:
+    if wpC == "1":
         cName = "Large Sword"
         indexStart = 201
         indexEnd = 399
-    if wpC == 2:
+    if wpC == "2":
         cName = "Spear"
         indexStart = 401
         indexEnd = 599
-    if wpC == 3:
+    if wpC == "3":
         cName = "Combat Bracer"
         indexStart = 601
         indexEnd = 799
@@ -88,7 +88,7 @@ def getWPfileName(wpC):
         if len(str(nWpn)) == 3:
             newuId = "0" + str(nWpn)
         if newuId in wpidBlacklist:
-            print("[WPNAME : " + str(uId) + " in Use, retrying...]")
+            print("[WPNAME : " + str(newuId) + " in Use, retrying...]")
         if newuId == indexEnd:
             print("[WPNAME ERROR: YOU RAN OUT OF SPACE IN THE " + cName + " CATEGORY, REMOVE A MOD FROM THE CATEGORY, THIS WEAPON WILL NOT BE EXPORTED")
             wpidnotFound = False
@@ -96,7 +96,7 @@ def getWPfileName(wpC):
         if newuId not in wpidBlacklist:
                 wpidBlacklist.append(newuId)
                 wpidnotFound = False
-                return newuId
+                return "wp" + newuId
         else:
             indexStart +=1
 
@@ -240,7 +240,7 @@ def writeToTable(crispSel, iName, UID, wpName, igName, igDescs, igDescl, wpCat, 
     if crispSel == 9:
         crispPart = weaponParamCrisp
         tablePath = "yamm_data/core/WeaponParam.csv"
-        lineOffset = 13
+        lineOffset = 40
 
     #REPLACE ALL PLACEHOLDER NAMES IN LOADED TEMPLATE TO GIVEN STRINGS
     crispPart = crispPart.replace("newWPid", wpName)

@@ -1256,9 +1256,9 @@
 				<Label>_</Label>
 			</Lv_5>
 		</weapon_dlc_combat>
-        <weapon_jdecmloryhk>
-            <ObjID>wp0602</ObjID>
-            <UniqueID>1006</UniqueID>
+        <weapon_lebgpjqwkkl>
+            <ObjID>wp0402</ObjID>
+            <UniqueID>1008</UniqueID>
 			<Category>2</Category>
 			<Special1>3</Special1>
 			<Special2>1070</Special2>
@@ -1287,10 +1287,10 @@
 				<Increase>undefined</Increase>
 				<Label>_</Label>
 			</Lv_5>
-        </weapon_jdecmloryhk>
-        <weapon_ayksgfpnvvn>
-            <ObjID>wp0601</ObjID>
-            <UniqueID>1005</UniqueID>
+        </weapon_lebgpjqwkkl>
+        <weapon_glmshmlebbp>
+            <ObjID>wp0002</ObjID>
+            <UniqueID>1007</UniqueID>
 			<Category>0</Category>
 			<Special1>3</Special1>
 			<Special2>1070</Special2>
@@ -1319,10 +1319,42 @@
 				<Increase>undefined</Increase>
 				<Label>_</Label>
 			</Lv_5>
-        </weapon_ayksgfpnvvn>
-        <weapon_egrifxdtadz>
-            <ObjID>wp0600</ObjID>
-            <UniqueID>1004</UniqueID>
+        </weapon_glmshmlebbp>
+        <weapon_vuwtggzjhpr>
+            <ObjID>wp0601</ObjID>
+            <UniqueID>1006</UniqueID>
+			<Category>3</Category>
+			<Special1>3</Special1>
+			<Special2>1070</Special2>
+			<Lv_1>
+				<Attack>100</Attack>
+				<Increase>0</Increase>
+				<Label>_</Label>
+			</Lv_1>
+			<Lv_2>
+				<Attack>200</Attack>
+				<Increase>10</Increase>
+				<Label>_</Label>
+			</Lv_2>
+			<Lv_3>
+				<Attack>300</Attack>
+				<Increase>20</Increase>
+				<Label>_</Label>
+			</Lv_3>
+			<Lv_4>
+				<Attack>400</Attack>
+				<Increase>30</Increase>
+				<Label>_</Label>
+			</Lv_4>
+			<Lv_5>
+				<Attack>undefined</Attack>
+				<Increase>undefined</Increase>
+				<Label>_</Label>
+			</Lv_5>
+        </weapon_vuwtggzjhpr>
+        <weapon_dgmcundhajl>
+            <ObjID>wp0401</ObjID>
+            <UniqueID>1005</UniqueID>
 			<Category>2</Category>
 			<Special1>3</Special1>
 			<Special2>1070</Special2>
@@ -1351,6 +1383,38 @@
 				<Increase>undefined</Increase>
 				<Label>_</Label>
 			</Lv_5>
-        </weapon_egrifxdtadz>
+        </weapon_dgmcundhajl>
+        <weapon_uvqubvhoejq>
+            <ObjID>wp0001</ObjID>
+            <UniqueID>1004</UniqueID>
+			<Category>0</Category>
+			<Special1>3</Special1>
+			<Special2>1070</Special2>
+			<Lv_1>
+				<Attack>100</Attack>
+				<Increase>0</Increase>
+				<Label>_</Label>
+			</Lv_1>
+			<Lv_2>
+				<Attack>200</Attack>
+				<Increase>10</Increase>
+				<Label>_</Label>
+			</Lv_2>
+			<Lv_3>
+				<Attack>300</Attack>
+				<Increase>20</Increase>
+				<Label>_</Label>
+			</Lv_3>
+			<Lv_4>
+				<Attack>400</Attack>
+				<Increase>30</Increase>
+				<Label>_</Label>
+			</Lv_4>
+			<Lv_5>
+				<Attack>undefined</Attack>
+				<Increase>undefined</Increase>
+				<Label>_</Label>
+			</Lv_5>
+        </weapon_uvqubvhoejq>
 	</Weapon>
 </WeaponInfo>

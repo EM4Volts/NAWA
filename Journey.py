@@ -137,7 +137,7 @@ class MyWindow:
         variable = StringVar(window)
         variable.set("Small Sword") # default value
 
-        config4 = OptionMenu(window,variable, "Large Sword", "Spear", "Small Sword")
+        config4 = OptionMenu(window,variable, "Large Sword", "Spear", "Small Sword", "Combat Bracers")
         config4.place(x=440, y=220)
 
         btn=Button(window, width=27,height=4,  text="Save Config", bg="grey", fg='white', command=lambda : [updateConfigFile(dir)])
@@ -200,7 +200,7 @@ window=Tk()
 mywin=MyWindow(window)
 window.resizable(False, False)
 window.iconbitmap("yamm_data/namc.ico")
-window.title('NAMC')
+window.title('NAWM')
 window.configure(bg='#474747')
 window.geometry("647x600+100+200")
 window.mainloop()

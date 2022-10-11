@@ -93,9 +93,6 @@ for filename in os.scandir(directory):
             internalWeaponID = 'weapon_' + ''.join(random.choice(string.ascii_lowercase) for _ in range(11))
             shutil.copyfile(filename, 'deploy/wp/' + newWpName + ".dtt")
             uniqueID = getUniqueID()
-            conDir = workDir + "/config.json"
-            print(workDir)
-            wpCFGdata = jout.readwpConfig("mods/" + workDir[5:][:-3] + "/config.json")
             print("[Writing all Tables using config: " + internalWeaponID, uniqueID, newWpName, wpCFGdata[0], wpCFGdata[1], wpCFGdata[2], wpCFGdata[3], wpCFGdata[5], wpCFGdata[6], wpCFGdata[7], wpCFGdata[8] + "]")
             jout.WriteAllTables(internalWeaponID, uniqueID, newWpName, wpCFGdata[0], wpCFGdata[1], wpCFGdata[2], wpCFGdata[3], wpCFGdata[5], wpCFGdata[6], wpCFGdata[7], wpCFGdata[8])
             newunpackDatt('deploy/wp/' + newWpName + ".dtt",'deploy/wp/' + newWpName + "_dtt")
@@ -116,7 +113,10 @@ for filename in os.scandir(directory):
             newpackDatt("deploy/wp/" + newWpName + "_dat/", "deploy/wp/" + newWpName + ".dat")
             newpackDatt("deploy/wp/" + newWpName + "_dtt/", "deploy/wp/" + newWpName + ".dtt")
         if strFilename.endswith('.dat'):
-            newWpName = "wp" + str(getWPfileName())
+            conDir = workDir + "/config.json"
+            print(workDir)
+            wpCFGdata = jout.readwpConfig("mods/" + workDir[5:][:-3] + "/config.json")
+            newWpName = jout.getWPfileName(wpCFGdata[3])
             shutil.copyfile(filename, 'deploy/wp/' + newWpName + ".dat")
             newunpackDatt('deploy/wp/' + newWpName + ".dat",'deploy/wp/' + newWpName + "_dat")
             for filename in os.scandir("deploy/wp/" + newWpName + "_dat"):
