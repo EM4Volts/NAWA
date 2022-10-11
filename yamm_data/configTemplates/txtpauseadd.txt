@@ -1,0 +1,4 @@
+    "PAUSE_WEAPONSTORY_newUid_01": "This weapon has been generated using NAMC.",
+    "PAUSE_WEAPONSTORY_newUid_02": "None of this would have been possible without the members of the NieR:Modding server, especially @Woeful_wolf, @RaiderB and @grojdg",
+    "PAUSE_WEAPONSTORY_newUid_03": "No androids were harmed in the process of generating this weapon.",
+    "PAUSE_WEAPONSTORY_newUid_04": "You're breathtaking!",
