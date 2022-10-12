@@ -2,7 +2,7 @@ import os
 from tkinter import *
 from tkinter import filedialog
 import journey_tools as jout
-
+import nawm as nawm
 new=""
 modList = []
 cfgFile = open("configs/config.ini", "r")
@@ -13,9 +13,9 @@ nierDatDir= config[0]
 nierModsDir= config[1]
 cfgStruct = [nierDatDir, nierModsDir]
 creditStr = "Huge thanks to:\n\n@Woeful_Wolf\n@RaiderB\n@grojdg\n\nfor their amazing\nwork on basically\neverything Automata!"
-
+print(nierModsDir)
 def generateConfig():
-    with open(r'/configs/config.ini', 'w') as cfg:
+    with open(r'configs/config.ini', 'w') as cfg:
         for str in cfgStruct:
             cfg.write("%s\n" % str)
 
@@ -48,12 +48,6 @@ def buildModList():
     modList = genPathList(nierModsDir)
     return modList
 
-
-
-
-
-
-
 buildModList()
 
 class MyWindow:
@@ -62,11 +56,8 @@ class MyWindow:
         lblndselect=Label(window, text=nierDatDir,bg="#474747", fg='white', font=("Helvetica", 10))
         lblndselect.place(x=140, y=522)
 
-
-        btn=Button(window,width=15, height=15, text="DEPLOY",bg="grey", fg='white', command=lambda : os.system("YAMM.py"))
+        btn=Button(window,width=15, height=15, text="DEPLOY",bg="grey", fg='white', command=lambda : nawm.main())
         btn.place(x=10, y=5)
-
-
 
         btn=Button(window,width=15, text="SELECT DATA DIR ",bg="grey", fg='white', command=lambda : [selectNierDataDir(),lblndselect.config(text = nierDatDir), generateConfig()])
         btn.place(x=10, y=520)
@@ -77,11 +68,10 @@ class MyWindow:
         lblnmdselect=Label(window, text=nierModsDir,bg="#474747", fg='white', font=("Helvetica", 10))
         lblnmdselect.place(x=140, y=562)
 
-
         def key(event):
             global new
             new= lb.get(lb.curselection())
-            conDir = "mods/" + new + "/config.json"
+            conDir = nierModsDir + "/" + new + "/config.json"
             updateConfigWindow(conDir)
         lb=Listbox(window,bg="#737373", height=31,width=50)
         lb.place(x=130, y=5)
@@ -108,10 +98,9 @@ class MyWindow:
             config8.insert(END, config_data[8])
         def updateConfigFile(dir):
             global new
-            conDir = "mods/" + new + "/config.json"
+            conDir = nierModsDir + "/" + new + "/config.json"
             conData = getConfigEntry()
             jout.writewpConfig(conDir,conData[0], conData[1], conData[2], jout.conWeaponType(variable.get()), conData[3], conData[4], conData[5], conData[6])
-
 
         configU=Label(window, bg="#474747", fg='white', font=("Helvetica", 14))
         configU.place(x=438, y=3)
@@ -167,11 +156,6 @@ class MyWindow:
         config8 = Entry(window, width=19)
         config8.place(x=525, y=370)
 
-
-
-
-
-
         def getConfigEntry():
             kName = config1.get()
             kName2 = config2.get()
@@ -180,7 +164,6 @@ class MyWindow:
             kName5 = config6.get()
             kName6 = config7.get()
             kName7 = config8.get()
-
 
             return kName, kName2, kName3, kName4, kName5, kName6, kName7
         def modListUpdate():
@@ -194,7 +177,6 @@ class MyWindow:
         btn.place(x=10, y=560)
         modListUpdate()
 
-
 buildModList()
 window=Tk()
 mywin=MyWindow(window)
@@ -204,11 +186,3 @@ window.title('NAWM')
 window.configure(bg='#474747')
 window.geometry("647x600+100+200")
 window.mainloop()
-
-
-
-
-
-
-
-

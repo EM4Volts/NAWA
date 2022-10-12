@@ -8,20 +8,6 @@ import yamm_data.fileporters.newexport_dat as newdattExpo
 import yamm_data.fileporters.newdat_unpacker as newdattUn
 import yamm_data.fileporters.tmd as tmd
 
-xmlList = ["yamm_data/coregm/WeaponInfoTable.xml",
-           "yamm_data/coregm/ItemInfoTable.xml",
-           "yamm_data/coregm/ShopInfoTable.xml",
-           "yamm_data/coregm/ShopInfoTable.xml",
-           "yamm_data/coregm/WeaponStrengthenTable.xml",
-           "yamm_data/core/WeaponStrengthenTable.xml"
-           ]
-
-itenInfoTablecrispList = []
-messCorecrispList = []
-secondweaponstrenghttablecrispList = []
-shopInfoTablecrispList = []
-weaponInfoTablecrispList = []
-crispList = []
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 directory = 'mods'
@@ -29,10 +15,7 @@ directory = 'mods'
 newUid = 1003
 mXMLn = 1
 
-idBlacklistFile = open("configs/wpids.xml", "r")
-data = idBlacklistFile.read()
-idBlacklist = data.split("\n")
-idBlacklistFile.close()
+
 
 cfgFile = open("configs/config.ini", "r")
 data = cfgFile.read()
@@ -59,21 +42,6 @@ def wpunpackDatt(datt, datt2):
 
 def packDatt(dattDir, name):
     dattExpo.main(dattDir, name)
-
-def getUniqueID():
-    global newUid
-    newUidFound = False
-    while not newUidFound:
-        uId = str(newUid)
-        newUid += 1
-        if uId in idBlacklist:
-            print("[UNIQUEID : " + uId + " in Use, retrying...]")
-        if uId not in idBlacklist:
-            if uId == "1000":
-                print("delete some wp mods.... how do you even have this many?")
-                exit()
-            else:
-                return uId
 
 shutil.copyfile("yamm_data/xml2Merge/txt_pause_add_us/txt_pause_add.json", "yamm_data/txt_pause_add_us/txt_pause_add.json")
 shutil.copyfile("yamm_data/xml2Merge/core/WeaponStrengthenTable.xml", "yamm_data/core/WeaponStrengthenTable.xml")
@@ -114,7 +82,6 @@ for filename in os.scandir(directory):
             newpackDatt("deploy/wp/" + newWpName + "_dtt/", "deploy/wp/" + newWpName + ".dtt")
         if strFilename.endswith('.dat'):
             conDir = workDir + "/config.json"
-            print(workDir)
             wpCFGdata = jout.readwpConfig("mods/" + workDir[5:][:-3] + "/config.json")
             newWpName = jout.getWPfileName(wpCFGdata[3])
             shutil.copyfile(filename, 'deploy/wp/' + newWpName + ".dat")
@@ -140,7 +107,6 @@ print("[Building MCD...]")
 mcd.json_to_mcd("yamm_data/ui_core_us/messcore.json", "yamm_data/ui_core_us/messcore.mcd")
 
 print("[Packing essential .dat's...]")
-#packDatt("yamm_data/core/", "deploy/core/core.dat")
 newpackDatt("yamm_data/core/", "deploy/core/core.dat")
 newpackDatt("yamm_data/coregm/", "deploy/core/coregm.dat")
 packDatt("yamm_data/ui_core_us/", "deploy/ui/ui_core_us.dat")

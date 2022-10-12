@@ -1,4 +1,4 @@
-import json, os, random, struct
+import json, os, random, struct, shutil
 def read_uint32(file) -> int:
     entry = file.read(4)
     return struct.unpack('<I', entry)[0]
@@ -59,6 +59,11 @@ data = wpidBlacklistFile.read()
 wpidBlacklist = data.split("\n")
 wpidBlacklistFile.close()
 
+idBlacklistFile = open("configs/wpids.xml", "r")
+data = idBlacklistFile.read()
+idBlacklist = data.split("\n")
+idBlacklistFile.close()
+newUid = 1003
 defaultWPConf = {"weaponname": "NAMC Weapon", "weapondescshort": "", "weapondesclong": "", "weapontype": "0", "lv1": "150", "lv2": "270", "lv3": "440", "lv4": "570"}
 
 def getWPfileName(wpC):
@@ -99,6 +104,32 @@ def getWPfileName(wpC):
                 return "wp" + newuId
         else:
             indexStart +=1
+
+def getUniqueID():
+    global newUid
+    newUidFound = False
+    while not newUidFound:
+        uId = str(newUid)
+        newUid += 1
+        if uId in idBlacklist:
+            print("[UNIQUEID : " + uId + " in Use, retrying...]")
+        if uId not in idBlacklist:
+            if uId == "1000":
+                print("delete some wp mods.... how do you even have this many?")
+                exit()
+            else:
+                return uId
+
+def cleanDeploy():
+    for filename in os.scandir("deploy/"):
+        subFName = filename
+        for filename in os.scandir(subFName):
+            toRM = "deploy/" + str(subFName)[11:][:-2] + "/" + str(filename)[11:][:-2]
+            if os.path.isdir(toRM):
+                shutil.rmtree(toRM)
+            else:
+                os.remove(toRM)
+
 
 def genNierIdentifier():
     random_ID = ''.join(random.choice('0123456789ABCDEF') for n in range(8))
