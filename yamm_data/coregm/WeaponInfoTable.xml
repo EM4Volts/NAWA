@@ -1256,7 +1256,7 @@
 				<Label>_</Label>
 			</Lv_5>
 		</weapon_dlc_combat>
-        <weapon_eazlgwdcqfw>
+        <weapon_ezujtvddiow>
             <ObjID>wp0201</ObjID>
             <UniqueID>1005</UniqueID>
 			<Category>1</Category>
@@ -1287,8 +1287,8 @@
 				<Increase>undefined</Increase>
 				<Label>_</Label>
 			</Lv_5>
-        </weapon_eazlgwdcqfw>
-        <weapon_zghzvrmmhsq>
+        </weapon_ezujtvddiow>
+        <weapon_xyliagqpfic>
             <ObjID>wp0401</ObjID>
             <UniqueID>1004</UniqueID>
 			<Category>2</Category>
@@ -1319,6 +1319,6 @@
 				<Increase>undefined</Increase>
 				<Label>_</Label>
 			</Lv_5>
-        </weapon_zghzvrmmhsq>
+        </weapon_xyliagqpfic>
 	</Weapon>
 </WeaponInfo>

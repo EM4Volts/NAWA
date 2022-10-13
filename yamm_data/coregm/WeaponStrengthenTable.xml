@@ -625,7 +625,7 @@
 				<Quantity>1</Quantity>
 			</Material5>
 		</weapon_white_sword_lv4>
-        <weapon_eazlgwdcqfw_lv2>
+        <weapon_ezujtvddiow_lv2>
             <ObjID>wp0201</ObjID>
             <UniqueID>1005</UniqueID>
             <lv>2</lv>
@@ -650,8 +650,8 @@
                 <UniqueID>0</UniqueID>
                 <Quantity>0</Quantity>
             </Material5>
-        </weapon_eazlgwdcqfw_lv2>
-        <weapon_eazlgwdcqfw_lv3>
+        </weapon_ezujtvddiow_lv2>
+        <weapon_ezujtvddiow_lv3>
             <ObjID>wp0201</ObjID>
             <UniqueID>1005</UniqueID>
             <lv>3</lv>
@@ -676,8 +676,8 @@
                 <UniqueID>0</UniqueID>
                 <Quantity>0</Quantity>
             </Material5>
-        </weapon_eazlgwdcqfw_lv3>
-        <weapon_eazlgwdcqfw_lv4>
+        </weapon_ezujtvddiow_lv3>
+        <weapon_ezujtvddiow_lv4>
             <ObjID>wp0201</ObjID>
             <UniqueID>1005</UniqueID>
             <lv>4</lv>
@@ -702,8 +702,8 @@
                 <UniqueID>0</UniqueID>
                 <Quantity>0</Quantity>
             </Material5>
-        </weapon_eazlgwdcqfw_lv4>
-        <weapon_zghzvrmmhsq_lv2>
+        </weapon_ezujtvddiow_lv4>
+        <weapon_xyliagqpfic_lv2>
             <ObjID>wp0401</ObjID>
             <UniqueID>1004</UniqueID>
             <lv>2</lv>
@@ -728,8 +728,8 @@
                 <UniqueID>0</UniqueID>
                 <Quantity>0</Quantity>
             </Material5>
-        </weapon_zghzvrmmhsq_lv2>
-        <weapon_zghzvrmmhsq_lv3>
+        </weapon_xyliagqpfic_lv2>
+        <weapon_xyliagqpfic_lv3>
             <ObjID>wp0401</ObjID>
             <UniqueID>1004</UniqueID>
             <lv>3</lv>
@@ -754,8 +754,8 @@
                 <UniqueID>0</UniqueID>
                 <Quantity>0</Quantity>
             </Material5>
-        </weapon_zghzvrmmhsq_lv3>
-        <weapon_zghzvrmmhsq_lv4>
+        </weapon_xyliagqpfic_lv3>
+        <weapon_xyliagqpfic_lv4>
             <ObjID>wp0401</ObjID>
             <UniqueID>1004</UniqueID>
             <lv>4</lv>
@@ -780,7 +780,7 @@
                 <UniqueID>0</UniqueID>
                 <Quantity>0</Quantity>
             </Material5>
-        </weapon_zghzvrmmhsq_lv4>
+        </weapon_xyliagqpfic_lv4>
 		<weapon_black_sword_lv2>
 			<ObjID>wp0071</ObjID>
 			<UniqueID>1071</UniqueID>

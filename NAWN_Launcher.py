@@ -4,13 +4,26 @@ from tkinter import *
 from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage, filedialog
 import journey_tools as jout
 import nawm
-nawmversion = "NAWM version 1.0.2"
+nawmversion = "NAWM version 1.0.4"
 
 OUTPUT_PATH = Path(__file__).parent
 ASSETS_PATH = OUTPUT_PATH / Path("./assets")
 
 new=""
 modList = []
+
+
+def check_names(path):
+    if os.path.exists(os.path.dirname(path)):
+        return True
+
+if not os.path.isfile("configs/config.ini"):
+    with open("configs/config.ini", "x"):
+        print("config remade")
+    with open(r'configs/config.ini', 'w') as cfg:
+        cfg.write("%s\n" % str)
+        cfg.write("%s\n" % str)
+
 cfgFile = open("configs/config.ini", "r")
 data = cfgFile.read()
 config = data.split("\n")
@@ -18,11 +31,12 @@ cfgFile.close()
 nierDatDir= config[0]
 nierModsDir= config[1]
 cfgStruct = [nierDatDir, nierModsDir]
-
 def generateConfig():
     with open(r'configs/config.ini', 'w') as cfg:
         for str in cfgStruct:
             cfg.write("%s\n" % str)
+
+
 
 def selectNierDataDir():
     global nierDatDir
@@ -30,6 +44,7 @@ def selectNierDataDir():
     folder_selected = filedialog.askdirectory()
     nierDatDir = folder_selected
     cfgStruct = [nierDatDir, nierModsDir]
+    generateConfig()
     return folder_selected + "/"
 
 def selectNierModsDir():
@@ -53,7 +68,9 @@ def buildModList():
     modList = genPathList(nierModsDir)
     return modList
 
-buildModList()
+if check_names(nierModsDir):
+    buildModList()
+
 
 def relative_to_assets(path: str) -> Path:
     return ASSETS_PATH / Path(path)
@@ -85,7 +102,10 @@ canvas.create_rectangle(
     outline="")
 def key(event):
     global new
-    new= lb.get(lb.curselection())
+    try:
+        new= lb.get(lb.curselection())
+    except:
+        pass
     conDir = nierModsDir + "/" + new + "/config.json"
     updateConfigWindow(conDir)
 lb=Listbox(window,bg="#383838", height=22,width=93, foreground="white")
@@ -97,7 +117,8 @@ def modListUpdate():
     for str in modList:
         str2 = str
         lb.insert(0, str2)
-modListUpdate()
+if check_names(nierModsDir):
+    modListUpdate()
 canvas.create_rectangle(
     557.0,
     0.0,
@@ -209,7 +230,7 @@ button_4 = Button(
     image=button_image_4,
     borderwidth=0,
     highlightthickness=0, fg="white", justify='center',
-    command=lambda: [selectNierModsDir(), modListUpdate(), generateConfig()],
+    command=lambda: [selectNierModsDir(), modListUpdate()],
     relief="flat"
 )
 button_4.place(
@@ -1167,8 +1188,8 @@ def updateConfigFile(dir):
     conData = getConfigEntry()
     jout.writewpConfig(conDir,conData[0], conData[1], conData[2], jout.conWeaponType(variable.get()),conData[3], conData[4], conData[5], conData[6], conData[7], conData[8], conData[9], conData[10], conData[11], conData[12], conData[13], conData[14], conData[15], conData[16], conData[17], conData[18], conData[19], conData[20], conData[21], conData[22], conData[23], conData[24], conData[25], conData[26], conData[27], conData[28], conData[29], conData[30], conData[31], conData[32], conData[33], conData[34])
 
-
-buildModList()
+if check_names(nierModsDir):
+    buildModList()
 window.resizable(False, False)
 window.iconbitmap("yamm_data/namc.ico")
 window.title('NAWM NieR: Automata Weapon Manager')

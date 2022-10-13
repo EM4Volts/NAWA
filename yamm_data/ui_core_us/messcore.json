@@ -13050,7 +13050,7 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "2"
+                    "line": "An ancient spear"
                 }
             ]
         },
@@ -13061,7 +13061,7 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "3."
+                    "line": "A Relic."
                 }
             ]
         },
@@ -13072,13 +13072,13 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "1"
+                    "line": "New Spear"
                 },
                 {
                     "vpos": 1,
                     "hpos": 0,
                     "font": 5,
-                    "line": "1"
+                    "line": "New Spear"
                 }
             ]
         },
