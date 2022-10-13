@@ -52,7 +52,7 @@ Start the game, go to the resistance camp, open the weapon shop and enjoy!
 
 ## FAQ
 
-#### Does this overwrite any vanilla weapons
+#### Does this overwrite any vanilla weapons?
 
 No! All vanilla weapons stay, and your new weapons are added as completely seperate ones.
 
