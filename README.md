@@ -32,6 +32,8 @@ inside the weapons folder put an folder called "wp" and put the weapons .dat and
 
 Repeat this for each weapon. Do not put multiple dat or dtt files in a weapons folder.
 
+If the weapon you wanna put in came with a misctex file or folder delete them, currently the tool does not support adding custom misctex (soon added)
+
 If you have added a weapon folder white NAWM is running rechoose the mods folder to refresh the list (to be changed soon)
 
 
