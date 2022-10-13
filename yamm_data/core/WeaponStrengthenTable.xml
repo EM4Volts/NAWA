@@ -547,13 +547,13 @@
 				<Quantity>0</Quantity>
 			</Material5>
 		</weapon_white_sword_lv4>
-        <weapon_vqqfjztuzqp_lv2>
-            <ObjID>wp0202</ObjID>
-            <UniqueID>1007</UniqueID>
+        <weapon_eazlgwdcqfw_lv2>
+            <ObjID>wp0201</ObjID>
+            <UniqueID>1005</UniqueID>
             <lv>2</lv>
             <cost>100</cost>
             <Material1>
-                <UniqueID>1007</UniqueID>
+                <UniqueID>1005</UniqueID>
                 <Quantity>1</Quantity>
             </Material1>
             <Material2>
@@ -572,14 +572,14 @@
                 <UniqueID>0</UniqueID>
                 <Quantity>0</Quantity>
             </Material5>
-        </weapon_vqqfjztuzqp_lv2>
-        <weapon_vqqfjztuzqp_lv3>
-            <ObjID>wp0202</ObjID>
-            <UniqueID>1007</UniqueID>
+        </weapon_eazlgwdcqfw_lv2>
+        <weapon_eazlgwdcqfw_lv3>
+            <ObjID>wp0201</ObjID>
+            <UniqueID>1005</UniqueID>
             <lv>3</lv>
             <cost>200</cost>
             <Material1>
-                <UniqueID>1007</UniqueID>
+                <UniqueID>1005</UniqueID>
                 <Quantity>1</Quantity>
             </Material1>
             <Material2>
@@ -598,14 +598,14 @@
                 <UniqueID>0</UniqueID>
                 <Quantity>0</Quantity>
             </Material5>
-        </weapon_vqqfjztuzqp_lv3>
-        <weapon_vqqfjztuzqp_lv4>
-            <ObjID>wp0202</ObjID>
-            <UniqueID>1007</UniqueID>
+        </weapon_eazlgwdcqfw_lv3>
+        <weapon_eazlgwdcqfw_lv4>
+            <ObjID>wp0201</ObjID>
+            <UniqueID>1005</UniqueID>
             <lv>4</lv>
             <cost>300</cost>
             <Material1>
-                <UniqueID>1007</UniqueID>
+                <UniqueID>1005</UniqueID>
                 <Quantity>1</Quantity>
             </Material1>
             <Material2>
@@ -624,14 +624,14 @@
                 <UniqueID>0</UniqueID>
                 <Quantity>0</Quantity>
             </Material5>
-        </weapon_vqqfjztuzqp_lv4> 
-        <weapon_qmucowhhxdu_lv2>
-            <ObjID>wp0402</ObjID>
-            <UniqueID>1006</UniqueID>
+        </weapon_eazlgwdcqfw_lv4> 
+        <weapon_zghzvrmmhsq_lv2>
+            <ObjID>wp0401</ObjID>
+            <UniqueID>1004</UniqueID>
             <lv>2</lv>
             <cost>100</cost>
             <Material1>
-                <UniqueID>1006</UniqueID>
+                <UniqueID>1004</UniqueID>
                 <Quantity>1</Quantity>
             </Material1>
             <Material2>
@@ -650,14 +650,14 @@
                 <UniqueID>0</UniqueID>
                 <Quantity>0</Quantity>
             </Material5>
-        </weapon_qmucowhhxdu_lv2>
-        <weapon_qmucowhhxdu_lv3>
-            <ObjID>wp0402</ObjID>
-            <UniqueID>1006</UniqueID>
+        </weapon_zghzvrmmhsq_lv2>
+        <weapon_zghzvrmmhsq_lv3>
+            <ObjID>wp0401</ObjID>
+            <UniqueID>1004</UniqueID>
             <lv>3</lv>
             <cost>200</cost>
             <Material1>
-                <UniqueID>1006</UniqueID>
+                <UniqueID>1004</UniqueID>
                 <Quantity>1</Quantity>
             </Material1>
             <Material2>
@@ -676,14 +676,14 @@
                 <UniqueID>0</UniqueID>
                 <Quantity>0</Quantity>
             </Material5>
-        </weapon_qmucowhhxdu_lv3>
-        <weapon_qmucowhhxdu_lv4>
-            <ObjID>wp0402</ObjID>
-            <UniqueID>1006</UniqueID>
+        </weapon_zghzvrmmhsq_lv3>
+        <weapon_zghzvrmmhsq_lv4>
+            <ObjID>wp0401</ObjID>
+            <UniqueID>1004</UniqueID>
             <lv>4</lv>
             <cost>300</cost>
             <Material1>
-                <UniqueID>1006</UniqueID>
+                <UniqueID>1004</UniqueID>
                 <Quantity>1</Quantity>
             </Material1>
             <Material2>
@@ -702,7 +702,7 @@
                 <UniqueID>0</UniqueID>
                 <Quantity>0</Quantity>
             </Material5>
-        </weapon_qmucowhhxdu_lv4> 
+        </weapon_zghzvrmmhsq_lv4> 
 		<weapon_iron_will_lv2>
 			<ObjID>wp0203</ObjID>
 			<UniqueID>1009</UniqueID>

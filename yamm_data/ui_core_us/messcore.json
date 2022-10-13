@@ -13005,7 +13005,7 @@
             ]
         },
         {
-            "event_name": "CORE_WP_HELP_S_1007",
+            "event_name": "CORE_WP_HELP_S_1005",
             "texts": [
                 {
                     "vpos": 0,
@@ -13016,7 +13016,7 @@
             ]
         },
         {
-            "event_name": "CORE_WP_HELP_1007",
+            "event_name": "CORE_WP_HELP_1005",
             "texts": [
                 {
                     "vpos": 0,
@@ -13027,7 +13027,7 @@
             ]
         },
         {
-            "event_name": "CORE_WP_NAME_1007",
+            "event_name": "CORE_WP_NAME_1005",
             "texts": [
                 {
                     "vpos": 0,
@@ -13044,7 +13044,7 @@
             ]
         },
         {
-            "event_name": "CORE_WP_HELP_S_1006",
+            "event_name": "CORE_WP_HELP_S_1004",
             "texts": [
                 {
                     "vpos": 0,
@@ -13055,7 +13055,7 @@
             ]
         },
         {
-            "event_name": "CORE_WP_HELP_1006",
+            "event_name": "CORE_WP_HELP_1004",
             "texts": [
                 {
                     "vpos": 0,
@@ -13066,7 +13066,7 @@
             ]
         },
         {
-            "event_name": "CORE_WP_NAME_1006",
+            "event_name": "CORE_WP_NAME_1004",
             "texts": [
                 {
                     "vpos": 0,

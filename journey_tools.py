@@ -104,11 +104,6 @@ defaultWPConf = {
 "lvl4crit": "0",
 }
 
-
-
-print(defaultWPConf)
-
-
 def getWPfileName(wpC):
     if wpC == "0":
         cName = "Small Sword"
@@ -182,7 +177,6 @@ def genNierIdentifier():
         quit()
     idBlackList.append(random_ID)
     return random_ID
-
 
 def conWeaponType(re):
     if re == "0":

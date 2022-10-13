@@ -17,6 +17,11 @@ def copyFold(source,dest): #stolen from stackvoerflow lol
     shutil.copytree(source,dest_dir)
 
 def main():
+    if not os.path.isdir("deploy"):
+        os.makedirs("deploy/wp", 0o666)
+        os.makedirs("deploy/core", 0o666)
+        os.makedirs("deploy/ui", 0o666)
+        os.makedirs("deploy/txtmess", 0o666)
     #list of all xml files to convert
     xmlList = ["yamm_data/coregm/WeaponInfoTable.xml",
                "yamm_data/coregm/ItemInfoTable.xml",
@@ -31,7 +36,6 @@ def main():
     data = cfgFile.read()
     config = data.split("\n")
     cfgFile.close()
-    print(cfgFile)
     nierDatDir= config[0]
     nierModsDir= config[1]
 
@@ -49,14 +53,11 @@ def main():
         wkDir = str(filename.path)
         wpCFGdata = jout.readwpConfig(wkDir + "/config.json")
         newWpName = jout.getWPfileName(wpCFGdata[3])
-        print(newWpName)
         internalWeaponID = 'weapon_' + ''.join(random.choice(string.ascii_lowercase) for _ in range(11))
         uniqueID = jout.getUniqueID()
-        print(wpCFGdata[36])
         jout.WriteAllTables(internalWeaponID, uniqueID, newWpName, wpCFGdata[0], wpCFGdata[1], wpCFGdata[2], wpCFGdata[3], wpCFGdata[5], wpCFGdata[6], wpCFGdata[7], wpCFGdata[8], wpCFGdata[9], wpCFGdata[10], wpCFGdata[11], wpCFGdata[12], wpCFGdata[13], wpCFGdata[14], wpCFGdata[15], wpCFGdata[16], wpCFGdata[17], wpCFGdata[18], wpCFGdata[19], wpCFGdata[20], wpCFGdata[21], wpCFGdata[22], wpCFGdata[23], wpCFGdata[24], wpCFGdata[25], wpCFGdata[26], wpCFGdata[27], wpCFGdata[28], wpCFGdata[29], wpCFGdata[30], wpCFGdata[31], wpCFGdata[32], wpCFGdata[33], wpCFGdata[34], wpCFGdata[35], wpCFGdata[36])
         for filename in os.scandir(wkDir + "/wp"):
             eFile = str(filename)[11:][:-2]
-            print(eFile)
             if eFile.endswith(".dat"):
                 shutil.copyfile(wkDir + "/wp/" + eFile, 'deploy/wp/' + newWpName + ".dat")
                 newdattUn.main('deploy/wp/' + newWpName + ".dat",'deploy/wp/' + newWpName + "_dat")
@@ -99,3 +100,4 @@ def main():
     dattExpo.main("yamm_data/txt_core_add_us/", "deploy/txtmess/txt_core_add_us.dat")
     dattExpo.main("yamm_data/txt_pause_add_us/", "deploy/txtmess/txt_pause_add_us.dat")
     shutil.copytree("deploy/", nierDatDir, copy_function=shutil.move, dirs_exist_ok=True)
+    print("[Mods successfuly deployed!]")
