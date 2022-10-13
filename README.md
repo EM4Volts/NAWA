@@ -39,7 +39,7 @@ If you have added a weapon folder white NAWM is running rechoose the mods folder
 
 **HOW TO USE NAWM:**
 
-Select the weapon u want to edit the Name, Stats and more in the list on the top right
+Select the weapon you want to edit the Name, Stats and more in the list on the top right
 
 Edit stuff and press the "Save config" button.
 
@@ -60,7 +60,7 @@ No! All vanilla weapons stay, and your new weapons are added as completely seper
 
 #### Does this corrupt my savefile?
 
-In my tests no. Only when u redeploy the weapon ids may change, so a waepon in ur inventory may suddenly be another one.
+In my tests no. Only when u redeploy the weapon ids may change, so a weapon in your inventory may suddenly be another one.
 
 #### How do i remove the weapoons?
 
