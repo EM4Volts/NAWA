@@ -4,7 +4,7 @@ from tkinter import *
 from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage, filedialog
 import journey_tools as jout
 import nawm
-nawmversion = "NAWM version 1.0.4"
+nawmversion = "NAWM version 1.0.5"
 
 OUTPUT_PATH = Path(__file__).parent
 ASSETS_PATH = OUTPUT_PATH / Path("./assets")
