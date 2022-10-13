@@ -13005,80 +13005,80 @@
             ]
         },
         {
-            "event_name": "CORE_WP_HELP_S_1009",
+            "event_name": "CORE_WP_HELP_S_1007",
             "texts": [
                 {
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": ""
+                    "line": "Short Desc"
                 }
             ]
         },
         {
-            "event_name": "CORE_WP_HELP_1009",
+            "event_name": "CORE_WP_HELP_1007",
             "texts": [
                 {
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "."
+                    "line": "Long Desc."
                 }
             ]
         },
         {
-            "event_name": "CORE_WP_NAME_1009",
+            "event_name": "CORE_WP_NAME_1007",
             "texts": [
                 {
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "Test"
+                    "line": "NAMC Weapon"
                 },
                 {
                     "vpos": 1,
                     "hpos": 0,
                     "font": 5,
-                    "line": "Test"
+                    "line": "NAMC Weapon"
                 }
             ]
         },
         {
-            "event_name": "CORE_WP_HELP_S_1008",
+            "event_name": "CORE_WP_HELP_S_1006",
             "texts": [
                 {
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": ""
+                    "line": "2"
                 }
             ]
         },
         {
-            "event_name": "CORE_WP_HELP_1008",
+            "event_name": "CORE_WP_HELP_1006",
             "texts": [
                 {
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "."
+                    "line": "3."
                 }
             ]
         },
         {
-            "event_name": "CORE_WP_NAME_1008",
+            "event_name": "CORE_WP_NAME_1006",
             "texts": [
                 {
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "zeeeeeeeeee"
+                    "line": "1"
                 },
                 {
                     "vpos": 1,
                     "hpos": 0,
                     "font": 5,
-                    "line": "zeeeeeeeeee"
+                    "line": "1"
                 }
             ]
         },

@@ -64,7 +64,50 @@ data = idBlacklistFile.read()
 idBlacklist = data.split("\n")
 idBlacklistFile.close()
 newUid = 1003
-defaultWPConf = {"weaponname": "NAMC Weapon", "weapondescshort": "", "weapondesclong": "", "weapontype": "0", "lv1": "150", "lv2": "270", "lv3": "440", "lv4": "570"}
+
+defaultWPConf = {
+"weaponname": "NAMC Weapon",
+"weapondescshort": "Short Desc",
+"weapondesclong": "Long Desc",
+"weapontype": "0",
+"lvl1dmgl": "160",
+"lvl1dmgr": "190",
+"lvl1cmbl": "5",
+"lvl1cmbr": "3",
+"lvl1spd": "100",
+"lvl1end": "100",
+"lvl1stun": "100",
+"lvl1crit": "0",
+"lvl2dmgl": "320",
+"lvl2dmgr": "380",
+"lvl2cmbl": "5",
+"lvl2cmbr": "3",
+"lvl2spd": "110",
+"lvl2end": "100",
+"lvl2stun": "100",
+"lvl2crit": "0",
+"lvl3dmgl": "448",
+"lvl3dmgr": "532",
+"lvl3cmbl": "6",
+"lvl3cmbr": "3",
+"lvl3spd": "115",
+"lvl3end": "100",
+"lvl3stun": "100",
+"lvl3crit": "0",
+"lvl4dmgl": "608",
+"lvl4dmgr": "722",
+"lvl4cmbl": "7",
+"lvl4cmbr": "3",
+"lvl4spd": "120",
+"lvl4end": "100",
+"lvl4stun": "100",
+"lvl4crit": "0",
+}
+
+
+
+print(defaultWPConf)
+
 
 def getWPfileName(wpC):
     if wpC == "0":
@@ -172,16 +215,43 @@ def readwpConfig(cfDir):
     wpDescS = wpconfJson['weapondescshort']
     wpDescL = wpconfJson['weapondesclong']
     wpType = wpconfJson['weapontype']
-    lv1 = wpconfJson['lv1']
-    lv2 = wpconfJson['lv2']
-    lv3 = wpconfJson['lv3']
-    lv4 = wpconfJson['lv4']
+    lvl1dmgl = wpconfJson["lvl1dmgl"]
+    lvl1dmgr = wpconfJson["lvl1dmgr"]
+    lvl1cmbl = wpconfJson["lvl1cmbl"]
+    lvl1cmbr = wpconfJson["lvl1cmbr"]
+    lvl1spd = wpconfJson["lvl1spd"]
+    lvl1end = wpconfJson["lvl1end"]
+    lvl1stun = wpconfJson["lvl1stun"]
+    lvl1crit = wpconfJson["lvl1crit"]
+    lvl2dmgl = wpconfJson["lvl2dmgl"]
+    lvl2dmgr = wpconfJson["lvl2dmgr"]
+    lvl2cmbl = wpconfJson["lvl2cmbl"]
+    lvl2cmbr = wpconfJson["lvl2cmbr"]
+    lvl2spd = wpconfJson["lvl2spd"]
+    lvl2end = wpconfJson["lvl2end"]
+    lvl2stun = wpconfJson["lvl2stun"]
+    lvl2crit = wpconfJson["lvl2crit"]
+    lvl3dmgl = wpconfJson["lvl3dmgl"]
+    lvl3dmgr = wpconfJson["lvl3dmgr"]
+    lvl3cmbl = wpconfJson["lvl3cmbl"]
+    lvl3cmbr = wpconfJson["lvl3cmbr"]
+    lvl3spd = wpconfJson["lvl3spd"]
+    lvl3end = wpconfJson["lvl3end"]
+    lvl3stun = wpconfJson["lvl3stun"]
+    lvl3crit = wpconfJson["lvl3crit"]
+    lvl4dmgl = wpconfJson["lvl4dmgl"]
+    lvl4dmgr = wpconfJson["lvl4dmgr"]
+    lvl4cmbl = wpconfJson["lvl4cmbl"]
+    lvl4cmbr = wpconfJson["lvl4cmbr"]
+    lvl4spd = wpconfJson["lvl4spd"]
+    lvl4end = wpconfJson["lvl4end"]
+    lvl4stun = wpconfJson["lvl4stun"]
+    lvl4crit = wpconfJson["lvl4crit"]
 
-    return wpName, wpDescS, wpDescL, wpType, wpconfJson, lv1, lv2, lv3, lv4
+    return wpName, wpDescS, wpDescL, wpType, wpconfJson, lvl1dmgl, lvl1dmgr, lvl1cmbl, lvl1cmbr, lvl1spd, lvl1end, lvl1stun, lvl1crit, lvl2dmgl, lvl2dmgr, lvl2cmbl, lvl2cmbr, lvl2spd, lvl2end, lvl2stun, lvl2crit, lvl3dmgl, lvl3dmgr, lvl3cmbl, lvl3cmbr, lvl3spd, lvl3end, lvl3stun, lvl3crit, lvl4dmgl, lvl4dmgr, lvl4cmbl, lvl4cmbr, lvl4spd, lvl4end, lvl4stun, lvl4crit
 
 
-def writewpConfig(cfDir, wpName, wpDescS, wpDescL, wpType, lv1, lv2, lv3, lv4):
-
+def writewpConfig(cfDir, wpName, wpDescS, wpDescL, wpType, lvl1dmgl, lvl1dmgr, lvl1cmbl, lvl1cmbr, lvl1spd, lvl1end, lvl1stun, lvl1crit, lvl2dmgl, lvl2dmgr, lvl2cmbl, lvl2cmbr, lvl2spd, lvl2end, lvl2stun, lvl2crit, lvl3dmgl, lvl3dmgr, lvl3cmbl, lvl3cmbr, lvl3spd, lvl3end, lvl3stun, lvl3crit, lvl4dmgl, lvl4dmgr, lvl4cmbl, lvl4cmbr, lvl4spd, lvl4end, lvl4stun, lvl4crit):
     if not os.path.isfile(cfDir):
         with open(cfDir, 'w') as f:
             json.dump(defaultWPConf, f)
@@ -193,10 +263,39 @@ def writewpConfig(cfDir, wpName, wpDescS, wpDescL, wpType, lv1, lv2, lv3, lv4):
     newCfg["weapondescshort"] = wpDescS
     newCfg["weapondesclong"] = wpDescL
     newCfg["weapontype"] = wpType
-    newCfg["lv1"] = lv1
-    newCfg["lv2"] = lv2
-    newCfg["lv3"] = lv3
-    newCfg["lv4"] = lv4
+    newCfg["lvl1dmgl"] = lvl1dmgl
+    newCfg["lvl1dmgr"] = lvl1dmgr
+    newCfg["lvl1cmbl"] = lvl1cmbl
+    newCfg["lvl1cmbr"] = lvl1cmbr
+    newCfg["lvl1spd"] = lvl1spd
+    newCfg["lvl1end"] = lvl1end
+    newCfg["lvl1stun"] = lvl1stun
+    newCfg["lvl1crit"] = lvl1crit
+    newCfg["lvl2dmgl"] = lvl2dmgl
+    newCfg["lvl2dmgr"] = lvl2dmgr
+    newCfg["lvl2cmbl"] = lvl2cmbl
+    newCfg["lvl2cmbr"] = lvl2cmbr
+    newCfg["lvl2spd"]  = lvl2spd
+    newCfg["lvl2end"]  = lvl2end
+    newCfg["lvl2stun"] = lvl2stun
+    newCfg["lvl2crit"] = lvl2crit
+    newCfg["lvl3dmgl"] = lvl3dmgl
+    newCfg["lvl3dmgr"] = lvl3dmgr
+    newCfg["lvl3cmbl"] = lvl3cmbl
+    newCfg["lvl3cmbr"] = lvl3cmbr
+    newCfg["lvl3spd"] = lvl3spd
+    newCfg["lvl3end"] = lvl3end
+    newCfg["lvl3stun"] = lvl3stun
+    newCfg["lvl3crit"] = lvl3crit
+    newCfg["lvl4dmgl"] = lvl4dmgl
+    newCfg["lvl4dmgr"] = lvl4dmgr
+    newCfg["lvl4cmbl"] = lvl4cmbl
+    newCfg["lvl4cmbr"] = lvl4cmbr
+    newCfg["lvl4spd"] = lvl4spd
+    newCfg["lvl4end"] = lvl4end
+    newCfg["lvl4stun"] = lvl4stun
+    newCfg["lvl4crit"] = lvl4crit
+
     with open(cfDir, 'w') as file:
         json.dump(newCfg, file)
 
@@ -234,7 +333,7 @@ def kewlDatt(ptf, kewlName, newName):
     with open(ptf, "wb") as f:
         f.write(ff)
 
-def writeToTable(crispSel, iName, UID, wpName, igName, igDescs, igDescl, wpCat, lv1, lv2, lv3, lv4):
+def writeToTable(crispSel, iName, UID, wpName, igName, igDescs, igDescl, wpCat, lvl1dmgl, lvl1dmgr, lvl1cmbl, lvl1cmbr, lvl1spd, lvl1end, lvl1stun, lvl1crit, lvl2dmgl, lvl2dmgr, lvl2cmbl, lvl2cmbr, lvl2spd, lvl2end, lvl2stun, lvl2crit, lvl3dmgl, lvl3dmgr, lvl3cmbl, lvl3cmbr, lvl3spd, lvl3end, lvl3stun, lvl3crit, lvl4dmgl, lvl4dmgr, lvl4cmbl, lvl4cmbr, lvl4spd, lvl4end, lvl4stun, lvl4crit):
     #SELECTS THE TABLE TO SET PATH, OFFSET AND TEMPLATE
     if crispSel == 1:
         crispPart = coregmItemInfoTableCrisp
@@ -283,14 +382,38 @@ def writeToTable(crispSel, iName, UID, wpName, igName, igDescs, igDescl, wpCat, 
     crispPart = crispPart.replace("newIGDescs", igDescs)
     crispPart = crispPart.replace("newIGDescl", igDescl)
     crispPart = crispPart.replace("newCat", wpCat)
-    crispPart = crispPart.replace("lv1a", lv1)
-    crispPart = crispPart.replace("lv1b", str(int(lv1) + 20))
-    crispPart = crispPart.replace("lv2a", lv2)
-    crispPart = crispPart.replace("lv2b", str(int(lv2) + 20))
-    crispPart = crispPart.replace("lv3a", lv3)
-    crispPart = crispPart.replace("lv3b", str(int(lv3) + 20))
-    crispPart = crispPart.replace("lv4a", lv4)
-    crispPart = crispPart.replace("lv4b", str(int(lv4) + 20))
+    crispPart = crispPart.replace("lvl1dmgl", lvl1dmgl)
+    crispPart = crispPart.replace("lvl1dmgr", lvl1dmgr)
+    crispPart = crispPart.replace("lvl1cmbl", lvl1cmbl)
+    crispPart = crispPart.replace("lvl1cmbr", lvl1cmbr)
+    crispPart = crispPart.replace("lvl1spd", lvl1spd)
+    crispPart = crispPart.replace("lvl1end", lvl1end)
+    crispPart = crispPart.replace("lvl1stun", lvl1stun)
+    crispPart = crispPart.replace("lvl1crit", lvl1crit)
+    crispPart = crispPart.replace("lvl2dmgl", lvl2dmgl)
+    crispPart = crispPart.replace("lvl2dmgr", lvl2dmgr)
+    crispPart = crispPart.replace("lvl2cmbl", lvl2cmbl)
+    crispPart = crispPart.replace("lvl2cmbr", lvl2cmbr)
+    crispPart = crispPart.replace("lvl2spd", lvl2spd)
+    crispPart = crispPart.replace("lvl2end", lvl2end)
+    crispPart = crispPart.replace("lvl2stun", lvl2stun)
+    crispPart = crispPart.replace("lvl2crit", lvl2crit)
+    crispPart = crispPart.replace("lvl3dmgl", lvl3dmgl)
+    crispPart = crispPart.replace("lvl3dmgr", lvl3dmgr)
+    crispPart = crispPart.replace("lvl3cmbl", lvl3cmbl)
+    crispPart = crispPart.replace("lvl3cmbr", lvl3cmbr)
+    crispPart = crispPart.replace("lvl3spd", lvl3spd)
+    crispPart = crispPart.replace("lvl3end", lvl3end)
+    crispPart = crispPart.replace("lvl3stun", lvl3stun)
+    crispPart = crispPart.replace("lvl3crit", lvl3crit)
+    crispPart = crispPart.replace("lvl4dmgl", lvl4dmgl)
+    crispPart = crispPart.replace("lvl4dmgr", lvl4dmgr)
+    crispPart = crispPart.replace("lvl4cmbl", lvl4cmbl)
+    crispPart = crispPart.replace("lvl4cmbr", lvl4cmbr)
+    crispPart = crispPart.replace("lvl4spd", lvl4spd)
+    crispPart = crispPart.replace("lvl4end", lvl4end)
+    crispPart = crispPart.replace("lvl4stun", lvl4stun)
+    crispPart = crispPart.replace("lvl4crit", lvl4crit)
     #crispPart = crispPart.replace("wpfamily")
     #OPEN TABLE AND LOAD INTO STRING
     with open(tablePath, "r") as f:
@@ -304,11 +427,11 @@ def writeToTable(crispSel, iName, UID, wpName, igName, igDescs, igDescl, wpCat, 
         tableContents = "".join(tableContents)
         f.write(tableContents)
 
-def WriteAllTables(a, b, c, d, e, f, g, h, i, j, k):
+def WriteAllTables(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, a1, b1, c1, d1, e1, f1, g1, h1, i1, j1, k1, l1, m1):
     allTables = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     #ecexutes the tablewrite on all currently accesible tables
     for int in allTables:
-        writeToTable(int, a, b, c, d, e, f, g, h, i, j, k)
+        writeToTable(int, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, a1, b1, c1, d1, e1, f1, g1, h1, i1, j1, k1, l1, m1)
 
 
 
