@@ -13005,7 +13005,7 @@
             ]
         },
         {
-            "event_name": "CORE_WP_HELP_S_1005",
+            "event_name": "CORE_WP_HELP_S_1009",
             "texts": [
                 {
                     "vpos": 0,
@@ -13016,7 +13016,7 @@
             ]
         },
         {
-            "event_name": "CORE_WP_HELP_1005",
+            "event_name": "CORE_WP_HELP_1009",
             "texts": [
                 {
                     "vpos": 0,
@@ -13027,7 +13027,46 @@
             ]
         },
         {
-            "event_name": "CORE_WP_NAME_1005",
+            "event_name": "CORE_WP_NAME_1009",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Raiden type 40"
+                },
+                {
+                    "vpos": 1,
+                    "hpos": 0,
+                    "font": 5,
+                    "line": "Raiden type 40"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_S_1008",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Short Desc"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_1008",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Long Desc."
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_NAME_1008",
             "texts": [
                 {
                     "vpos": 0,
@@ -13040,6 +13079,123 @@
                     "hpos": 0,
                     "font": 5,
                     "line": "NAMC Weapon"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_S_1007",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Short Desc"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_1007",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Long Desc."
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_NAME_1007",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Dynamo Roller"
+                },
+                {
+                    "vpos": 1,
+                    "hpos": 0,
+                    "font": 5,
+                    "line": "Dynamo Roller"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_S_1006",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Short Desc"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_1006",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Long Desc."
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_NAME_1006",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Bloodroot Vases"
+                },
+                {
+                    "vpos": 1,
+                    "hpos": 0,
+                    "font": 5,
+                    "line": "Bloodroot Vases"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_S_1005",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "For fucks sake"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_1005",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Hello World."
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_NAME_1005",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Bloodroot Twinblade"
+                },
+                {
+                    "vpos": 1,
+                    "hpos": 0,
+                    "font": 5,
+                    "line": "Bloodroot Twinblade"
                 }
             ]
         },
@@ -13050,7 +13206,7 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "An ancient spear"
+                    "line": "dagger"
                 }
             ]
         },
@@ -13061,7 +13217,7 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "A Relic."
+                    "line": "Long Desc."
                 }
             ]
         },
@@ -13072,13 +13228,13 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "New Spear"
+                    "line": "Bloodroot Dagger"
                 },
                 {
                     "vpos": 1,
                     "hpos": 0,
                     "font": 5,
-                    "line": "New Spear"
+                    "line": "Bloodroot Dagger"
                 }
             ]
         },

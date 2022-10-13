@@ -196,6 +196,11 @@ def conWeaponType(re):
     if re == "Combat Bracers":
         return "3"
 
+
+def resetConfig(cfDir):
+    with open(cfDir, 'w') as f:
+        json.dump(defaultWPConf, f)
+    print("config reset")
 def readwpConfig(cfDir):
     if not os.path.isfile(cfDir):
         with open(cfDir, 'w') as f:
@@ -313,10 +318,6 @@ with open("yamm_data/configTemplates/coreWeaponStrenghtTable.txt", 'r') as file:
     coreWeaponStrenghtTableCrisp = file.read()
 with open("yamm_data/configTemplates/messcore.txt", 'r') as file:
     uimesscoreCrisp = file.read()
-with open("yamm_data/configTemplates/txtcoreadd.txt", 'r') as file:
-    txtcoreaddCrisp = file.read()
-with open("yamm_data/configTemplates/txtpauseadd.txt", 'r') as file:
-    txtpauseaddCrisp = file.read()
 with open("yamm_data/configTemplates/coreweaponParam.txt", 'r') as file:
     weaponParamCrisp = file.read()
 #currently in use for replacign binary strings
@@ -354,14 +355,6 @@ def writeToTable(crispSel, iName, UID, wpName, igName, igDescs, igDescl, wpCat, 
         tablePath = "yamm_data/ui_core_us/messcore.json"
         lineOffset = 13006
     if crispSel == 7:
-        crispPart = txtcoreaddCrisp
-        tablePath = "yamm_data/txt_core_add_us/txt_core_add.json"
-        lineOffset = 1082
-    if crispSel == 8:
-        crispPart = txtpauseaddCrisp
-        tablePath = "yamm_data/txt_pause_add_us/txt_pause_add.json"
-        lineOffset = 143
-    if crispSel == 9:
         crispPart = weaponParamCrisp
         tablePath = "yamm_data/core/WeaponParam.csv"
         lineOffset = 40
@@ -422,7 +415,7 @@ def writeToTable(crispSel, iName, UID, wpName, igName, igDescs, igDescl, wpCat, 
         f.write(tableContents)
 
 def WriteAllTables(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, a1, b1, c1, d1, e1, f1, g1, h1, i1, j1, k1, l1, m1):
-    allTables = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    allTables = [1, 2, 3, 4, 5, 6, 7]
     #ecexutes the tablewrite on all currently accesible tables
     for int in allTables:
         writeToTable(int, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, a1, b1, c1, d1, e1, f1, g1, h1, i1, j1, k1, l1, m1)
@@ -456,6 +449,14 @@ def replace_in_hex(file_to_manipulate, stringtoreplace, stringtoplace):
     with open(file_to_manipulate, "wb") as file:
         file.write(rp)
 
+
+def shuffleIdentifierMisctex(wtaFilePath):
+    with open(wtaFilePath, "rb") as wtab_fp:
+        wtaIdTable = WTA(wtab_fp).wtaTextureIdentifier
+    for str in wtaIdTable:
+        newIDd=genInsertableID(wtaFilePath)
+        revTurnTab= " ".join(identifierTurn(str)[i:i+2] for i in range(0, len(identifierTurn(str)), 2))
+        replace_in_hex(wtaFilePath, revTurnTab, newIDd)
 
 def shuffleIdentifierWta(wtaFilePath, wmbFilePath):
     with open(wtaFilePath, "rb") as wtab_fp:

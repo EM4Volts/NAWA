@@ -1,1 +1,0 @@
-    "CORE_WP_NAME_newUid": "newIGname",

@@ -5,7 +5,6 @@ import journey_tools as jout
 import yamm_data.fileporters.xmlToBxm as xml2Bxm
 import yamm_data.fileporters.newexport_dat as newdattExpo
 import yamm_data.fileporters.newdat_unpacker as newdattUn
-import yamm_data.fileporters.tmd as tmd
 
 def newpackDatt(dattDir, name):
     dct = jout.genPathList(dattDir)
@@ -40,10 +39,8 @@ def main():
     nierModsDir= config[1]
 
     #Copy vanilla xml and json files to the work folders
-    shutil.copyfile("yamm_data/xml2Merge/txt_pause_add_us/txt_pause_add.json", "yamm_data/txt_pause_add_us/txt_pause_add.json")
     shutil.copyfile("yamm_data/xml2Merge/core/WeaponStrengthenTable.xml", "yamm_data/core/WeaponStrengthenTable.xml")
     shutil.copyfile("yamm_data/xml2Merge/core/WeaponParam.csv", "yamm_data/core/WeaponParam.csv")
-    shutil.copyfile("yamm_data/xml2Merge/txt_core_add_us/txt_core_add.json", "yamm_data/txt_core_add_us/txt_core_add.json")
     shutil.copyfile("yamm_data/xml2Merge/ui_core_us/messcore.json", "yamm_data/ui_core_us/messcore.json")
     for filename in os.listdir("yamm_data/xml2Merge/coregm"):
         shutil.copyfile("yamm_data/xml2Merge/coregm/" + filename, "yamm_data/coregm/" + filename)
@@ -70,6 +67,44 @@ def main():
                     if not curStr.startswith(newWpName):
                         delString = "deploy/wp/" + newWpName + "_dat/" + str(filename)[11:][:-2]
                         os.remove(delString)
+                if os.path.isdir(wkDir + "/misctex"):
+                    for filename in os.scandir(wkDir + "/misctex"):
+                        misFile = str(filename)[11:][:-2]
+                        print(misFile)
+                        if eFile.endswith(".dat"):
+                            shutil.copyfile(wkDir + "/misctex/" + misFile, 'deploy/misctex/' + "misctex_" + newWpName + ".dat")
+                            newdattUn.main('deploy/misctex/' + "misctex_" + newWpName + ".dat",'deploy/misctex/' + "misctex_" + newWpName + "_dat")
+                            for filename in os.scandir("deploy/misctex/" + "misctex_" + newWpName + "_dat"):
+                                try:
+                                    shutil.copyfile("deploy/misctex/" + "misctex_" + newWpName + "_dat/" + str(filename)[11:][:-2], "deploy/misctex/" + "misctex_" + newWpName + "_dat/" + "misctex_" + newWpName + str(filename)[25:][:-2])
+                                except shutil.SameFileError:
+                                    pass
+                                curStr= str(filename)[11:][:-2]
+                                if not curStr.startswith(newWpName):
+                                    delString = "deploy/misctex/" + newWpName + "_dat/" + str(filename)[11:][:-2]
+                                    try:
+                                        os.remove(delString)
+                                    except:
+                                        pass
+                            jout.shuffleIdentifierMisctex( "deploy/misctex/" + "misctex_" + newWpName + "_dat/" + "misctex_" +newWpName + ".wta")
+                            newpackDatt("deploy/misctex/" + "misctex_" + newWpName + "_dat/", "deploy/misctex/" + "misctex_" +newWpName + ".dat")
+                        if misFile.endswith(".dtt"):
+                            shutil.copyfile(wkDir + "/misctex/" + misFile, 'deploy/misctex/' + "misctex_" + newWpName + ".dtt")
+                            newdattUn.main('deploy/misctex/' + "misctex_" + newWpName + ".dtt",'deploy/misctex/' + "misctex_" + newWpName + "_dtt")
+                            for filename in os.scandir("deploy/misctex/" + "misctex_" + newWpName + "_dtt"):
+                                try:
+                                    shutil.copyfile("deploy/misctex/" + "misctex_" + newWpName + "_dtt/" + str(filename)[11:][:-2], "deploy/misctex/" + "misctex_" + newWpName + "_dtt/" + "misctex_" + newWpName + str(filename)[25:][:-2])
+                                except shutil.SameFileError:
+                                    pass
+                                curStr= str(filename)[11:][:-2]
+                                if not curStr.startswith(newWpName):
+                                    delString = "deploy/misctex/" + newWpName + "_dtt/" + str(filename)[11:][:-2]
+                                    try:
+                                        os.remove(delString)
+                                    except:
+                                        pass
+                            newpackDatt("deploy/misctex/" + "misctex_" + newWpName + "_dtt/", "deploy/misctex/" + "misctex_" +newWpName + ".dtt")
+
             if eFile.endswith(".dtt"):
                 shutil.copyfile(wkDir + "/wp/" + eFile, 'deploy/wp/' + newWpName + ".dtt")
                 newdattUn.main('deploy/wp/' + newWpName + ".dtt",'deploy/wp/' + newWpName + "_dtt")
@@ -85,11 +120,10 @@ def main():
                 jout.shuffleIdentifierWta( "deploy/wp/" + newWpName + "_dat/" + newWpName + ".wta", "deploy/wp/" + newWpName + "_dtt/" + newWpName + ".wmb")
                 newpackDatt("deploy/wp/" + newWpName + "_dat/", "deploy/wp/" + newWpName + ".dat")
                 newpackDatt("deploy/wp/" + newWpName + "_dtt/", "deploy/wp/" + newWpName + ".dtt")
+                newpackDatt("deploy/misctex/" + "misctex_" + newWpName + "_dtt/", "deploy/misctex/" + "misctex_" +newWpName + ".dtt")
+
     print("[Converting new XML...]")
     xml2Bxm.main(xmlList)
-    print("[Building TMD...]")
-    tmd.json_to_tmd("yamm_data/txt_core_add_us/txt_core_add.json")
-    tmd.json_to_tmd("yamm_data/txt_pause_add_us/txt_pause_add.json")
     print("[Building MCD...]")
     mcd.json_to_mcd("yamm_data/ui_core_us/messcore.json", "yamm_data/ui_core_us/messcore.mcd")
 
@@ -97,7 +131,5 @@ def main():
     newpackDatt("yamm_data/core/", "deploy/core/core.dat")
     newpackDatt("yamm_data/coregm/", "deploy/core/coregm.dat")
     dattExpo.main("yamm_data/ui_core_us/", "deploy/ui/ui_core_us.dat")
-    dattExpo.main("yamm_data/txt_core_add_us/", "deploy/txtmess/txt_core_add_us.dat")
-    dattExpo.main("yamm_data/txt_pause_add_us/", "deploy/txtmess/txt_pause_add_us.dat")
     shutil.copytree("deploy/", nierDatDir, copy_function=shutil.move, dirs_exist_ok=True)
     print("[Mods successfuly deployed!]")

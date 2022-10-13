@@ -4,7 +4,7 @@ from tkinter import *
 from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage, filedialog
 import journey_tools as jout
 import nawm
-nawmversion = "NAWM version 1.0.4"
+nawmversion = "NAWM version 1.0.5"
 
 OUTPUT_PATH = Path(__file__).parent
 ASSETS_PATH = OUTPUT_PATH / Path("./assets")
@@ -12,7 +12,7 @@ ASSETS_PATH = OUTPUT_PATH / Path("./assets")
 new=""
 modList = []
 
-
+conDir= ""
 def check_names(path):
     if os.path.exists(os.path.dirname(path)):
         return True
@@ -101,13 +101,14 @@ canvas.create_rectangle(
     fill="#595959",
     outline="")
 def key(event):
-    global new
+    global new, conDir
     try:
         new= lb.get(lb.curselection())
     except:
         pass
     conDir = nierModsDir + "/" + new + "/config.json"
     updateConfigWindow(conDir)
+
 lb=Listbox(window,bg="#383838", height=22,width=93, foreground="white")
 lb.place(x=0, y=0)
 lb.bind('<<ListboxSelect>>',key)
@@ -146,7 +147,7 @@ canvas.create_rectangle(
 
 configU=Label(window, bg="#474747", fg='white', font=("RobotoRoman CondensedRegular", 36 * -1))
 configU.place(x=577.0, y=15.0)
-
+configU.config(text = "Select a Weapon to start")
 canvas.create_rectangle(
     0.0,
     362.0,
@@ -217,6 +218,8 @@ button_3 = Button(
     command=lambda: [selectNierDataDir(), generateConfig()],
     relief="flat"
 )
+
+
 button_3.place(
     x=12.0,
     y=686.0,
@@ -1076,7 +1079,7 @@ def updateConfigWindow(dir):
     config3.delete(0, END)
     config3.insert(END, config_data[2])
 
-    configU.config(text = new[:20] + "...")
+    configU.config(text = new[:32] + "...")
     jout.conWeaponType(config_data[3])
     variable.set(jout.conWeaponType(config_data[3]))
     
@@ -1190,6 +1193,24 @@ def updateConfigFile(dir):
 
 if check_names(nierModsDir):
     buildModList()
+
+button_image_reset = PhotoImage(
+    file=relative_to_assets("button_reset.png"))
+button_reset = Button(
+    image=button_image_reset,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: [jout.resetConfig(conDir), updateConfigWindow(conDir)],
+    relief="flat"
+)
+
+button_reset.place(
+    x=940.0,
+    y=275.0,
+    width=190.0,
+    height=35.0
+)
+
 window.resizable(False, False)
 window.iconbitmap("yamm_data/namc.ico")
 window.title('NAWM NieR: Automata Weapon Manager')

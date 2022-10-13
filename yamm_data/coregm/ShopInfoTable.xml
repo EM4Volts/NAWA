@@ -3565,7 +3565,7 @@
 				<State_5>1</State_5>
 				<State_6>1</State_6>
 			</weapon_beastlord>
-            <weapon_ezujtvddiow>
+            <weapon_uzyqpyrewwe>
                 <State_0>1</State_0>
                 <State_1>1</State_1>
                 <State_2>1</State_2>
@@ -3573,8 +3573,8 @@
                 <State_4>1</State_4>
                 <State_5>1</State_5>
                 <State_6>1</State_6>
-            </weapon_ezujtvddiow>
-            <weapon_xyliagqpfic>
+            </weapon_uzyqpyrewwe>
+            <weapon_uynlxgiinai>
                 <State_0>1</State_0>
                 <State_1>1</State_1>
                 <State_2>1</State_2>
@@ -3582,7 +3582,43 @@
                 <State_4>1</State_4>
                 <State_5>1</State_5>
                 <State_6>1</State_6>
-            </weapon_xyliagqpfic>
+            </weapon_uynlxgiinai>
+            <weapon_yfjqsbwgivz>
+                <State_0>1</State_0>
+                <State_1>1</State_1>
+                <State_2>1</State_2>
+                <State_3>1</State_3>
+                <State_4>1</State_4>
+                <State_5>1</State_5>
+                <State_6>1</State_6>
+            </weapon_yfjqsbwgivz>
+            <weapon_gpmnthjvxxj>
+                <State_0>1</State_0>
+                <State_1>1</State_1>
+                <State_2>1</State_2>
+                <State_3>1</State_3>
+                <State_4>1</State_4>
+                <State_5>1</State_5>
+                <State_6>1</State_6>
+            </weapon_gpmnthjvxxj>
+            <weapon_hskdioyaybx>
+                <State_0>1</State_0>
+                <State_1>1</State_1>
+                <State_2>1</State_2>
+                <State_3>1</State_3>
+                <State_4>1</State_4>
+                <State_5>1</State_5>
+                <State_6>1</State_6>
+            </weapon_hskdioyaybx>
+            <weapon_frtxhvlolxk>
+                <State_0>1</State_0>
+                <State_1>1</State_1>
+                <State_2>1</State_2>
+                <State_3>1</State_3>
+                <State_4>1</State_4>
+                <State_5>1</State_5>
+                <State_6>1</State_6>
+            </weapon_frtxhvlolxk>
 		</Item>
 	</shop_RC_Smith>
 	<shop_PV_Smith>
