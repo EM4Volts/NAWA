@@ -66,7 +66,10 @@ In my tests no. Only when u redeploy the weapon ids may change, so a weapon in y
 
 Just delete the core, ui, txtmess and wp folders in your data folder.
 
+#### Any problems ingame?
 
+Sadly yes, currently the story and details tab of a weapon will softlock the game, dont press them. the details tab will be openable in
+a future update, story is sadly hardcoded and will never be accesible
 
 
 
