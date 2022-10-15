@@ -49,7 +49,6 @@ def main():
     jout.cleanDeploy()
     for filename in os.scandir(nierModsDir):
         wkDir = str(filename.path)
-        misctex_Files_Folder = nierModsDir + "/" + filename.name + "/misctex"
         wpCFGdata = jout.readwpConfig(wkDir + "/config.json")
         newWpName = jout.getWPfileName(wpCFGdata[3])
         internalWeaponID = 'weapon_' + ''.join(random.choice(string.ascii_lowercase) for _ in range(11))
