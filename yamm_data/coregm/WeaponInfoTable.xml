@@ -1256,7 +1256,7 @@
 				<Label>_</Label>
 			</Lv_5>
 		</weapon_dlc_combat>
-        <weapon_uzyqpyrewwe>
+        <weapon_jzjimgqnowy>
             <ObjID>wp0004</ObjID>
             <UniqueID>1009</UniqueID>
 			<Category>0</Category>
@@ -1287,9 +1287,9 @@
 				<Increase>undefined</Increase>
 				<Label>_</Label>
 			</Lv_5>
-        </weapon_uzyqpyrewwe>
-        <weapon_uynlxgiinai>
-            <ObjID>wp0202</ObjID>
+        </weapon_jzjimgqnowy>
+        <weapon_ypmhjvhtlyj>
+            <ObjID>wp0201</ObjID>
             <UniqueID>1008</UniqueID>
 			<Category>1</Category>
 			<Special1>3</Special1>
@@ -1319,8 +1319,8 @@
 				<Increase>undefined</Increase>
 				<Label>_</Label>
 			</Lv_5>
-        </weapon_uynlxgiinai>
-        <weapon_yfjqsbwgivz>
+        </weapon_ypmhjvhtlyj>
+        <weapon_vsmgxkekdse>
             <ObjID>wp0002</ObjID>
             <UniqueID>1007</UniqueID>
 			<Category>0</Category>
@@ -1351,11 +1351,11 @@
 				<Increase>undefined</Increase>
 				<Label>_</Label>
 			</Lv_5>
-        </weapon_yfjqsbwgivz>
-        <weapon_gpmnthjvxxj>
-            <ObjID>wp0201</ObjID>
+        </weapon_vsmgxkekdse>
+        <weapon_lsdrkcaiemd>
+            <ObjID>wp0601</ObjID>
             <UniqueID>1006</UniqueID>
-			<Category>1</Category>
+			<Category>3</Category>
 			<Special1>3</Special1>
 			<Special2>1070</Special2>
 			<Lv_1>
@@ -1383,8 +1383,8 @@
 				<Increase>undefined</Increase>
 				<Label>_</Label>
 			</Lv_5>
-        </weapon_gpmnthjvxxj>
-        <weapon_hskdioyaybx>
+        </weapon_lsdrkcaiemd>
+        <weapon_rjfmorchxcj>
             <ObjID>wp0401</ObjID>
             <UniqueID>1005</UniqueID>
 			<Category>2</Category>
@@ -1415,8 +1415,8 @@
 				<Increase>undefined</Increase>
 				<Label>_</Label>
 			</Lv_5>
-        </weapon_hskdioyaybx>
-        <weapon_frtxhvlolxk>
+        </weapon_rjfmorchxcj>
+        <weapon_kouklbrdzpf>
             <ObjID>wp0001</ObjID>
             <UniqueID>1004</UniqueID>
 			<Category>0</Category>
@@ -1447,6 +1447,6 @@
 				<Increase>undefined</Increase>
 				<Label>_</Label>
 			</Lv_5>
-        </weapon_frtxhvlolxk>
+        </weapon_kouklbrdzpf>
 	</Weapon>
 </WeaponInfo>

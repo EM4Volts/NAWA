@@ -14,6 +14,8 @@ def copyFold(source,dest): #stolen from stackvoerflow lol
     os.mkdir(dest)
     dest_dir = os.path.join(dest,os.path.basename(source))
     shutil.copytree(source,dest_dir)
+renameblacklist = ["file_order.metadata", "hash_data.metadata"]
+
 
 def main():
     if not os.path.isdir("deploy"):
@@ -44,10 +46,10 @@ def main():
     shutil.copyfile("yamm_data/xml2Merge/ui_core_us/messcore.json", "yamm_data/ui_core_us/messcore.json")
     for filename in os.listdir("yamm_data/xml2Merge/coregm"):
         shutil.copyfile("yamm_data/xml2Merge/coregm/" + filename, "yamm_data/coregm/" + filename)
-    curWhitelist = ["file_order.metadata", "hash_data.metadata","dat_info.json"]
     jout.cleanDeploy()
     for filename in os.scandir(nierModsDir):
         wkDir = str(filename.path)
+        misctex_Files_Folder = nierModsDir + "/" + filename.name + "/misctex"
         wpCFGdata = jout.readwpConfig(wkDir + "/config.json")
         newWpName = jout.getWPfileName(wpCFGdata[3])
         internalWeaponID = 'weapon_' + ''.join(random.choice(string.ascii_lowercase) for _ in range(11))
@@ -67,43 +69,6 @@ def main():
                     if not curStr.startswith(newWpName):
                         delString = "deploy/wp/" + newWpName + "_dat/" + str(filename)[11:][:-2]
                         os.remove(delString)
-                if os.path.isdir(wkDir + "/misctex"):
-                    for filename in os.scandir(wkDir + "/misctex"):
-                        misFile = str(filename)[11:][:-2]
-                        print(misFile)
-                        if eFile.endswith(".dat"):
-                            shutil.copyfile(wkDir + "/misctex/" + misFile, 'deploy/misctex/' + "misctex_" + newWpName + ".dat")
-                            newdattUn.main('deploy/misctex/' + "misctex_" + newWpName + ".dat",'deploy/misctex/' + "misctex_" + newWpName + "_dat")
-                            for filename in os.scandir("deploy/misctex/" + "misctex_" + newWpName + "_dat"):
-                                try:
-                                    shutil.copyfile("deploy/misctex/" + "misctex_" + newWpName + "_dat/" + str(filename)[11:][:-2], "deploy/misctex/" + "misctex_" + newWpName + "_dat/" + "misctex_" + newWpName + str(filename)[25:][:-2])
-                                except shutil.SameFileError:
-                                    pass
-                                curStr= str(filename)[11:][:-2]
-                                if not curStr.startswith(newWpName):
-                                    delString = "deploy/misctex/" + newWpName + "_dat/" + str(filename)[11:][:-2]
-                                    try:
-                                        os.remove(delString)
-                                    except:
-                                        pass
-                            jout.shuffleIdentifierMisctex( "deploy/misctex/" + "misctex_" + newWpName + "_dat/" + "misctex_" +newWpName + ".wta")
-                            newpackDatt("deploy/misctex/" + "misctex_" + newWpName + "_dat/", "deploy/misctex/" + "misctex_" +newWpName + ".dat")
-                        if misFile.endswith(".dtt"):
-                            shutil.copyfile(wkDir + "/misctex/" + misFile, 'deploy/misctex/' + "misctex_" + newWpName + ".dtt")
-                            newdattUn.main('deploy/misctex/' + "misctex_" + newWpName + ".dtt",'deploy/misctex/' + "misctex_" + newWpName + "_dtt")
-                            for filename in os.scandir("deploy/misctex/" + "misctex_" + newWpName + "_dtt"):
-                                try:
-                                    shutil.copyfile("deploy/misctex/" + "misctex_" + newWpName + "_dtt/" + str(filename)[11:][:-2], "deploy/misctex/" + "misctex_" + newWpName + "_dtt/" + "misctex_" + newWpName + str(filename)[25:][:-2])
-                                except shutil.SameFileError:
-                                    pass
-                                curStr= str(filename)[11:][:-2]
-                                if not curStr.startswith(newWpName):
-                                    delString = "deploy/misctex/" + newWpName + "_dtt/" + str(filename)[11:][:-2]
-                                    try:
-                                        os.remove(delString)
-                                    except:
-                                        pass
-                            newpackDatt("deploy/misctex/" + "misctex_" + newWpName + "_dtt/", "deploy/misctex/" + "misctex_" +newWpName + ".dtt")
 
             if eFile.endswith(".dtt"):
                 shutil.copyfile(wkDir + "/wp/" + eFile, 'deploy/wp/' + newWpName + ".dtt")
@@ -120,7 +85,8 @@ def main():
                 jout.shuffleIdentifierWta( "deploy/wp/" + newWpName + "_dat/" + newWpName + ".wta", "deploy/wp/" + newWpName + "_dtt/" + newWpName + ".wmb")
                 newpackDatt("deploy/wp/" + newWpName + "_dat/", "deploy/wp/" + newWpName + ".dat")
                 newpackDatt("deploy/wp/" + newWpName + "_dtt/", "deploy/wp/" + newWpName + ".dtt")
-                newpackDatt("deploy/misctex/" + "misctex_" + newWpName + "_dtt/", "deploy/misctex/" + "misctex_" +newWpName + ".dtt")
+                shutil.rmtree("deploy/wp/" + newWpName + "_dat/")
+                shutil.rmtree("deploy/wp/" + newWpName + "_dtt/")
 
     print("[Converting new XML...]")
     xml2Bxm.main(xmlList)

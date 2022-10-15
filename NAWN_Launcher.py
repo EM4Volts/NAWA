@@ -2,9 +2,11 @@ from pathlib import Path
 import os
 from tkinter import *
 from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage, filedialog
+
+
 import journey_tools as jout
 import nawm
-nawmversion = "NAWM version 1.0.5"
+nawmversion = "NAWM version 1.1.2"
 
 OUTPUT_PATH = Path(__file__).parent
 ASSETS_PATH = OUTPUT_PATH / Path("./assets")
@@ -1213,5 +1215,5 @@ button_reset.place(
 
 window.resizable(False, False)
 window.iconbitmap("yamm_data/namc.ico")
-window.title('NAWM NieR: Automata Weapon Manager')
+window.title('NAWM | NieR: Automata Weapon Manager')
 window.mainloop()
