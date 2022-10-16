@@ -16,13 +16,11 @@ def copyFold(source,dest): #stolen from stackvoerflow lol
     shutil.copytree(source,dest_dir)
 renameblacklist = ["file_order.metadata", "hash_data.metadata"]
 
-
 def main():
     if not os.path.isdir("deploy"):
         os.makedirs("deploy/wp", 0o666)
         os.makedirs("deploy/core", 0o666)
         os.makedirs("deploy/ui", 0o666)
-        os.makedirs("deploy/txtmess", 0o666)
     #list of all xml files to convert
     xmlList = ["yamm_data/coregm/WeaponInfoTable.xml",
                "yamm_data/coregm/ItemInfoTable.xml",
@@ -81,6 +79,7 @@ def main():
                     if not curStr.startswith(newWpName):
                         delString = "deploy/wp/" + newWpName + "_dtt/" + str(filename)[11:][:-2]
                         os.remove(delString)
+
                 jout.shuffleIdentifierWta( "deploy/wp/" + newWpName + "_dat/" + newWpName + ".wta", "deploy/wp/" + newWpName + "_dtt/" + newWpName + ".wmb")
                 newpackDatt("deploy/wp/" + newWpName + "_dat/", "deploy/wp/" + newWpName + ".dat")
                 newpackDatt("deploy/wp/" + newWpName + "_dtt/", "deploy/wp/" + newWpName + ".dtt")

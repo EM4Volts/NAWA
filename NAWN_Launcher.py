@@ -2,8 +2,6 @@ from pathlib import Path
 import os
 from tkinter import *
 from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage, filedialog
-
-
 import journey_tools as jout
 import nawm
 nawmversion = "NAWM version 1.1.2"
@@ -15,6 +13,7 @@ new=""
 modList = []
 
 conDir= ""
+
 def check_names(path):
     if os.path.exists(os.path.dirname(path)):
         return True
@@ -33,12 +32,11 @@ cfgFile.close()
 nierDatDir= config[0]
 nierModsDir= config[1]
 cfgStruct = [nierDatDir, nierModsDir]
+
 def generateConfig():
     with open(r'configs/config.ini', 'w') as cfg:
         for str in cfgStruct:
             cfg.write("%s\n" % str)
-
-
 
 def selectNierDataDir():
     global nierDatDir
@@ -73,16 +71,13 @@ def buildModList():
 if check_names(nierModsDir):
     buildModList()
 
-
 def relative_to_assets(path: str) -> Path:
     return ASSETS_PATH / Path(path)
-
 
 window = Tk()
 
 window.geometry("1143x734")
 window.configure(bg = "#3A7FF6")
-
 
 canvas = Canvas(
     window,
@@ -148,7 +143,7 @@ canvas.create_rectangle(
 
 
 configU=Label(window, bg="#474747", fg='white', font=("RobotoRoman CondensedRegular", 36 * -1))
-configU.place(x=577.0, y=15.0)
+configU.place(x=571.0, y=15.0)
 configU.config(text = "Select a Weapon to start")
 canvas.create_rectangle(
     0.0,
@@ -220,7 +215,6 @@ button_3 = Button(
     command=lambda: [selectNierDataDir(), generateConfig()],
     relief="flat"
 )
-
 
 button_3.place(
     x=12.0,
@@ -364,7 +358,7 @@ canvas.create_text(
 
 canvas.create_text(
     664.0,
-    338.0,
+    329.0,
     anchor="nw",
     text="If you do not know what a value means leave it at its default.",
     fill="#FFFFFF",

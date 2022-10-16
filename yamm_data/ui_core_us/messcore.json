@@ -13005,6 +13005,123 @@
             ]
         },
         {
+            "event_name": "CORE_WP_HELP_S_1012",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_1012",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Long Desc."
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_NAME_1012",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Raiden type 40"
+                },
+                {
+                    "vpos": 1,
+                    "hpos": 0,
+                    "font": 5,
+                    "line": "Raiden type 40"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_S_1011",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Short Desc"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_1011",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Long Desc."
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_NAME_1011",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Popola"
+                },
+                {
+                    "vpos": 1,
+                    "hpos": 0,
+                    "font": 5,
+                    "line": "Popola"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_S_1010",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Short Desc"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_1010",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Long Desc."
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_NAME_1010",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Hydro Thing"
+                },
+                {
+                    "vpos": 1,
+                    "hpos": 0,
+                    "font": 5,
+                    "line": "Hydro Thing"
+                }
+            ]
+        },
+        {
             "event_name": "CORE_WP_HELP_S_1009",
             "texts": [
                 {
@@ -13033,13 +13150,13 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "Raiden type 40"
+                    "line": "Dynamo Roller"
                 },
                 {
                     "vpos": 1,
                     "hpos": 0,
                     "font": 5,
-                    "line": "Raiden type 40"
+                    "line": "Dynamo Roller"
                 }
             ]
         },
@@ -13072,13 +13189,13 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "Hydro Thing"
+                    "line": "Devola"
                 },
                 {
                     "vpos": 1,
                     "hpos": 0,
                     "font": 5,
-                    "line": "Hydro Thing"
+                    "line": "Devola"
                 }
             ]
         },
@@ -13089,7 +13206,7 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "Short Desc"
+                    "line": "A blade appears in each outstretched hand.\nA pair of wings form on each Warlock's back."
                 }
             ]
         },
@@ -13111,13 +13228,13 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "Dynamo Roller"
+                    "line": "Dawnblade"
                 },
                 {
                     "vpos": 1,
                     "hpos": 0,
                     "font": 5,
-                    "line": "Dynamo Roller"
+                    "line": "Dawnblade"
                 }
             ]
         },

@@ -6,6 +6,7 @@ def read_uint32(file) -> int:
 def to_uint(bs):
     return int.from_bytes(bs, byteorder='little', signed=False)
 
+
 class WTA(object):
     def __init__(self, wta_fp):
         super(WTA, self).__init__()
@@ -102,6 +103,8 @@ defaultWPConf = {
 "lvl4end": "100",
 "lvl4stun": "100",
 "lvl4crit": "0",
+"priPerk": "0003",
+"secPerk": "1003"
 }
 
 def getWPfileName(wpC):
@@ -131,7 +134,7 @@ def getWPfileName(wpC):
         if len(str(nWpn)) == 3:
             newuId = "0" + str(nWpn)
         if newuId in wpidBlacklist:
-            print("[WPNAME : " + str(newuId) + " in Use, retrying...]")
+            print("[Doing stuff")
         if newuId == indexEnd:
             print("[WPNAME ERROR: YOU RAN OUT OF SPACE IN THE " + cName + " CATEGORY, REMOVE A MOD FROM THE CATEGORY, THIS WEAPON WILL NOT BE EXPORTED")
             wpidnotFound = False
@@ -197,10 +200,18 @@ def conWeaponType(re):
         return "3"
 
 
+def translateSpecial(sId):
+    with open("configs/weaponspecials.json", "r") as specialA:
+        specialAs = specialA.read()
+    jsonSpecials = json.loads(specialAs)
+    toReSid = jsonSpecials[sId]
+    return toReSid
+
 def resetConfig(cfDir):
     with open(cfDir, 'w') as f:
         json.dump(defaultWPConf, f)
     print("config reset")
+
 def readwpConfig(cfDir):
     if not os.path.isfile(cfDir):
         with open(cfDir, 'w') as f:
