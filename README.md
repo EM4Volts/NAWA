@@ -1,5 +1,5 @@
 
-# NAWM
+# NAWA
 
 A NieR: Automata Weapon Manager allowing to add completely custom weapons to the game
 
@@ -34,10 +34,10 @@ Repeat this for each weapon. Do not put multiple dat or dtt files in a weapons f
 
 If the weapon you wanna put in came with a misctex file or folder delete them, currently the tool does not support adding custom misctex (soon added)
 
-If you have added a weapon folder white NAWM is running rechoose the mods folder to refresh the list (to be changed soon)
+If you have added a weapon folder white NAWA is running rechoose the mods folder to refresh the list (to be changed soon)
 
 
-**HOW TO USE NAWM:**
+**HOW TO USE NAWA:**
 
 Select the weapon you want to edit the Name, Stats and more in the list on the top right
 
