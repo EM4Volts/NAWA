@@ -3043,476 +3043,8 @@
 				<Quantity>1</Quantity>
 			</Material5>
 		</weapon_dlc_combat_lv4>
-        <weapon_njedjdtsxtj_lv2>
-            <ObjID>wp0008</ObjID>
-            <UniqueID>1016</UniqueID>
-            <lv>2</lv>
-            <cost>2500</cost>
-            <Material1>
-                <UniqueID>530</UniqueID>
-                <Quantity>5</Quantity>
-            </Material1>
-            <Material2>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material2>
-            <Material3>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material3>
-            <Material4>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material4>
-            <Material5>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material5>
-        </weapon_njedjdtsxtj_lv2>
-        <weapon_njedjdtsxtj_lv3>
-            <ObjID>wp0008</ObjID>
-            <UniqueID>1016</UniqueID>
-            <lv>3</lv>
-            <cost>5000</cost>
-            <Material1>
-                <UniqueID>610</UniqueID>
-                <Quantity>1</Quantity>
-            </Material1>
-            <Material2>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material2>
-            <Material3>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material3>
-            <Material4>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material4>
-            <Material5>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material5>
-        </weapon_njedjdtsxtj_lv3>
-        <weapon_njedjdtsxtj_lv4>
-            <ObjID>wp0008</ObjID>
-            <UniqueID>1016</UniqueID>
-            <lv>4</lv>
-            <cost>10000</cost>
-            <Material1>
-                <UniqueID>536</UniqueID>
-                <Quantity>1</Quantity>
-            </Material1>
-            <Material2>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material2>
-            <Material3>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material3>
-            <Material4>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material4>
-            <Material5>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material5>
-        </weapon_njedjdtsxtj_lv4>
-        <weapon_lwrtsvawrwt_lv2>
-            <ObjID>wp0007</ObjID>
-            <UniqueID>1015</UniqueID>
-            <lv>2</lv>
-            <cost>2500</cost>
-            <Material1>
-                <UniqueID>530</UniqueID>
-                <Quantity>5</Quantity>
-            </Material1>
-            <Material2>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material2>
-            <Material3>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material3>
-            <Material4>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material4>
-            <Material5>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material5>
-        </weapon_lwrtsvawrwt_lv2>
-        <weapon_lwrtsvawrwt_lv3>
-            <ObjID>wp0007</ObjID>
-            <UniqueID>1015</UniqueID>
-            <lv>3</lv>
-            <cost>5000</cost>
-            <Material1>
-                <UniqueID>610</UniqueID>
-                <Quantity>1</Quantity>
-            </Material1>
-            <Material2>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material2>
-            <Material3>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material3>
-            <Material4>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material4>
-            <Material5>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material5>
-        </weapon_lwrtsvawrwt_lv3>
-        <weapon_lwrtsvawrwt_lv4>
-            <ObjID>wp0007</ObjID>
-            <UniqueID>1015</UniqueID>
-            <lv>4</lv>
-            <cost>10000</cost>
-            <Material1>
-                <UniqueID>536</UniqueID>
-                <Quantity>1</Quantity>
-            </Material1>
-            <Material2>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material2>
-            <Material3>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material3>
-            <Material4>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material4>
-            <Material5>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material5>
-        </weapon_lwrtsvawrwt_lv4>
-        <weapon_uxzocknatcu_lv2>
-            <ObjID>wp0006</ObjID>
-            <UniqueID>1014</UniqueID>
-            <lv>2</lv>
-            <cost>2500</cost>
-            <Material1>
-                <UniqueID>530</UniqueID>
-                <Quantity>5</Quantity>
-            </Material1>
-            <Material2>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material2>
-            <Material3>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material3>
-            <Material4>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material4>
-            <Material5>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material5>
-        </weapon_uxzocknatcu_lv2>
-        <weapon_uxzocknatcu_lv3>
-            <ObjID>wp0006</ObjID>
-            <UniqueID>1014</UniqueID>
-            <lv>3</lv>
-            <cost>5000</cost>
-            <Material1>
-                <UniqueID>610</UniqueID>
-                <Quantity>1</Quantity>
-            </Material1>
-            <Material2>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material2>
-            <Material3>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material3>
-            <Material4>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material4>
-            <Material5>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material5>
-        </weapon_uxzocknatcu_lv3>
-        <weapon_uxzocknatcu_lv4>
-            <ObjID>wp0006</ObjID>
-            <UniqueID>1014</UniqueID>
-            <lv>4</lv>
-            <cost>10000</cost>
-            <Material1>
-                <UniqueID>536</UniqueID>
-                <Quantity>1</Quantity>
-            </Material1>
-            <Material2>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material2>
-            <Material3>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material3>
-            <Material4>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material4>
-            <Material5>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material5>
-        </weapon_uxzocknatcu_lv4>
-        <weapon_xexxrfelodf_lv2>
-            <ObjID>wp0201</ObjID>
-            <UniqueID>1012</UniqueID>
-            <lv>2</lv>
-            <cost>2500</cost>
-            <Material1>
-                <UniqueID>530</UniqueID>
-                <Quantity>5</Quantity>
-            </Material1>
-            <Material2>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material2>
-            <Material3>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material3>
-            <Material4>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material4>
-            <Material5>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material5>
-        </weapon_xexxrfelodf_lv2>
-        <weapon_xexxrfelodf_lv3>
-            <ObjID>wp0201</ObjID>
-            <UniqueID>1012</UniqueID>
-            <lv>3</lv>
-            <cost>5000</cost>
-            <Material1>
-                <UniqueID>610</UniqueID>
-                <Quantity>1</Quantity>
-            </Material1>
-            <Material2>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material2>
-            <Material3>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material3>
-            <Material4>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material4>
-            <Material5>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material5>
-        </weapon_xexxrfelodf_lv3>
-        <weapon_xexxrfelodf_lv4>
-            <ObjID>wp0201</ObjID>
-            <UniqueID>1012</UniqueID>
-            <lv>4</lv>
-            <cost>10000</cost>
-            <Material1>
-                <UniqueID>536</UniqueID>
-                <Quantity>1</Quantity>
-            </Material1>
-            <Material2>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material2>
-            <Material3>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material3>
-            <Material4>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material4>
-            <Material5>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material5>
-        </weapon_xexxrfelodf_lv4>
-        <weapon_fuhsfppqdwj_lv2>
-            <ObjID>wp0005</ObjID>
-            <UniqueID>1011</UniqueID>
-            <lv>2</lv>
-            <cost>2500</cost>
-            <Material1>
-                <UniqueID>530</UniqueID>
-                <Quantity>5</Quantity>
-            </Material1>
-            <Material2>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material2>
-            <Material3>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material3>
-            <Material4>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material4>
-            <Material5>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material5>
-        </weapon_fuhsfppqdwj_lv2>
-        <weapon_fuhsfppqdwj_lv3>
-            <ObjID>wp0005</ObjID>
-            <UniqueID>1011</UniqueID>
-            <lv>3</lv>
-            <cost>5000</cost>
-            <Material1>
-                <UniqueID>610</UniqueID>
-                <Quantity>1</Quantity>
-            </Material1>
-            <Material2>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material2>
-            <Material3>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material3>
-            <Material4>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material4>
-            <Material5>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material5>
-        </weapon_fuhsfppqdwj_lv3>
-        <weapon_fuhsfppqdwj_lv4>
-            <ObjID>wp0005</ObjID>
-            <UniqueID>1011</UniqueID>
-            <lv>4</lv>
-            <cost>10000</cost>
-            <Material1>
-                <UniqueID>536</UniqueID>
-                <Quantity>1</Quantity>
-            </Material1>
-            <Material2>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material2>
-            <Material3>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material3>
-            <Material4>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material4>
-            <Material5>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material5>
-        </weapon_fuhsfppqdwj_lv4>
-        <weapon_tsxtydlsrpc_lv2>
-            <ObjID>wp0004</ObjID>
-            <UniqueID>1010</UniqueID>
-            <lv>2</lv>
-            <cost>2500</cost>
-            <Material1>
-                <UniqueID>530</UniqueID>
-                <Quantity>5</Quantity>
-            </Material1>
-            <Material2>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material2>
-            <Material3>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material3>
-            <Material4>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material4>
-            <Material5>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material5>
-        </weapon_tsxtydlsrpc_lv2>
-        <weapon_tsxtydlsrpc_lv3>
-            <ObjID>wp0004</ObjID>
-            <UniqueID>1010</UniqueID>
-            <lv>3</lv>
-            <cost>5000</cost>
-            <Material1>
-                <UniqueID>610</UniqueID>
-                <Quantity>1</Quantity>
-            </Material1>
-            <Material2>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material2>
-            <Material3>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material3>
-            <Material4>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material4>
-            <Material5>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material5>
-        </weapon_tsxtydlsrpc_lv3>
-        <weapon_tsxtydlsrpc_lv4>
-            <ObjID>wp0004</ObjID>
-            <UniqueID>1010</UniqueID>
-            <lv>4</lv>
-            <cost>10000</cost>
-            <Material1>
-                <UniqueID>536</UniqueID>
-                <Quantity>1</Quantity>
-            </Material1>
-            <Material2>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material2>
-            <Material3>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material3>
-            <Material4>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material4>
-            <Material5>
-                <UniqueID>0</UniqueID>
-                <Quantity>0</Quantity>
-            </Material5>
-        </weapon_tsxtydlsrpc_lv4>
-        <weapon_jrjvofimlph_lv2>
-            <ObjID>wp0002</ObjID>
+        <weapon_ocacbvpqscc_lv2>
+            <ObjID>wp0009</ObjID>
             <UniqueID>1009</UniqueID>
             <lv>2</lv>
             <cost>2500</cost>
@@ -3536,9 +3068,9 @@
                 <UniqueID>0</UniqueID>
                 <Quantity>0</Quantity>
             </Material5>
-        </weapon_jrjvofimlph_lv2>
-        <weapon_jrjvofimlph_lv3>
-            <ObjID>wp0002</ObjID>
+        </weapon_ocacbvpqscc_lv2>
+        <weapon_ocacbvpqscc_lv3>
+            <ObjID>wp0009</ObjID>
             <UniqueID>1009</UniqueID>
             <lv>3</lv>
             <cost>5000</cost>
@@ -3562,9 +3094,9 @@
                 <UniqueID>0</UniqueID>
                 <Quantity>0</Quantity>
             </Material5>
-        </weapon_jrjvofimlph_lv3>
-        <weapon_jrjvofimlph_lv4>
-            <ObjID>wp0002</ObjID>
+        </weapon_ocacbvpqscc_lv3>
+        <weapon_ocacbvpqscc_lv4>
+            <ObjID>wp0009</ObjID>
             <UniqueID>1009</UniqueID>
             <lv>4</lv>
             <cost>10000</cost>
@@ -3588,9 +3120,9 @@
                 <UniqueID>0</UniqueID>
                 <Quantity>0</Quantity>
             </Material5>
-        </weapon_jrjvofimlph_lv4>
-        <weapon_behsybbsgze_lv2>
-            <ObjID>wp0403</ObjID>
+        </weapon_ocacbvpqscc_lv4>
+        <weapon_eiwbrvisnrl_lv2>
+            <ObjID>wp0008</ObjID>
             <UniqueID>1008</UniqueID>
             <lv>2</lv>
             <cost>2500</cost>
@@ -3614,9 +3146,9 @@
                 <UniqueID>0</UniqueID>
                 <Quantity>0</Quantity>
             </Material5>
-        </weapon_behsybbsgze_lv2>
-        <weapon_behsybbsgze_lv3>
-            <ObjID>wp0403</ObjID>
+        </weapon_eiwbrvisnrl_lv2>
+        <weapon_eiwbrvisnrl_lv3>
+            <ObjID>wp0008</ObjID>
             <UniqueID>1008</UniqueID>
             <lv>3</lv>
             <cost>5000</cost>
@@ -3640,9 +3172,9 @@
                 <UniqueID>0</UniqueID>
                 <Quantity>0</Quantity>
             </Material5>
-        </weapon_behsybbsgze_lv3>
-        <weapon_behsybbsgze_lv4>
-            <ObjID>wp0403</ObjID>
+        </weapon_eiwbrvisnrl_lv3>
+        <weapon_eiwbrvisnrl_lv4>
+            <ObjID>wp0008</ObjID>
             <UniqueID>1008</UniqueID>
             <lv>4</lv>
             <cost>10000</cost>
@@ -3666,9 +3198,9 @@
                 <UniqueID>0</UniqueID>
                 <Quantity>0</Quantity>
             </Material5>
-        </weapon_behsybbsgze_lv4>
-        <weapon_sabeciqxgna_lv2>
-            <ObjID>wp0601</ObjID>
+        </weapon_eiwbrvisnrl_lv4>
+        <weapon_nfjazturvyd_lv2>
+            <ObjID>wp0007</ObjID>
             <UniqueID>1007</UniqueID>
             <lv>2</lv>
             <cost>2500</cost>
@@ -3692,9 +3224,9 @@
                 <UniqueID>0</UniqueID>
                 <Quantity>0</Quantity>
             </Material5>
-        </weapon_sabeciqxgna_lv2>
-        <weapon_sabeciqxgna_lv3>
-            <ObjID>wp0601</ObjID>
+        </weapon_nfjazturvyd_lv2>
+        <weapon_nfjazturvyd_lv3>
+            <ObjID>wp0007</ObjID>
             <UniqueID>1007</UniqueID>
             <lv>3</lv>
             <cost>5000</cost>
@@ -3718,9 +3250,9 @@
                 <UniqueID>0</UniqueID>
                 <Quantity>0</Quantity>
             </Material5>
-        </weapon_sabeciqxgna_lv3>
-        <weapon_sabeciqxgna_lv4>
-            <ObjID>wp0601</ObjID>
+        </weapon_nfjazturvyd_lv3>
+        <weapon_nfjazturvyd_lv4>
+            <ObjID>wp0007</ObjID>
             <UniqueID>1007</UniqueID>
             <lv>4</lv>
             <cost>10000</cost>
@@ -3744,9 +3276,87 @@
                 <UniqueID>0</UniqueID>
                 <Quantity>0</Quantity>
             </Material5>
-        </weapon_sabeciqxgna_lv4>
-        <weapon_aujoayuqbui_lv2>
-            <ObjID>wp0402</ObjID>
+        </weapon_nfjazturvyd_lv4>
+        <weapon_qqbjgdkcdmo_lv2>
+            <ObjID>wp0403</ObjID>
+            <UniqueID>1403</UniqueID>
+            <lv>2</lv>
+            <cost>2500</cost>
+            <Material1>
+                <UniqueID>530</UniqueID>
+                <Quantity>5</Quantity>
+            </Material1>
+            <Material2>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material2>
+            <Material3>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material3>
+            <Material4>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material4>
+            <Material5>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material5>
+        </weapon_qqbjgdkcdmo_lv2>
+        <weapon_qqbjgdkcdmo_lv3>
+            <ObjID>wp0403</ObjID>
+            <UniqueID>1403</UniqueID>
+            <lv>3</lv>
+            <cost>5000</cost>
+            <Material1>
+                <UniqueID>610</UniqueID>
+                <Quantity>1</Quantity>
+            </Material1>
+            <Material2>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material2>
+            <Material3>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material3>
+            <Material4>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material4>
+            <Material5>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material5>
+        </weapon_qqbjgdkcdmo_lv3>
+        <weapon_qqbjgdkcdmo_lv4>
+            <ObjID>wp0403</ObjID>
+            <UniqueID>1403</UniqueID>
+            <lv>4</lv>
+            <cost>10000</cost>
+            <Material1>
+                <UniqueID>536</UniqueID>
+                <Quantity>1</Quantity>
+            </Material1>
+            <Material2>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material2>
+            <Material3>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material3>
+            <Material4>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material4>
+            <Material5>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material5>
+        </weapon_qqbjgdkcdmo_lv4>
+        <weapon_blmobmfebyn_lv2>
+            <ObjID>wp0006</ObjID>
             <UniqueID>1006</UniqueID>
             <lv>2</lv>
             <cost>2500</cost>
@@ -3770,9 +3380,9 @@
                 <UniqueID>0</UniqueID>
                 <Quantity>0</Quantity>
             </Material5>
-        </weapon_aujoayuqbui_lv2>
-        <weapon_aujoayuqbui_lv3>
-            <ObjID>wp0402</ObjID>
+        </weapon_blmobmfebyn_lv2>
+        <weapon_blmobmfebyn_lv3>
+            <ObjID>wp0006</ObjID>
             <UniqueID>1006</UniqueID>
             <lv>3</lv>
             <cost>5000</cost>
@@ -3796,9 +3406,9 @@
                 <UniqueID>0</UniqueID>
                 <Quantity>0</Quantity>
             </Material5>
-        </weapon_aujoayuqbui_lv3>
-        <weapon_aujoayuqbui_lv4>
-            <ObjID>wp0402</ObjID>
+        </weapon_blmobmfebyn_lv3>
+        <weapon_blmobmfebyn_lv4>
+            <ObjID>wp0006</ObjID>
             <UniqueID>1006</UniqueID>
             <lv>4</lv>
             <cost>10000</cost>
@@ -3822,9 +3432,87 @@
                 <UniqueID>0</UniqueID>
                 <Quantity>0</Quantity>
             </Material5>
-        </weapon_aujoayuqbui_lv4>
-        <weapon_gjhssgxwroa_lv2>
-            <ObjID>wp0001</ObjID>
+        </weapon_blmobmfebyn_lv4>
+        <weapon_ybhsfxkthpk_lv2>
+            <ObjID>wp0202</ObjID>
+            <UniqueID>1202</UniqueID>
+            <lv>2</lv>
+            <cost>2500</cost>
+            <Material1>
+                <UniqueID>530</UniqueID>
+                <Quantity>5</Quantity>
+            </Material1>
+            <Material2>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material2>
+            <Material3>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material3>
+            <Material4>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material4>
+            <Material5>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material5>
+        </weapon_ybhsfxkthpk_lv2>
+        <weapon_ybhsfxkthpk_lv3>
+            <ObjID>wp0202</ObjID>
+            <UniqueID>1202</UniqueID>
+            <lv>3</lv>
+            <cost>5000</cost>
+            <Material1>
+                <UniqueID>610</UniqueID>
+                <Quantity>1</Quantity>
+            </Material1>
+            <Material2>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material2>
+            <Material3>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material3>
+            <Material4>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material4>
+            <Material5>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material5>
+        </weapon_ybhsfxkthpk_lv3>
+        <weapon_ybhsfxkthpk_lv4>
+            <ObjID>wp0202</ObjID>
+            <UniqueID>1202</UniqueID>
+            <lv>4</lv>
+            <cost>10000</cost>
+            <Material1>
+                <UniqueID>536</UniqueID>
+                <Quantity>1</Quantity>
+            </Material1>
+            <Material2>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material2>
+            <Material3>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material3>
+            <Material4>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material4>
+            <Material5>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material5>
+        </weapon_ybhsfxkthpk_lv4>
+        <weapon_yfximdugwmc_lv2>
+            <ObjID>wp0005</ObjID>
             <UniqueID>1005</UniqueID>
             <lv>2</lv>
             <cost>2500</cost>
@@ -3848,9 +3536,9 @@
                 <UniqueID>0</UniqueID>
                 <Quantity>0</Quantity>
             </Material5>
-        </weapon_gjhssgxwroa_lv2>
-        <weapon_gjhssgxwroa_lv3>
-            <ObjID>wp0001</ObjID>
+        </weapon_yfximdugwmc_lv2>
+        <weapon_yfximdugwmc_lv3>
+            <ObjID>wp0005</ObjID>
             <UniqueID>1005</UniqueID>
             <lv>3</lv>
             <cost>5000</cost>
@@ -3874,9 +3562,9 @@
                 <UniqueID>0</UniqueID>
                 <Quantity>0</Quantity>
             </Material5>
-        </weapon_gjhssgxwroa_lv3>
-        <weapon_gjhssgxwroa_lv4>
-            <ObjID>wp0001</ObjID>
+        </weapon_yfximdugwmc_lv3>
+        <weapon_yfximdugwmc_lv4>
+            <ObjID>wp0005</ObjID>
             <UniqueID>1005</UniqueID>
             <lv>4</lv>
             <cost>10000</cost>
@@ -3900,9 +3588,9 @@
                 <UniqueID>0</UniqueID>
                 <Quantity>0</Quantity>
             </Material5>
-        </weapon_gjhssgxwroa_lv4>
-        <weapon_psgkzrellie_lv2>
-            <ObjID>wp0401</ObjID>
+        </weapon_yfximdugwmc_lv4>
+        <weapon_pdvelbqjbuk_lv2>
+            <ObjID>wp0004</ObjID>
             <UniqueID>1004</UniqueID>
             <lv>2</lv>
             <cost>2500</cost>
@@ -3926,9 +3614,9 @@
                 <UniqueID>0</UniqueID>
                 <Quantity>0</Quantity>
             </Material5>
-        </weapon_psgkzrellie_lv2>
-        <weapon_psgkzrellie_lv3>
-            <ObjID>wp0401</ObjID>
+        </weapon_pdvelbqjbuk_lv2>
+        <weapon_pdvelbqjbuk_lv3>
+            <ObjID>wp0004</ObjID>
             <UniqueID>1004</UniqueID>
             <lv>3</lv>
             <cost>5000</cost>
@@ -3952,9 +3640,9 @@
                 <UniqueID>0</UniqueID>
                 <Quantity>0</Quantity>
             </Material5>
-        </weapon_psgkzrellie_lv3>
-        <weapon_psgkzrellie_lv4>
-            <ObjID>wp0401</ObjID>
+        </weapon_pdvelbqjbuk_lv3>
+        <weapon_pdvelbqjbuk_lv4>
+            <ObjID>wp0004</ObjID>
             <UniqueID>1004</UniqueID>
             <lv>4</lv>
             <cost>10000</cost>
@@ -3978,7 +3666,475 @@
                 <UniqueID>0</UniqueID>
                 <Quantity>0</Quantity>
             </Material5>
-        </weapon_psgkzrellie_lv4>
+        </weapon_pdvelbqjbuk_lv4>
+        <weapon_blbfmvyfcnk_lv2>
+            <ObjID>wp0002</ObjID>
+            <UniqueID>1002</UniqueID>
+            <lv>2</lv>
+            <cost>2500</cost>
+            <Material1>
+                <UniqueID>530</UniqueID>
+                <Quantity>5</Quantity>
+            </Material1>
+            <Material2>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material2>
+            <Material3>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material3>
+            <Material4>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material4>
+            <Material5>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material5>
+        </weapon_blbfmvyfcnk_lv2>
+        <weapon_blbfmvyfcnk_lv3>
+            <ObjID>wp0002</ObjID>
+            <UniqueID>1002</UniqueID>
+            <lv>3</lv>
+            <cost>5000</cost>
+            <Material1>
+                <UniqueID>610</UniqueID>
+                <Quantity>1</Quantity>
+            </Material1>
+            <Material2>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material2>
+            <Material3>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material3>
+            <Material4>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material4>
+            <Material5>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material5>
+        </weapon_blbfmvyfcnk_lv3>
+        <weapon_blbfmvyfcnk_lv4>
+            <ObjID>wp0002</ObjID>
+            <UniqueID>1002</UniqueID>
+            <lv>4</lv>
+            <cost>10000</cost>
+            <Material1>
+                <UniqueID>536</UniqueID>
+                <Quantity>1</Quantity>
+            </Material1>
+            <Material2>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material2>
+            <Material3>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material3>
+            <Material4>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material4>
+            <Material5>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material5>
+        </weapon_blbfmvyfcnk_lv4>
+        <weapon_loxcjjhlkjs_lv2>
+            <ObjID>wp0402</ObjID>
+            <UniqueID>1402</UniqueID>
+            <lv>2</lv>
+            <cost>2500</cost>
+            <Material1>
+                <UniqueID>530</UniqueID>
+                <Quantity>5</Quantity>
+            </Material1>
+            <Material2>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material2>
+            <Material3>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material3>
+            <Material4>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material4>
+            <Material5>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material5>
+        </weapon_loxcjjhlkjs_lv2>
+        <weapon_loxcjjhlkjs_lv3>
+            <ObjID>wp0402</ObjID>
+            <UniqueID>1402</UniqueID>
+            <lv>3</lv>
+            <cost>5000</cost>
+            <Material1>
+                <UniqueID>610</UniqueID>
+                <Quantity>1</Quantity>
+            </Material1>
+            <Material2>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material2>
+            <Material3>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material3>
+            <Material4>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material4>
+            <Material5>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material5>
+        </weapon_loxcjjhlkjs_lv3>
+        <weapon_loxcjjhlkjs_lv4>
+            <ObjID>wp0402</ObjID>
+            <UniqueID>1402</UniqueID>
+            <lv>4</lv>
+            <cost>10000</cost>
+            <Material1>
+                <UniqueID>536</UniqueID>
+                <Quantity>1</Quantity>
+            </Material1>
+            <Material2>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material2>
+            <Material3>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material3>
+            <Material4>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material4>
+            <Material5>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material5>
+        </weapon_loxcjjhlkjs_lv4>
+        <weapon_kfjhwtspjlo_lv2>
+            <ObjID>wp0601</ObjID>
+            <UniqueID>1601</UniqueID>
+            <lv>2</lv>
+            <cost>2500</cost>
+            <Material1>
+                <UniqueID>530</UniqueID>
+                <Quantity>5</Quantity>
+            </Material1>
+            <Material2>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material2>
+            <Material3>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material3>
+            <Material4>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material4>
+            <Material5>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material5>
+        </weapon_kfjhwtspjlo_lv2>
+        <weapon_kfjhwtspjlo_lv3>
+            <ObjID>wp0601</ObjID>
+            <UniqueID>1601</UniqueID>
+            <lv>3</lv>
+            <cost>5000</cost>
+            <Material1>
+                <UniqueID>610</UniqueID>
+                <Quantity>1</Quantity>
+            </Material1>
+            <Material2>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material2>
+            <Material3>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material3>
+            <Material4>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material4>
+            <Material5>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material5>
+        </weapon_kfjhwtspjlo_lv3>
+        <weapon_kfjhwtspjlo_lv4>
+            <ObjID>wp0601</ObjID>
+            <UniqueID>1601</UniqueID>
+            <lv>4</lv>
+            <cost>10000</cost>
+            <Material1>
+                <UniqueID>536</UniqueID>
+                <Quantity>1</Quantity>
+            </Material1>
+            <Material2>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material2>
+            <Material3>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material3>
+            <Material4>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material4>
+            <Material5>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material5>
+        </weapon_kfjhwtspjlo_lv4>
+        <weapon_dlsszxsilrz_lv2>
+            <ObjID>wp0401</ObjID>
+            <UniqueID>1401</UniqueID>
+            <lv>2</lv>
+            <cost>2500</cost>
+            <Material1>
+                <UniqueID>530</UniqueID>
+                <Quantity>5</Quantity>
+            </Material1>
+            <Material2>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material2>
+            <Material3>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material3>
+            <Material4>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material4>
+            <Material5>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material5>
+        </weapon_dlsszxsilrz_lv2>
+        <weapon_dlsszxsilrz_lv3>
+            <ObjID>wp0401</ObjID>
+            <UniqueID>1401</UniqueID>
+            <lv>3</lv>
+            <cost>5000</cost>
+            <Material1>
+                <UniqueID>610</UniqueID>
+                <Quantity>1</Quantity>
+            </Material1>
+            <Material2>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material2>
+            <Material3>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material3>
+            <Material4>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material4>
+            <Material5>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material5>
+        </weapon_dlsszxsilrz_lv3>
+        <weapon_dlsszxsilrz_lv4>
+            <ObjID>wp0401</ObjID>
+            <UniqueID>1401</UniqueID>
+            <lv>4</lv>
+            <cost>10000</cost>
+            <Material1>
+                <UniqueID>536</UniqueID>
+                <Quantity>1</Quantity>
+            </Material1>
+            <Material2>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material2>
+            <Material3>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material3>
+            <Material4>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material4>
+            <Material5>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material5>
+        </weapon_dlsszxsilrz_lv4>
+        <weapon_irizyoxkcna_lv2>
+            <ObjID>wp0001</ObjID>
+            <UniqueID>1001</UniqueID>
+            <lv>2</lv>
+            <cost>2500</cost>
+            <Material1>
+                <UniqueID>530</UniqueID>
+                <Quantity>5</Quantity>
+            </Material1>
+            <Material2>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material2>
+            <Material3>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material3>
+            <Material4>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material4>
+            <Material5>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material5>
+        </weapon_irizyoxkcna_lv2>
+        <weapon_irizyoxkcna_lv3>
+            <ObjID>wp0001</ObjID>
+            <UniqueID>1001</UniqueID>
+            <lv>3</lv>
+            <cost>5000</cost>
+            <Material1>
+                <UniqueID>610</UniqueID>
+                <Quantity>1</Quantity>
+            </Material1>
+            <Material2>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material2>
+            <Material3>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material3>
+            <Material4>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material4>
+            <Material5>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material5>
+        </weapon_irizyoxkcna_lv3>
+        <weapon_irizyoxkcna_lv4>
+            <ObjID>wp0001</ObjID>
+            <UniqueID>1001</UniqueID>
+            <lv>4</lv>
+            <cost>10000</cost>
+            <Material1>
+                <UniqueID>536</UniqueID>
+                <Quantity>1</Quantity>
+            </Material1>
+            <Material2>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material2>
+            <Material3>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material3>
+            <Material4>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material4>
+            <Material5>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material5>
+        </weapon_irizyoxkcna_lv4>
+        <weapon_cbrfdtvlocx_lv2>
+            <ObjID>wp0201</ObjID>
+            <UniqueID>1201</UniqueID>
+            <lv>2</lv>
+            <cost>2500</cost>
+            <Material1>
+                <UniqueID>530</UniqueID>
+                <Quantity>5</Quantity>
+            </Material1>
+            <Material2>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material2>
+            <Material3>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material3>
+            <Material4>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material4>
+            <Material5>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material5>
+        </weapon_cbrfdtvlocx_lv2>
+        <weapon_cbrfdtvlocx_lv3>
+            <ObjID>wp0201</ObjID>
+            <UniqueID>1201</UniqueID>
+            <lv>3</lv>
+            <cost>5000</cost>
+            <Material1>
+                <UniqueID>610</UniqueID>
+                <Quantity>1</Quantity>
+            </Material1>
+            <Material2>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material2>
+            <Material3>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material3>
+            <Material4>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material4>
+            <Material5>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material5>
+        </weapon_cbrfdtvlocx_lv3>
+        <weapon_cbrfdtvlocx_lv4>
+            <ObjID>wp0201</ObjID>
+            <UniqueID>1201</UniqueID>
+            <lv>4</lv>
+            <cost>10000</cost>
+            <Material1>
+                <UniqueID>536</UniqueID>
+                <Quantity>1</Quantity>
+            </Material1>
+            <Material2>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material2>
+            <Material3>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material3>
+            <Material4>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material4>
+            <Material5>
+                <UniqueID>0</UniqueID>
+                <Quantity>0</Quantity>
+            </Material5>
+        </weapon_cbrfdtvlocx_lv4>
 		<composition_pod1_lv2>
 			<ObjID>it0000</ObjID>
 			<UniqueID>6001</UniqueID>

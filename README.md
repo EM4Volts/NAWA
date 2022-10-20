@@ -1,7 +1,7 @@
 
 # NAWA
 
-A NieR: Automata Weapon Manager allowing to add completely custom weapons to the game
+A NieR: Automata Weapon Assembler allowing to add completely custom weapons to the game
 
 
 

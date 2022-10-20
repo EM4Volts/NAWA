@@ -13005,247 +13005,13 @@
             ]
         },
         {
-            "event_name": "CORE_WP_HELP_S_1016",
-            "texts": [
-                {
-                    "vpos": 0,
-                    "hpos": 0,
-                    "font": 36,
-                    "line": "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                }
-            ]
-        },
-        {
-            "event_name": "CORE_WP_HELP_1016",
-            "texts": [
-                {
-                    "vpos": 0,
-                    "hpos": 0,
-                    "font": 36,
-                    "line": "Long Desc."
-                }
-            ]
-        },
-        {
-            "event_name": "CORE_WP_NAME_1016",
-            "texts": [
-                {
-                    "vpos": 0,
-                    "hpos": 0,
-                    "font": 36,
-                    "line": "Raiden type 40"
-                },
-                {
-                    "vpos": 1,
-                    "hpos": 0,
-                    "font": 5,
-                    "line": "Raiden type 40"
-                }
-            ]
-        },
-        {
-            "event_name": "CORE_WP_HELP_S_1015",
-            "texts": [
-                {
-                    "vpos": 0,
-                    "hpos": 0,
-                    "font": 36,
-                    "line": "Podders"
-                }
-            ]
-        },
-        {
-            "event_name": "CORE_WP_HELP_1015",
-            "texts": [
-                {
-                    "vpos": 0,
-                    "hpos": 0,
-                    "font": 36,
-                    "line": "Long Desc."
-                }
-            ]
-        },
-        {
-            "event_name": "CORE_WP_NAME_1015",
-            "texts": [
-                {
-                    "vpos": 0,
-                    "hpos": 0,
-                    "font": 36,
-                    "line": "Pod"
-                },
-                {
-                    "vpos": 1,
-                    "hpos": 0,
-                    "font": 5,
-                    "line": "Pod"
-                }
-            ]
-        },
-        {
-            "event_name": "CORE_WP_HELP_S_1014",
-            "texts": [
-                {
-                    "vpos": 0,
-                    "hpos": 0,
-                    "font": 36,
-                    "line": "Short Desc"
-                }
-            ]
-        },
-        {
-            "event_name": "CORE_WP_HELP_1014",
-            "texts": [
-                {
-                    "vpos": 0,
-                    "hpos": 0,
-                    "font": 36,
-                    "line": "Long Desc."
-                }
-            ]
-        },
-        {
-            "event_name": "CORE_WP_NAME_1014",
-            "texts": [
-                {
-                    "vpos": 0,
-                    "hpos": 0,
-                    "font": 36,
-                    "line": "Ice Blade"
-                },
-                {
-                    "vpos": 1,
-                    "hpos": 0,
-                    "font": 5,
-                    "line": "Ice Blade"
-                }
-            ]
-        },
-        {
-            "event_name": "CORE_WP_HELP_S_1012",
-            "texts": [
-                {
-                    "vpos": 0,
-                    "hpos": 0,
-                    "font": 36,
-                    "line": "Short Desc"
-                }
-            ]
-        },
-        {
-            "event_name": "CORE_WP_HELP_1012",
-            "texts": [
-                {
-                    "vpos": 0,
-                    "hpos": 0,
-                    "font": 36,
-                    "line": "Long Desc."
-                }
-            ]
-        },
-        {
-            "event_name": "CORE_WP_NAME_1012",
-            "texts": [
-                {
-                    "vpos": 0,
-                    "hpos": 0,
-                    "font": 36,
-                    "line": "Hydro Thing"
-                },
-                {
-                    "vpos": 1,
-                    "hpos": 0,
-                    "font": 5,
-                    "line": "Hydro Thing"
-                }
-            ]
-        },
-        {
-            "event_name": "CORE_WP_HELP_S_1011",
-            "texts": [
-                {
-                    "vpos": 0,
-                    "hpos": 0,
-                    "font": 36,
-                    "line": "Short Desc"
-                }
-            ]
-        },
-        {
-            "event_name": "CORE_WP_HELP_1011",
-            "texts": [
-                {
-                    "vpos": 0,
-                    "hpos": 0,
-                    "font": 36,
-                    "line": "Long Desc."
-                }
-            ]
-        },
-        {
-            "event_name": "CORE_WP_NAME_1011",
-            "texts": [
-                {
-                    "vpos": 0,
-                    "hpos": 0,
-                    "font": 36,
-                    "line": "Half Truths"
-                },
-                {
-                    "vpos": 1,
-                    "hpos": 0,
-                    "font": 5,
-                    "line": "Half Truths"
-                }
-            ]
-        },
-        {
-            "event_name": "CORE_WP_HELP_S_1010",
-            "texts": [
-                {
-                    "vpos": 0,
-                    "hpos": 0,
-                    "font": 36,
-                    "line": "Short Desc"
-                }
-            ]
-        },
-        {
-            "event_name": "CORE_WP_HELP_1010",
-            "texts": [
-                {
-                    "vpos": 0,
-                    "hpos": 0,
-                    "font": 36,
-                    "line": "Long Desc."
-                }
-            ]
-        },
-        {
-            "event_name": "CORE_WP_NAME_1010",
-            "texts": [
-                {
-                    "vpos": 0,
-                    "hpos": 0,
-                    "font": 36,
-                    "line": "NAMC Weapon"
-                },
-                {
-                    "vpos": 1,
-                    "hpos": 0,
-                    "font": 5,
-                    "line": "NAMC Weapon"
-                }
-            ]
-        },
-        {
             "event_name": "CORE_WP_HELP_S_1009",
             "texts": [
                 {
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "Short Desc"
+                    "line": "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
                 }
             ]
         },
@@ -13267,13 +13033,13 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "NAMC Weapon"
+                    "line": "Raiden type 40"
                 },
                 {
                     "vpos": 1,
                     "hpos": 0,
                     "font": 5,
-                    "line": "NAMC Weapon"
+                    "line": "Raiden type 40"
                 }
             ]
         },
@@ -13284,7 +13050,7 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "Light and Dark, forged together into a\n physical manifestation of terror."
+                    "line": "Podders"
                 }
             ]
         },
@@ -13306,13 +13072,13 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "Containment Scythe"
+                    "line": "Pod"
                 },
                 {
                     "vpos": 1,
                     "hpos": 0,
                     "font": 5,
-                    "line": "Containment Scythe"
+                    "line": "Pod"
                 }
             ]
         },
@@ -13323,7 +13089,7 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "Short Desc"
+                    "line": "The one thing"
                 }
             ]
         },
@@ -13345,13 +13111,52 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "Bloodroot Vases"
+                    "line": "Mistsplitter"
                 },
                 {
                     "vpos": 1,
                     "hpos": 0,
                     "font": 5,
-                    "line": "Bloodroot Vases"
+                    "line": "Mistsplitter"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_S_1403",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Short Desc"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_1403",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Long Desc."
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_NAME_1403",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "KEWL THING LOL"
+                },
+                {
+                    "vpos": 1,
+                    "hpos": 0,
+                    "font": 5,
+                    "line": "KEWL THING LOL"
                 }
             ]
         },
@@ -13362,7 +13167,7 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "For fucks sake"
+                    "line": "Short Desc"
                 }
             ]
         },
@@ -13373,7 +13178,7 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "Hello World."
+                    "line": "Long Desc."
                 }
             ]
         },
@@ -13384,13 +13189,52 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "Bloodroot Twinblade"
+                    "line": "Ice Blade"
                 },
                 {
                     "vpos": 1,
                     "hpos": 0,
                     "font": 5,
-                    "line": "Bloodroot Twinblade"
+                    "line": "Ice Blade"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_S_1202",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Short Desc"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_1202",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Long Desc."
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_NAME_1202",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Hydro Thing"
+                },
+                {
+                    "vpos": 1,
+                    "hpos": 0,
+                    "font": 5,
+                    "line": "Hydro Thing"
                 }
             ]
         },
@@ -13401,7 +13245,7 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "dagger"
+                    "line": "Short Desc"
                 }
             ]
         },
@@ -13423,13 +13267,13 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "Bloodroot Dagger"
+                    "line": "Half Truths"
                 },
                 {
                     "vpos": 1,
                     "hpos": 0,
                     "font": 5,
-                    "line": "Bloodroot Dagger"
+                    "line": "Half Truths"
                 }
             ]
         },
@@ -13457,6 +13301,240 @@
         },
         {
             "event_name": "CORE_WP_NAME_1004",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "NAMC Weapon"
+                },
+                {
+                    "vpos": 1,
+                    "hpos": 0,
+                    "font": 5,
+                    "line": "NAMC Weapon"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_S_1002",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Short Desc"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_1002",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Long Desc."
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_NAME_1002",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "NAMC Weapon"
+                },
+                {
+                    "vpos": 1,
+                    "hpos": 0,
+                    "font": 5,
+                    "line": "NAMC Weapon"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_S_1402",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Light and Dark, forged together into a\n physical manifestation of terror."
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_1402",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Long Desc."
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_NAME_1402",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Containment Scythe"
+                },
+                {
+                    "vpos": 1,
+                    "hpos": 0,
+                    "font": 5,
+                    "line": "Containment Scythe"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_S_1601",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Short Desc"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_1601",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Long Desc."
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_NAME_1601",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Bloodroot Vases"
+                },
+                {
+                    "vpos": 1,
+                    "hpos": 0,
+                    "font": 5,
+                    "line": "Bloodroot Vases"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_S_1401",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "For fucks sake"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_1401",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Hello World."
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_NAME_1401",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Bloodroot Twinblade"
+                },
+                {
+                    "vpos": 1,
+                    "hpos": 0,
+                    "font": 5,
+                    "line": "Bloodroot Twinblade"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_S_1001",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "dagger"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_1001",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Long Desc."
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_NAME_1001",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Bloodroot Dagger"
+                },
+                {
+                    "vpos": 1,
+                    "hpos": 0,
+                    "font": 5,
+                    "line": "Bloodroot Dagger"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_S_1201",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Short Desc"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_1201",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Long Desc."
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_NAME_1201",
             "texts": [
                 {
                     "vpos": 0,

@@ -147,7 +147,7 @@ def getWPfileName(wpC):
         if newuId not in wpidBlacklist:
                 wpidBlacklist.append(newuId)
                 wpidnotFound = False
-                return "wp" + newuId
+                return "wp" + newuId, "1" + newuId[1:]
         else:
             indexStart +=1
 

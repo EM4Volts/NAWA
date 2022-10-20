@@ -5,7 +5,7 @@ import journey_tools as jout
 import yamm_data.fileporters.xmlToBxm as xml2Bxm
 import yamm_data.fileporters.newexport_dat as newdattExpo
 import yamm_data.fileporters.newdat_unpacker as newdattUn
-
+import time
 def newpackDatt(dattDir, name):
     dct = jout.genPathList(dattDir)
     newdattExpo.main(name, dct)
@@ -21,11 +21,13 @@ nierModsDir= config[1]
 def wpStaging():
     for filename in os.scandir(nierModsDir):
         wp_Files_Folder = nierModsDir + "/" + filename.name + "/wp"
+        misctex_files_folder = nierModsDir + "/" + filename.name + "/misctex"
         wpCFGdata = jout.readwpConfig(nierModsDir + "/" + filename.name + "/config.json")
         print("_____DEBUG_____")
-        uniqueID = jout.getUniqueID()
         internalWeaponID = 'weapon_' + ''.join(random.choice(string.ascii_lowercase) for _ in range(11))
-        new_wp_name = jout.getWPfileName(wpCFGdata[3])
+        wpId = jout.getWPfileName(wpCFGdata[3])
+        new_wp_name = wpId[0]
+        uniqueID = wpId[1]
         print(wpCFGdata[0])
         jout.WriteAllTables(internalWeaponID, uniqueID, new_wp_name, wpCFGdata[0], wpCFGdata[1], wpCFGdata[2], wpCFGdata[3], wpCFGdata[5], wpCFGdata[6], wpCFGdata[7], wpCFGdata[8], wpCFGdata[9], wpCFGdata[10], wpCFGdata[11], wpCFGdata[12], wpCFGdata[13], wpCFGdata[14], wpCFGdata[15], wpCFGdata[16], wpCFGdata[17], wpCFGdata[18], wpCFGdata[19], wpCFGdata[20], wpCFGdata[21], wpCFGdata[22], wpCFGdata[23], wpCFGdata[24], wpCFGdata[25], wpCFGdata[26], wpCFGdata[27], wpCFGdata[28], wpCFGdata[29], wpCFGdata[30], wpCFGdata[31], wpCFGdata[32], wpCFGdata[33], wpCFGdata[34], wpCFGdata[35], wpCFGdata[36])
         for filename in os.scandir(wp_Files_Folder):
@@ -57,17 +59,75 @@ def wpStaging():
                         os.rename(unpack_dtt_path + "/" + fn_rename_name, unpack_dtt_path + "/"  + new_fn_name)
                     else:
                         os.remove(unpack_dtt_path + "/" + filename.name)
+
+
                 jout.shuffleIdentifierWta(unpack_dat_path + "/" + new_wp_name + ".wta", unpack_dtt_path + "/" +  new_wp_name + ".wmb")
                 newpackDatt(unpack_dat_path + "/", new_dat_path)
                 newpackDatt(unpack_dtt_path + "/", new_dtt_path)
                 shutil.rmtree(unpack_dat_path)
                 shutil.rmtree(unpack_dtt_path)
 
+
+        if os.path.isdir(misctex_files_folder):
+            print(filename.name, "has misctex")
+            for filename in os.scandir(misctex_files_folder):
+                mt_Path = misctex_files_folder + "/" + filename.name
+                if mt_Path.endswith(".dat"):
+                    shutil.copyfile(mt_Path, "deploy/misctex/misctex_" + new_wp_name + ".dat")
+                if mt_Path.endswith(".dtt"):
+                    shutil.copyfile(mt_Path, "deploy/misctex/misctex_" + new_wp_name + ".dtt")
+        else:
+            if wpCFGdata[3] == "0":
+                mTexSName = "misctex_smallsword"
+            if wpCFGdata[3] == "1":
+                mTexSName = "misctex_largesword"
+            if wpCFGdata[3] == "2":
+                mTexSName = "misctex_spear"
+            if wpCFGdata[3] == "3":
+                mTexSName = "misctex_bracers"
+            shutil.copyfile("yamm_data\configTemplates/" + mTexSName + ".dat", "deploy/misctex/misctex_" + new_wp_name + ".dat")
+            shutil.copyfile("yamm_data\configTemplates/" + mTexSName + ".dtt", "deploy/misctex/misctex_" + new_wp_name + ".dtt")
+
+
+def finishMisctex():
+    for filename in os.scandir("deploy/misctex"):
+        mt_Path = "deploy/misctex/" + filename.name
+        old_wp_name =  filename.name[:-4][8:]
+        if mt_Path.endswith(".dat"):
+            mt_dat_un = mt_Path + "_dat"
+            newdattUn.main(mt_Path, mt_dat_un)
+            for filename in os.scandir(mt_dat_un):
+                if not filename.name in renameblacklist:
+                    fn_rename_name = filename.name
+                    fn_ext = fn_rename_name[-4:]
+                    os.rename(mt_dat_un + "/" + fn_rename_name, mt_dat_un + "/misctex_"  + old_wp_name +fn_ext)
+                else:
+                    os.remove(mt_dat_un + "/" + filename.name)
+
+        if mt_Path.endswith(".dtt"):
+            mt_dtt_un = mt_Path + "_dtt"
+            newdattUn.main(mt_Path, mt_dtt_un)
+            for filename in os.scandir(mt_dtt_un):
+                if not filename.name in renameblacklist:
+                    fn_rename_name = filename.name
+                    fn_ext = fn_rename_name[-4:]
+                    os.rename(mt_dtt_un + "/" + fn_rename_name, mt_dtt_un + "/misctex_"  + old_wp_name +fn_ext)
+                else:
+                    os.remove(mt_dtt_un + "/" + filename.name)
+
+            jout.shuffleIdentifierMisctex(mt_dat_un + "/" + "misctex_" + old_wp_name + ".wta")
+            newpackDatt(mt_dtt_un + "/", "deploy/misctex/misctex_"  + old_wp_name + ".dtt")
+            newpackDatt(mt_dat_un + "/", "deploy/misctex/misctex_"  + old_wp_name + ".dat")
+            shutil.rmtree(mt_dtt_un)
+            shutil.rmtree(mt_dat_un)
+
+
 def deploy():
     if not os.path.isdir("deploy"):
         os.makedirs("deploy/wp", 0o666)
         os.makedirs("deploy/core", 0o666)
         os.makedirs("deploy/ui", 0o666)
+        os.makedirs("deploy/misctex", 0o666)
     xmlList = ["yamm_data/coregm/WeaponInfoTable.xml",
                "yamm_data/coregm/ItemInfoTable.xml",
                "yamm_data/coregm/ShopInfoTable.xml",
@@ -92,6 +152,7 @@ def deploy():
     nierModsDir= config[1]
     jout.cleanDeploy()
     wpStaging()
+    finishMisctex()
     print("[Converting new XML...]")
     xml2Bxm.main(xmlList)
     print("[Building MCD...]")
