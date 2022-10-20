@@ -1,10 +1,10 @@
 from pathlib import Path
-import os
+import os, tkinter.messagebox, nawa
 from tkinter import *
 from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage, filedialog
 import journey_tools as jout
-import nawm
-nawmversion = "NAWM version 1.1.2"
+
+nawmversion = "NAWA version 1.2.1"
 
 OUTPUT_PATH = Path(__file__).parent
 ASSETS_PATH = OUTPUT_PATH / Path("./assets")
@@ -78,6 +78,8 @@ window = Tk()
 
 window.geometry("1143x734")
 window.configure(bg = "#3A7FF6")
+def onClick():
+    tkinter.messagebox.showinfo("NAWA", "All your mods have been deployed!")
 
 canvas = Canvas(
     window,
@@ -196,7 +198,7 @@ button_2 = Button(
     image=button_image_2,
     borderwidth=0,
     highlightthickness=0, fg="white", justify='center',
-    command=lambda: nawm.main(),
+    command=lambda: [nawa.main(), onClick()],
     relief="flat"
 )
 button_2.place(
@@ -1209,5 +1211,5 @@ button_reset.place(
 
 window.resizable(False, False)
 window.iconbitmap("yamm_data/namc.ico")
-window.title('NAWM | NieR: Automata Weapon Manager')
+window.title('NAWA | NieR: Automata Weapon Assembly')
 window.mainloop()

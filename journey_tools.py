@@ -6,7 +6,6 @@ def read_uint32(file) -> int:
 def to_uint(bs):
     return int.from_bytes(bs, byteorder='little', signed=False)
 
-
 class WTA(object):
     def __init__(self, wta_fp):
         super(WTA, self).__init__()
@@ -55,17 +54,23 @@ data = identifierBlackList.read()
 idBlackList = data.split("\n")
 identifierBlackList.close()
 
-wpidBlacklistFile = open("configs/allwpids.xml", "r")
-data = wpidBlacklistFile.read()
-wpidBlacklist = data.split("\n")
-wpidBlacklistFile.close()
 
-idBlacklistFile = open("configs/wpids.xml", "r")
-data = idBlacklistFile.read()
-idBlacklist = data.split("\n")
-idBlacklistFile.close()
-newUid = 1003
+wpidBlacklist = []
+idBlacklist = []
+def regenBlacklists():
+    global wpidBlacklist, idBlacklist, newUid
+    wpidBlacklistFile = open("configs/allwpids.xml", "r")
+    data = wpidBlacklistFile.read()
+    wpidBlacklist = data.split("\n")
+    wpidBlacklistFile.close()
 
+    idBlacklistFile = open("configs/wpids.xml", "r")
+    data = idBlacklistFile.read()
+    idBlacklist = data.split("\n")
+    idBlacklistFile.close()
+    newUid = 1003
+
+regenBlacklists()
 defaultWPConf = {
 "weaponname": "NAMC Weapon",
 "weapondescshort": "Short Desc",
@@ -134,7 +139,7 @@ def getWPfileName(wpC):
         if len(str(nWpn)) == 3:
             newuId = "0" + str(nWpn)
         if newuId in wpidBlacklist:
-            print("[Doing stuff")
+            print("[Doing stuff]")
         if newuId == indexEnd:
             print("[WPNAME ERROR: YOU RAN OUT OF SPACE IN THE " + cName + " CATEGORY, REMOVE A MOD FROM THE CATEGORY, THIS WEAPON WILL NOT BE EXPORTED")
             wpidnotFound = False
@@ -162,6 +167,7 @@ def getUniqueID():
                 return uId
 
 def cleanDeploy():
+    regenBlacklists()
     for filename in os.scandir("deploy/"):
         subFName = filename
         for filename in os.scandir(subFName):
@@ -344,7 +350,7 @@ def writeToTable(crispSel, iName, UID, wpName, igName, igDescs, igDescl, wpCat, 
     if crispSel == 1:
         crispPart = coregmItemInfoTableCrisp
         tablePath = "yamm_data/coregm/ItemInfoTable.xml"
-        lineOffset = 827
+        lineOffset = 1478
     if crispSel == 2:
         crispPart = coregmShopInfoTableCrisp
         tablePath = "yamm_data/coregm/ShopInfoTable.xml"
@@ -356,7 +362,7 @@ def writeToTable(crispSel, iName, UID, wpName, igName, igDescs, igDescl, wpCat, 
     if crispSel == 4:
         crispPart = coregmWeaponStrenghtenTableCrisp
         tablePath = "yamm_data/coregm/WeaponStrengthenTable.xml"
-        lineOffset = 627
+        lineOffset = 3045
     if crispSel == 5:
         crispPart = coreWeaponStrenghtTableCrisp
         tablePath = "yamm_data/core/WeaponStrengthenTable.xml"

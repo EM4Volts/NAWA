@@ -13005,13 +13005,130 @@
             ]
         },
         {
-            "event_name": "CORE_WP_HELP_S_1012",
+            "event_name": "CORE_WP_HELP_S_1016",
             "texts": [
                 {
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
                     "line": "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_1016",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Long Desc."
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_NAME_1016",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Raiden type 40"
+                },
+                {
+                    "vpos": 1,
+                    "hpos": 0,
+                    "font": 5,
+                    "line": "Raiden type 40"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_S_1015",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Podders"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_1015",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Long Desc."
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_NAME_1015",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Pod"
+                },
+                {
+                    "vpos": 1,
+                    "hpos": 0,
+                    "font": 5,
+                    "line": "Pod"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_S_1014",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Short Desc"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_1014",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Long Desc."
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_NAME_1014",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Ice Blade"
+                },
+                {
+                    "vpos": 1,
+                    "hpos": 0,
+                    "font": 5,
+                    "line": "Ice Blade"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_S_1012",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "Short Desc"
                 }
             ]
         },
@@ -13033,13 +13150,13 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "Raiden type 40"
+                    "line": "Hydro Thing"
                 },
                 {
                     "vpos": 1,
                     "hpos": 0,
                     "font": 5,
-                    "line": "Raiden type 40"
+                    "line": "Hydro Thing"
                 }
             ]
         },
@@ -13072,13 +13189,13 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "Popola"
+                    "line": "Half Truths"
                 },
                 {
                     "vpos": 1,
                     "hpos": 0,
                     "font": 5,
-                    "line": "Popola"
+                    "line": "Half Truths"
                 }
             ]
         },
@@ -13111,13 +13228,13 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "Hydro Thing"
+                    "line": "NAMC Weapon"
                 },
                 {
                     "vpos": 1,
                     "hpos": 0,
                     "font": 5,
-                    "line": "Hydro Thing"
+                    "line": "NAMC Weapon"
                 }
             ]
         },
@@ -13150,13 +13267,13 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "Dynamo Roller"
+                    "line": "NAMC Weapon"
                 },
                 {
                     "vpos": 1,
                     "hpos": 0,
                     "font": 5,
-                    "line": "Dynamo Roller"
+                    "line": "NAMC Weapon"
                 }
             ]
         },
@@ -13167,7 +13284,7 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "Short Desc"
+                    "line": "Light and Dark, forged together into a\n physical manifestation of terror."
                 }
             ]
         },
@@ -13189,13 +13306,13 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "Devola"
+                    "line": "Containment Scythe"
                 },
                 {
                     "vpos": 1,
                     "hpos": 0,
                     "font": 5,
-                    "line": "Devola"
+                    "line": "Containment Scythe"
                 }
             ]
         },
@@ -13206,7 +13323,7 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "A blade appears in each outstretched hand.\nA pair of wings form on each Warlock's back."
+                    "line": "Short Desc"
                 }
             ]
         },
@@ -13228,13 +13345,13 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "Dawnblade"
+                    "line": "Bloodroot Vases"
                 },
                 {
                     "vpos": 1,
                     "hpos": 0,
                     "font": 5,
-                    "line": "Dawnblade"
+                    "line": "Bloodroot Vases"
                 }
             ]
         },
@@ -13245,7 +13362,7 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "Short Desc"
+                    "line": "For fucks sake"
                 }
             ]
         },
@@ -13256,7 +13373,7 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "Long Desc."
+                    "line": "Hello World."
                 }
             ]
         },
@@ -13267,13 +13384,13 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "Bloodroot Vases"
+                    "line": "Bloodroot Twinblade"
                 },
                 {
                     "vpos": 1,
                     "hpos": 0,
                     "font": 5,
-                    "line": "Bloodroot Vases"
+                    "line": "Bloodroot Twinblade"
                 }
             ]
         },
@@ -13284,7 +13401,7 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "For fucks sake"
+                    "line": "dagger"
                 }
             ]
         },
@@ -13295,7 +13412,7 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "Hello World."
+                    "line": "Long Desc."
                 }
             ]
         },
@@ -13306,13 +13423,13 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "Bloodroot Twinblade"
+                    "line": "Bloodroot Dagger"
                 },
                 {
                     "vpos": 1,
                     "hpos": 0,
                     "font": 5,
-                    "line": "Bloodroot Twinblade"
+                    "line": "Bloodroot Dagger"
                 }
             ]
         },
@@ -13323,7 +13440,7 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "dagger"
+                    "line": "Short Desc"
                 }
             ]
         },
@@ -13345,13 +13462,13 @@
                     "vpos": 0,
                     "hpos": 0,
                     "font": 36,
-                    "line": "Bloodroot Dagger"
+                    "line": "50 Cal"
                 },
                 {
                     "vpos": 1,
                     "hpos": 0,
                     "font": 5,
-                    "line": "Bloodroot Dagger"
+                    "line": "50 Cal"
                 }
             ]
         },
