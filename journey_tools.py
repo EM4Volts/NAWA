@@ -1,4 +1,8 @@
 import json, os, random, struct, shutil
+import yamm_data.fileporters.newdat_unpacker as newdattUn
+import yamm_data.fileporters.bxmToXml as bxm2xml
+import yamm_data.fileporters.mcd as mcd
+
 def read_uint32(file) -> int:
     entry = file.read(4)
     return struct.unpack('<I', entry)[0]
@@ -49,7 +53,7 @@ class WTA(object):
                 return self.getTextureByIndex(index,texture_fp)
         return False
 
-identifierBlackList = open("configs/ddslist.xml", "r")
+identifierBlackList = open("configs/ddslist.txt", "r")
 data = identifierBlackList.read()
 idBlackList = data.split("\n")
 identifierBlackList.close()
@@ -59,12 +63,12 @@ wpidBlacklist = []
 idBlacklist = []
 def regenBlacklists():
     global wpidBlacklist, idBlacklist, newUid
-    wpidBlacklistFile = open("configs/allwpids.xml", "r")
+    wpidBlacklistFile = open("configs/allwpids.txt", "r")
     data = wpidBlacklistFile.read()
     wpidBlacklist = data.split("\n")
     wpidBlacklistFile.close()
 
-    idBlacklistFile = open("configs/wpids.xml", "r")
+    idBlacklistFile = open("configs/wpids.txt", "r")
     data = idBlacklistFile.read()
     idBlacklist = data.split("\n")
     idBlacklistFile.close()
@@ -115,7 +119,7 @@ defaultWPConf = {
 def getWPfileName(wpC):
     if wpC == "0":
         cName = "Small Sword"
-        indexStart = 1
+        indexStart = 2
         indexEnd = 199
     if wpC == "1":
         cName = "Large Sword"
@@ -349,31 +353,31 @@ def writeToTable(crispSel, iName, UID, wpName, igName, igDescs, igDescl, wpCat, 
     #SELECTS THE TABLE TO SET PATH, OFFSET AND TEMPLATE
     if crispSel == 1:
         crispPart = coregmItemInfoTableCrisp
-        tablePath = "yamm_data/coregm/ItemInfoTable.xml"
-        lineOffset = 1478
+        tablePath = "yamm_data/dat_files/coregm.dat/ItemInfoTable.xml"
+        lineOffset = 8
     if crispSel == 2:
         crispPart = coregmShopInfoTableCrisp
-        tablePath = "yamm_data/coregm/ShopInfoTable.xml"
+        tablePath = "yamm_data/dat_files/coregm.dat/ShopInfoTable.xml"
         lineOffset = 3567
     if crispSel == 3:
         crispPart = coregmWeaponInfoTableCrisp
-        tablePath = "yamm_data/coregm/weaponinfotable.xml"
-        lineOffset = 1258
+        tablePath = "yamm_data/dat_files/coregm.dat/weaponinfotable.xml"
+        lineOffset = 10
     if crispSel == 4:
         crispPart = coregmWeaponStrenghtenTableCrisp
-        tablePath = "yamm_data/coregm/WeaponStrengthenTable.xml"
-        lineOffset = 3045
+        tablePath = "yamm_data/dat_files/coregm.dat/WeaponStrengthenTable.xml"
+        lineOffset = 3
     if crispSel == 5:
         crispPart = coreWeaponStrenghtTableCrisp
-        tablePath = "yamm_data/core/WeaponStrengthenTable.xml"
-        lineOffset = 549
+        tablePath = "yamm_data/dat_files/core.dat/WeaponStrengthenTable.xml"
+        lineOffset = 3
     if crispSel == 6:
         crispPart = uimesscoreCrisp
-        tablePath = "yamm_data/ui_core_us/messcore.json"
-        lineOffset = 13006
+        tablePath = "yamm_data/dat_files/ui_core_us.dat/messcore.json"
+        lineOffset = 3
     if crispSel == 7:
         crispPart = weaponParamCrisp
-        tablePath = "yamm_data/core/WeaponParam.csv"
+        tablePath = "yamm_data/dat_files/core.dat/WeaponParam.csv"
         lineOffset = 40
 
     #REPLACE ALL PLACEHOLDER NAMES IN LOADED TEMPLATE TO GIVEN STRINGS
@@ -483,5 +487,30 @@ def shuffleIdentifierWta(wtaFilePath, wmbFilePath):
         revTurnTab= " ".join(identifierTurn(str)[i:i+2] for i in range(0, len(identifierTurn(str)), 2))
         replace_in_hex(wtaFilePath, revTurnTab, newIDd)
         replace_in_hex(wmbFilePath[:-4] + ".wmb", revTurnTab, newIDd)
+
+
+def prepareDatFiles():
+    datList = ["dat_files/core.dat",
+               "dat_files/coregm.dat",
+               "dat_files/ui_core_us.dat"
+               ]
+    bxmList = ["yamm_data/dat_files/coregm.dat/WeaponInfoTable.bxm",
+               "yamm_data/dat_files/coregm.dat/ItemInfoTable.bxm",
+               "yamm_data/dat_files/coregm.dat/ShopInfoTable.bxm",
+               "yamm_data/dat_files/coregm.dat/WeaponStrengthenTable.bxm",
+               "yamm_data/dat_files/core.dat/WeaponStrengthenTable.bxm"
+               ]
+    for str in datList:
+        if os.path.isfile(str):
+            print("[Unpacking " + str + "]")
+            newdattUn.main(str, "yamm_data/" + str)
+        else:
+            print("[ERROR: PLEASE PUT VALID DAT FILES IN THE DAT FILES DIRECTORY]\n[]")
+            exit()
+    for str in bxmList:
+        print("[Preparing XML File " + str + "]")
+        bxm2xml.main(str)
+    print("[Prepating MCD]")
+    mcd.mcd_to_json("yamm_data/dat_files/ui_core_us.dat/messcore.mcd")
 
 

@@ -1,11 +1,11 @@
 import os, random, shutil, string
 import yamm_data.fileporters.mcd as mcd
-import yamm_data.fileporters.export_dat as dattExpo
 import journey_tools as jout
 import yamm_data.fileporters.xmlToBxm as xml2Bxm
 import yamm_data.fileporters.newexport_dat as newdattExpo
 import yamm_data.fileporters.newdat_unpacker as newdattUn
-import time
+import yamm_data.fileporters.dat as oneTrueDatPacker
+
 def newpackDatt(dattDir, name):
     dct = jout.genPathList(dattDir)
     newdattExpo.main(name, dct)
@@ -62,8 +62,8 @@ def wpStaging():
 
 
                 jout.shuffleIdentifierWta(unpack_dat_path + "/" + new_wp_name + ".wta", unpack_dtt_path + "/" +  new_wp_name + ".wmb")
-                newpackDatt(unpack_dat_path + "/", new_dat_path)
-                newpackDatt(unpack_dtt_path + "/", new_dtt_path)
+                oneTrueDatPacker.main(unpack_dat_path + "/", new_dat_path)
+                oneTrueDatPacker.main(unpack_dtt_path + "/", new_dtt_path)
                 shutil.rmtree(unpack_dat_path)
                 shutil.rmtree(unpack_dtt_path)
 
@@ -116,33 +116,13 @@ def finishMisctex():
                     os.remove(mt_dtt_un + "/" + filename.name)
 
             jout.shuffleIdentifierMisctex(mt_dat_un + "/" + "misctex_" + old_wp_name + ".wta")
-            newpackDatt(mt_dtt_un + "/", "deploy/misctex/misctex_"  + old_wp_name + ".dtt")
-            newpackDatt(mt_dat_un + "/", "deploy/misctex/misctex_"  + old_wp_name + ".dat")
+            oneTrueDatPacker.main(mt_dtt_un + "/", "deploy/misctex/misctex_"  + old_wp_name + ".dtt")
+            oneTrueDatPacker.main(mt_dat_un + "/", "deploy/misctex/misctex_"  + old_wp_name + ".dat")
             shutil.rmtree(mt_dtt_un)
             shutil.rmtree(mt_dat_un)
 
 
 def deploy():
-    if not os.path.isdir("deploy"):
-        os.makedirs("deploy/wp", 0o666)
-        os.makedirs("deploy/core", 0o666)
-        os.makedirs("deploy/ui", 0o666)
-        os.makedirs("deploy/misctex", 0o666)
-    xmlList = ["yamm_data/coregm/WeaponInfoTable.xml",
-               "yamm_data/coregm/ItemInfoTable.xml",
-               "yamm_data/coregm/ShopInfoTable.xml",
-               "yamm_data/coregm/ShopInfoTable.xml",
-               "yamm_data/coregm/WeaponStrengthenTable.xml",
-               "yamm_data/core/WeaponStrengthenTable.xml"
-               ]
-
-    #Copy vanilla xml and json files to the work folders
-    shutil.copyfile("yamm_data/xml2Merge/core/WeaponStrengthenTable.xml", "yamm_data/core/WeaponStrengthenTable.xml")
-    shutil.copyfile("yamm_data/xml2Merge/core/WeaponParam.csv", "yamm_data/core/WeaponParam.csv")
-    shutil.copyfile("yamm_data/xml2Merge/ui_core_us/messcore.json", "yamm_data/ui_core_us/messcore.json")
-    for filename in os.listdir("yamm_data/xml2Merge/coregm"):
-        shutil.copyfile("yamm_data/xml2Merge/coregm/" + filename, "yamm_data/coregm/" + filename)
-    #read the cfg file for directories
     cfgFile = open("configs/config.ini", "r")
     data = cfgFile.read()
     config = data.split("\n")
@@ -150,17 +130,30 @@ def deploy():
     global nierModsDir, nierDatDir
     nierDatDir= config[0]
     nierModsDir= config[1]
+    jout.prepareDatFiles()
+
+    if not os.path.isdir("deploy"):
+        os.makedirs("deploy/wp", 0o666)
+        os.makedirs("deploy/core", 0o666)
+        os.makedirs("deploy/ui", 0o666)
+        os.makedirs("deploy/misctex", 0o666)
+    xmlList = ["yamm_data/dat_files/coregm.dat/WeaponInfoTable.xml",
+               "yamm_data/dat_files/coregm.dat/ItemInfoTable.xml",
+               "yamm_data/dat_files/coregm.dat/ShopInfoTable.xml",
+               "yamm_data/dat_files/coregm.dat/WeaponStrengthenTable.xml",
+               "yamm_data/dat_files/core.dat/WeaponStrengthenTable.xml"
+               ]
     jout.cleanDeploy()
     wpStaging()
     finishMisctex()
     print("[Converting new XML...]")
     xml2Bxm.main(xmlList)
     print("[Building MCD...]")
-    mcd.json_to_mcd("yamm_data/ui_core_us/messcore.json", "yamm_data/ui_core_us/messcore.mcd")
+    mcd.json_to_mcd("yamm_data/dat_files/ui_core_us.dat/messcore.json", "yamm_data/dat_files/ui_core_us.dat/messcore.mcd")
     print("[Packing essential .dat's...]")
-    newpackDatt("yamm_data/core/", "deploy/core/core.dat")
-    newpackDatt("yamm_data/coregm/", "deploy/core/coregm.dat")
-    dattExpo.main("yamm_data/ui_core_us/", "deploy/ui/ui_core_us.dat")
+    oneTrueDatPacker.main("yamm_data/dat_files/core.dat/", "deploy/core/core.dat")
+    oneTrueDatPacker.main("yamm_data/dat_files/coregm.dat/", "deploy/core/coregm.dat")
+    oneTrueDatPacker.main("yamm_data/dat_files/ui_core_us.dat/", "deploy/ui/ui_core_us.dat")
     shutil.copytree("deploy/", nierDatDir, copy_function=shutil.copy, dirs_exist_ok=True)
     print("[Mods successfuly deployed!]")
 

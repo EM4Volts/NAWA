@@ -1,10 +1,12 @@
 from pathlib import Path
-import os, tkinter.messagebox, nawa
+import os, tkinter.messagebox
 from tkinter import *
 from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage, filedialog
 import journey_tools as jout
 
-nawmversion = "NAWA version 1.2.1"
+
+
+nawmversion = "NAWA version 1.3.1b"
 
 OUTPUT_PATH = Path(__file__).parent
 ASSETS_PATH = OUTPUT_PATH / Path("./assets")
@@ -32,6 +34,7 @@ cfgFile.close()
 nierDatDir= config[0]
 nierModsDir= config[1]
 cfgStruct = [nierDatDir, nierModsDir]
+import nawa
 
 def generateConfig():
     with open(r'configs/config.ini', 'w') as cfg:
@@ -78,8 +81,9 @@ window = Tk()
 
 window.geometry("1143x734")
 window.configure(bg = "#3A7FF6")
-def onClick():
-    tkinter.messagebox.showinfo("NAWA", "All your mods have been deployed!")
+
+def alertBox(str):
+    tkinter.messagebox.showinfo("NAWA", str)
 
 canvas = Canvas(
     window,
@@ -198,7 +202,7 @@ button_2 = Button(
     image=button_image_2,
     borderwidth=0,
     highlightthickness=0, fg="white", justify='center',
-    command=lambda: [nawa.deploy(), onClick()],
+    command=lambda: [check_ifCfg(True)],
     relief="flat"
 )
 button_2.place(
@@ -214,7 +218,7 @@ button_3 = Button(
     image=button_image_3,
     borderwidth=0,
     highlightthickness=0, fg="white", justify='center',
-    command=lambda: [selectNierDataDir(), generateConfig()],
+    command=lambda: [selectNierDataDir(), generateConfig(), check_ifCfg(False)],
     relief="flat"
 )
 
@@ -225,13 +229,15 @@ button_3.place(
     height=35.0
 )
 
+
+
 button_image_4 = PhotoImage(
     file=relative_to_assets("button_4.png"))
 button_4 = Button(
     image=button_image_4,
     borderwidth=0,
     highlightthickness=0, fg="white", justify='center',
-    command=lambda: [selectNierModsDir(), modListUpdate()],
+    command=lambda: [selectNierModsDir(),generateConfig(), modListUpdate(), check_ifCfg(False)],
     relief="flat"
 )
 button_4.place(
@@ -923,6 +929,9 @@ entry_bg_28 = canvas.create_image(
     93.5,
     image=entry_image_28
 )
+
+
+
 config1 = Entry(
     bd=0,
     bg="#353434",
@@ -1080,7 +1089,7 @@ def updateConfigWindow(dir):
     configU.config(text = new[:32] + "...")
     jout.conWeaponType(config_data[3])
     variable.set(jout.conWeaponType(config_data[3]))
-    
+
     config5.delete(0, END)
     config5.insert(END, config_data[5])
     config6.delete(0, END)
@@ -1208,8 +1217,30 @@ button_reset.place(
     width=190.0,
     height=35.0
 )
+nierDataConfirm =Label(window, bg="#2E2E2E", font=("RobotoRoman CondensedRegular", 12 * -1))
+nierDataConfirm.place(x=202.0, y=700.0)
+modsDirConfirm =Label(window, bg="#2E2E2E", font=("RobotoRoman CondensedRegular", 12 * -1))
+modsDirConfirm.place(x=414, y=700.0)
 
-window.resizable(False, False)
+def check_ifCfg(startDeploy):
+    internalSuccess = 1
+    if not os.path.isdir(nierModsDir):
+        alertBox("SELECT A VALID MODS FOLDER")
+        internalSuccess = 0
+        modsDirConfirm.config(text = "x", fg='red')
+    if not os.path.isdir(nierDatDir):
+        alertBox("SELECT A VALID DATA FOLDER")
+        internalSuccess = 0
+        nierDataConfirm.config(text = "x", fg='red')
+    if internalSuccess == 1:
+        modsDirConfirm.config(text = "✓", fg='green')
+        nierDataConfirm.config(text = "✓", fg='green')
+        if startDeploy:
+            nawa.deploy()
+            alertBox("Mods successfully deployed!")
+
 window.iconbitmap("yamm_data/namc.ico")
+check_ifCfg(False)
+window.resizable(False, False)
 window.title('NAWA | NieR: Automata Weapon Assembly')
 window.mainloop()

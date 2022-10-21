@@ -192,3 +192,13 @@ def writeBe_int32(file, int):
 def writeBe_int16(file, int):
     entry = struct.pack('>h', int)
     file.write(entry)
+
+def write_padding16(file, num):
+    if num % 16 != 0:
+        file.write(b"\0" * (16 - (num % 16)))
+
+def padTo16(num):
+    if num % 16 != 0:
+        num += 16 - (num % 16)
+
+    return num

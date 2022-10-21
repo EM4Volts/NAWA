@@ -16,6 +16,10 @@ You have to have Python 3.10 or higher installed
 
 **ON FIRST START:** 
 
+Before using NAWA please put your core.dat, coregm.dat and ui_core_us.dat in the dat_files folder
+
+NEEDS UPDATE< UPDATE BEFORE PUBLIC RELEASE
+
 Select your NieR: Automata install folders data folder and the folder you will put your weapon mods in using the buttons on the bottom left.
 
 
