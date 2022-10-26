@@ -2,11 +2,11 @@ from pathlib import Path
 import os, tkinter.messagebox
 from tkinter import *
 from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage, filedialog
-import journey_tools as jout
+import nawa_tools as jout
 
 
 
-nawmversion = "NAWA version 1.3.1b"
+nawmversion = "NAWA version 1.4.2a\nthanks to WoefulWolf and Grojdg"
 
 OUTPUT_PATH = Path(__file__).parent
 ASSETS_PATH = OUTPUT_PATH / Path("./assets")
@@ -35,6 +35,8 @@ nierDatDir= config[0]
 nierModsDir= config[1]
 cfgStruct = [nierDatDir, nierModsDir]
 import nawa
+
+#DEAR READER, DONT EVEN READ FURTHER THEN THIS, THIS FILE IS A MESS. DO NOT ATTEMPT TO READ MORE THEN JUST A BIT HERE
 
 def generateConfig():
     with open(r'configs/config.ini', 'w') as cfg:
@@ -188,9 +190,10 @@ variable = StringVar(window)
 variable.set("Small Sword") # default value
 
 config4 = OptionMenu(window,variable, "Large Sword", "Spear", "Small Sword", "Combat Bracers")
-config4.place(x=742, y=278)
+config4.configure(font=('RobotoRoman CondensedRegular',13), bg="#464646")
+config4.place(x=742, y=275)
 button_1.place(
-    x=732.0,
+    x=682.0,
     y=686.0,
     width=190.0,
     height=35.0
@@ -206,9 +209,56 @@ button_2 = Button(
     relief="flat"
 )
 button_2.place(
-    x=941.0,
+    x=891.0,
     y=686.0,
     width=190.0,
+    height=35.0
+)
+
+def del_wp():
+    delList = open("configs/lastWP.txt", "r")
+    data = delList.read()
+    kewlWPIDDELLIST = data.split("\n")
+    delList.close()
+    for str in kewlWPIDDELLIST:
+        try:
+            print(f"removing {str}")
+            os.remove(f"{nierDatDir}/wp/wp{str}.dat")
+            os.remove(f"{nierDatDir}/wp/wp{str}.dtt")
+            os.remove(f"{nierDatDir}/misctex/misctex_wp{str}.dat")
+            os.remove(f"{nierDatDir}/misctex/misctex_wp{str}.dtt")
+        except:
+            print("skipping file")
+    try:
+        os.remove(f"{nierDatDir}/core/core.dat")
+        os.remove(f"{nierDatDir}/core/coregm.dat")
+        os.remove(f"{nierDatDir}/ui/ui_core_us.dat")
+    except:
+        print("core file not found, bruv wtf u doin?")
+
+def delConfirm():
+    msg_box = tkinter.messagebox.askquestion('Remove NAWA', 'Are you sure you want to remove all mods added by NAWA from the game?',
+                                        icon='warning')
+    if msg_box == 'yes':
+        del_wp()
+        tkinter.messagebox.showinfo('Done!', 'All mods removed')
+    else:
+        print("Abort removal")
+
+
+button_image_del = PhotoImage(
+    file=relative_to_assets("delete.png"))
+button_del = Button(
+    image=button_image_del,
+    borderwidth=0,
+    highlightthickness=0, fg="white", justify='center',
+    command=lambda: [delConfirm()],
+    relief="flat"
+)
+button_del.place(
+    x=1098.0,
+    y=686.0,
+    width=35.0,
     height=35.0
 )
 
@@ -374,8 +424,8 @@ canvas.create_text(
 )
 
 canvas.create_text(
-    485.0,
-    709.0,
+    435.0,
+    685.0,
     anchor="nw",
     text=nawmversion,
     fill="#353535",
@@ -644,6 +694,8 @@ entry_bg_13 = canvas.create_image(
     561.5,
     image=entry_image_13
 )
+
+#DIDNT I TELL YOU TO STOP READING THIS?
 config24 = Entry(
     bd=0,
     bg="#353434",
@@ -1236,6 +1288,7 @@ def check_ifCfg(startDeploy):
         modsDirConfirm.config(text = "✓", fg='green')
         nierDataConfirm.config(text = "✓", fg='green')
         if startDeploy:
+            del_wp()
             nawa.deploy()
             alertBox("Mods successfully deployed!")
 

@@ -101,7 +101,7 @@ class DAT:
         self.outdir = outdir
         self.extensions = []
         in_files = os.listdir(in_dir)
-        
+
         if len(in_files) == 0:
             print("Input directory is empty, exiting")
             sys.exit(1)
@@ -178,7 +178,7 @@ class DAT:
             f.write(data)
             ioUtils.write_padding16(f, f.tell())
 
-        print(f"Wrote {outfile}")
+        print(f"[Wrote {outfile}]")
 
     def get_extension_table_size(self):
         split_names = []
@@ -227,22 +227,4 @@ class DAT:
 def main(infile, outfile):
 
     DAT_file = DAT(infile, False, outfile)
-    DAT_file.pack()
-
-if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Usage: py dat.py in_dir")
-
-    in_dir = sys.argv[1]
-    dupe = False
-
-    if len(sys.argv) == 3:
-        flag = sys.argv[2]
-        if flag == "-d":
-            dupe = True
-
-        else:
-            print("Unknown 3rd arg, ignoring")
-
-    DAT_file = DAT(in_dir, dupe)
     DAT_file.pack()

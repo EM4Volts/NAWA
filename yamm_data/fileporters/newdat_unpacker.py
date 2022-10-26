@@ -80,22 +80,6 @@ def extract_hashes(fp, extract_dir, FileCount, hashMapOffset, fileNamesOffset):
 	for i in range(FileCount):
 		fileNames.append(fp.read(fileNameSize))
 
-	# Extraction
-	filename = 'file_order.metadata'
-	extract_dir_sub = extract_dir + '\\' + filename
-	outfile = open(extract_dir_sub,'wb')
-
-	# Header
-	outfile.write(struct.pack('<i', FileCount))
-	outfile.write(struct.pack('<i', fileNameSize))
-
-	#Filenames
-	for fileName in fileNames:
-		outfile.write(fileName)
-
-	outfile.close()
-
-	# hash_data.metadata
 	# Header
 	fp.seek(hashMapOffset)
 	preHashShift = to_int(fp.read(4))
@@ -120,33 +104,8 @@ def extract_hashes(fp, extract_dir, FileCount, hashMapOffset, fileNamesOffset):
 	fileIndices = []
 	for i in range(FileCount):
 		fileIndices.append(to_int(fp.read(2)))
- 
-	# Extraction
-	filename = 'hash_data.metadata'
-	extract_dir_sub = extract_dir + '\\' + filename
-	outfile = open(extract_dir_sub,'wb')
 
-		# Header
-	outfile.write(struct.pack('<i', preHashShift))
-	outfile.write(struct.pack('<i', bucketOffsetsOffset))
-	outfile.write(struct.pack('<i', hashesOffset))
-	outfile.write(struct.pack('<i', fileIndicesOffset))
 
-		# Bucket Offsets
-	for i in bucketOffsets:
-		#print(bucketOffsets)
-		outfile.write(struct.pack('<H', i))
-
-		# Hashes
-	for i in hashes:
-		outfile.write(i)
-
-		# File Indices
-	for i in fileIndices:
-		#print(i)
-		outfile.write(struct.pack('<H', i))
-
-	outfile.close()
 
 
 def main(filename, extract_dir):
@@ -165,30 +124,3 @@ def main(filename, extract_dir):
 		extract_hashes(fp, extract_dir, FileCount, hashMapOffset, NameTableOffset)
 
 	return Filename
-
-
-if __name__ == '__main__':
-	extract_dir = ''
-	dirname = ''
-	useage = "\nUseage:\npython dat_unpacker.py your_dat_path your_extract_path"
-	useage1 = "\nUseage:\nblender --background --python dat_unpacker.py your_dat_path your_extract_path"
-	if len(sys.argv) < 3:
-		print(useage)
-		exit()
-	if len(sys.argv) > 2:
-		dir_name = sys.argv[1]
-		extract_dir = sys.argv[2]
-		print()
-		if os.path.split(sys.argv[0])[-1].lower().find("blender") >-1:
-			if len(sys.argv) < 6:
-				print(useage1)
-				exit()
-			dir_name = sys.argv[4]
-			extract_dir = sys.argv[5]
-		if not os.path.exists(extract_dir):
-			create_dir(extract_dir)
-	ROOT_DIR = dir_name
-	for dirpath,dirnames,filename in os.walk(dir_name):
-		for file in filename:
-			filename = "%s\%s"%(dirpath,file)
-			main(filename, extract_dir, ROOT_DIR)

@@ -58,7 +58,6 @@ data = identifierBlackList.read()
 idBlackList = data.split("\n")
 identifierBlackList.close()
 
-
 wpidBlacklist = []
 idBlacklist = []
 def regenBlacklists():
@@ -76,9 +75,9 @@ def regenBlacklists():
 
 regenBlacklists()
 defaultWPConf = {
-"weaponname": "NAMC Weapon",
-"weapondescshort": "Short Desc",
-"weapondesclong": "Long Desc",
+"weaponname": "Mysterious Weapon",
+"weapondescshort": "Descended upon the world\\nfrom a different one",
+"weapondesclong": "Descended upon the world from a different one",
 "weapontype": "0",
 "lvl1dmgl": "160",
 "lvl1dmgr": "190",
@@ -116,7 +115,10 @@ defaultWPConf = {
 "secPerk": "1003"
 }
 
+logDelList = []
 def getWPfileName(wpC):
+    global logDelList
+    #deciding on weapon name for weapon category based on WPC
     if wpC == "0":
         cName = "Small Sword"
         indexStart = 2
@@ -133,9 +135,11 @@ def getWPfileName(wpC):
         cName = "Combat Bracer"
         indexStart = 601
         indexEnd = 799
+    #setting wpidnotfound to True to iterate through the wpid list to make sure no dupe happens. < dupe id bad, we dont want this to happen lol
     wpidnotFound = True
     while wpidnotFound:
         nWpn = indexStart
+        #checking if the index is shorter, to add some 0s thanks python for not allowing itegers to start with 0
         if len(str(nWpn)) == 1:
             newuId = "000" + str(nWpn)
         if len(str(nWpn)) == 2:
@@ -143,55 +147,52 @@ def getWPfileName(wpC):
         if len(str(nWpn)) == 3:
             newuId = "0" + str(nWpn)
         if newuId in wpidBlacklist:
-            print("[Doing stuff]")
+            print(f"[...{newuId}...]")
         if newuId == indexEnd:
-            print("[WPNAME ERROR: YOU RAN OUT OF SPACE IN THE " + cName + " CATEGORY, REMOVE A MOD FROM THE CATEGORY, THIS WEAPON WILL NOT BE EXPORTED")
+            #if newui hits indexend skip weapon, sadly only a limited ammount of weapons can be added
+            print(f"[WPNAME ERROR: YOU RAN OUT OF SPACE IN THE {cName} CATEGORY, REMOVE A MOD FROM THE CATEGORY, THIS WEAPON WILL NOT BE EXPORTED]")
             wpidnotFound = False
             return "Skip"
         if newuId not in wpidBlacklist:
+                #return new wp id for the weapon aswell as its uid counterpart with an 1 at the start
+                logDelList.append(newuId)
                 wpidBlacklist.append(newuId)
                 wpidnotFound = False
                 return "wp" + newuId, "1" + newuId[1:]
         else:
             indexStart +=1
 
-def getUniqueID():
-    global newUid
-    newUidFound = False
-    while not newUidFound:
-        uId = str(newUid)
-        newUid += 1
-        if uId in idBlacklist:
-            print("[UNIQUEID : " + uId + " in Use, retrying...]")
-        if uId not in idBlacklist:
-            if uId == "1000":
-                print("delete some wp mods.... how do you even have this many?")
-                exit()
-            else:
-                return uId
+def write_last_wp():
+    global logDelList
+    with open("configs/lastWP.txt", "w") as f:
+        for str in logDelList:
+            f.write("%s\n" % str)
 
+
+
+#cleans the deploy folder, cleaning good pog
 def cleanDeploy():
     regenBlacklists()
-    for filename in os.scandir("deploy/"):
+    for filename in os.scandir("yamm_data/deploy/"):
         subFName = filename
         for filename in os.scandir(subFName):
-            toRM = "deploy/" + str(subFName)[11:][:-2] + "/" + str(filename)[11:][:-2]
+            toRM = "yamm_data/deploy/" + str(subFName)[11:][:-2] + "/" + str(filename)[11:][:-2]
             if os.path.isdir(toRM):
                 shutil.rmtree(toRM)
             else:
                 os.remove(toRM)
 
-
 def genNierIdentifier():
+    # getting random hexstring to use as identifer
     random_ID = ''.join(random.choice('0123456789ABCDEF') for n in range(8))
-    while random_ID in idBlackList:
+    while random_ID in idBlackList: #compare new string against list of all known ingame identifiers to not have dupes
         print("Dupe found")
         random_ID = ''.join(random.choice('0123456789ABCDEF') for n in range(8))
         quit()
     idBlackList.append(random_ID)
     return random_ID
 
-def conWeaponType(re):
+def conWeaponType(re):   #doing a bit of the skiddoodle to translate a name to a number and back for the configs
     if re == "0":
         return "Small Sword"
     if re == "1":
@@ -209,20 +210,19 @@ def conWeaponType(re):
     if re == "Combat Bracers":
         return "3"
 
-
-def translateSpecial(sId):
+def translateSpecial(sId): #not used. will leave in if ever needed
     with open("configs/weaponspecials.json", "r") as specialA:
         specialAs = specialA.read()
     jsonSpecials = json.loads(specialAs)
     toReSid = jsonSpecials[sId]
     return toReSid
 
-def resetConfig(cfDir):
+def resetConfig(cfDir): #resets a weapons config file to the default version... not a good way todo so but it works lmao
     with open(cfDir, 'w') as f:
         json.dump(defaultWPConf, f)
     print("config reset")
 
-def readwpConfig(cfDir):
+def readwpConfig(cfDir): #reads the weapon config cfDir and returns it as a list of strings (dont judge me)
     if not os.path.isfile(cfDir):
         with open(cfDir, 'w') as f:
             json.dump(defaultWPConf, f)
@@ -271,6 +271,7 @@ def readwpConfig(cfDir):
     return wpName, wpDescS, wpDescL, wpType, wpconfJson, lvl1dmgl, lvl1dmgr, lvl1cmbl, lvl1cmbr, lvl1spd, lvl1end, lvl1stun, lvl1crit, lvl2dmgl, lvl2dmgr, lvl2cmbl, lvl2cmbr, lvl2spd, lvl2end, lvl2stun, lvl2crit, lvl3dmgl, lvl3dmgr, lvl3cmbl, lvl3cmbr, lvl3spd, lvl3end, lvl3stun, lvl3crit, lvl4dmgl, lvl4dmgr, lvl4cmbl, lvl4cmbr, lvl4spd, lvl4end, lvl4stun, lvl4crit
 
 
+#writes the weapons config to a file... dont judge me again
 def writewpConfig(cfDir, wpName, wpDescS, wpDescL, wpType, lvl1dmgl, lvl1dmgr, lvl1cmbl, lvl1cmbr, lvl1spd, lvl1end, lvl1stun, lvl1crit, lvl2dmgl, lvl2dmgr, lvl2cmbl, lvl2cmbr, lvl2spd, lvl2end, lvl2stun, lvl2crit, lvl3dmgl, lvl3dmgr, lvl3cmbl, lvl3cmbr, lvl3spd, lvl3end, lvl3stun, lvl3crit, lvl4dmgl, lvl4dmgr, lvl4cmbl, lvl4cmbr, lvl4spd, lvl4end, lvl4stun, lvl4crit):
     if not os.path.isfile(cfDir):
         with open(cfDir, 'w') as f:
@@ -319,6 +320,7 @@ def writewpConfig(cfDir, wpName, wpDescS, wpDescL, wpType, lvl1dmgl, lvl1dmgr, l
     with open(cfDir, 'w') as file:
         json.dump(newCfg, file)
 
+#make kewl list from folderidoo
 def genPathList(folder):
     mDir = os.listdir(folder)
     mDir2 = []
@@ -327,6 +329,8 @@ def genPathList(folder):
         mDir2.append(entry)
     return mDir2
 
+
+#open all the templates and load into mem to use later on, done on import.
 with open("yamm_data/configTemplates/coregmItemInfoTable.txt", 'r') as file:
     coregmItemInfoTableCrisp = file.read()
 with open("yamm_data/configTemplates/coregmShopInfoTable.txt", 'r') as file:
@@ -341,7 +345,8 @@ with open("yamm_data/configTemplates/messcore.txt", 'r') as file:
     uimesscoreCrisp = file.read()
 with open("yamm_data/configTemplates/coreweaponParam.txt", 'r') as file:
     weaponParamCrisp = file.read()
-#currently in use for replacign binary strings
+
+#replaces a string inside of ta binary thingeridoo...
 def kewlDatt(ptf, kewlName, newName):
     with open(ptf, "rb") as f:
         contents = f.read()
@@ -349,6 +354,7 @@ def kewlDatt(ptf, kewlName, newName):
     with open(ptf, "wb") as f:
         f.write(ff)
 
+#writes to a table depending on which one was selected. different offsets for different ones. no i wont switch to proper json or xml stuff, not yet lol poggers
 def writeToTable(crispSel, iName, UID, wpName, igName, igDescs, igDescl, wpCat, lvl1dmgl, lvl1dmgr, lvl1cmbl, lvl1cmbr, lvl1spd, lvl1end, lvl1stun, lvl1crit, lvl2dmgl, lvl2dmgr, lvl2cmbl, lvl2cmbr, lvl2spd, lvl2end, lvl2stun, lvl2crit, lvl3dmgl, lvl3dmgr, lvl3cmbl, lvl3cmbr, lvl3spd, lvl3end, lvl3stun, lvl3crit, lvl4dmgl, lvl4dmgr, lvl4cmbl, lvl4cmbr, lvl4spd, lvl4end, lvl4stun, lvl4crit):
     #SELECTS THE TABLE TO SET PATH, OFFSET AND TEMPLATE
     if crispSel == 1:
@@ -435,22 +441,20 @@ def writeToTable(crispSel, iName, UID, wpName, igName, igDescs, igDescl, wpCat, 
         tableContents = "".join(tableContents)
         f.write(tableContents)
 
+#simplify writing to all tables by having kewl command (dont even try to judge me for this)
 def WriteAllTables(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, a1, b1, c1, d1, e1, f1, g1, h1, i1, j1, k1, l1, m1):
     allTables = [1, 2, 3, 4, 5, 6, 7]
     #ecexutes the tablewrite on all currently accesible tables
     for int in allTables:
         writeToTable(int, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, a1, b1, c1, d1, e1, f1, g1, h1, i1, j1, k1, l1, m1)
 
-
-
-
-def genInsertableID(wtaFilePath):
+def genInsertableID(wtaFilePath): #if im honest i dont know what this does anymore. its needed. dont remove
     global wtaIdTable
     nierID = genNierIdentifier()
     retNierId = " ".join(nierID[i:i+2] for i in range(0, len(nierID), 2))
     return retNierId
 
-def identifierTurn(str):
+def identifierTurn(str): #takes a kewl 8 char long string and make it be reverse.
     revID = str[::-1]
     l1 = str[:-6]
     l2 = str[:-4][2:]
@@ -460,7 +464,7 @@ def identifierTurn(str):
 
     return binStr
 
-def replace_in_hex(file_to_manipulate, stringtoreplace, stringtoplace):
+def replace_in_hex(file_to_manipulate, stringtoreplace, stringtoplace): #replaces a string in a file via the kewl read and write binary shit lol
     g1 = bytes.fromhex(stringtoreplace)
     g2 = bytes.fromhex(stringtoplace)
 
@@ -470,14 +474,13 @@ def replace_in_hex(file_to_manipulate, stringtoreplace, stringtoplace):
     with open(file_to_manipulate, "wb") as file:
         file.write(rp)
 
-
 def shuffleIdentifierMisctex(wtaFilePath):
     with open(wtaFilePath, "rb") as wtab_fp:
         wtaIdTable = WTA(wtab_fp).wtaTextureIdentifier
     for str in wtaIdTable:
         newIDd=genInsertableID(wtaFilePath)
         revTurnTab= " ".join(identifierTurn(str)[i:i+2] for i in range(0, len(identifierTurn(str)), 2))
-        replace_in_hex(wtaFilePath, revTurnTab, newIDd)
+        replace_in_hex(wtaFilePath, revTurnTab, newIDd) #shuffles identifiers but for misctex only..
 
 def shuffleIdentifierWta(wtaFilePath, wmbFilePath):
     with open(wtaFilePath, "rb") as wtab_fp:
@@ -488,8 +491,7 @@ def shuffleIdentifierWta(wtaFilePath, wmbFilePath):
         replace_in_hex(wtaFilePath, revTurnTab, newIDd)
         replace_in_hex(wmbFilePath[:-4] + ".wmb", revTurnTab, newIDd)
 
-
-def prepareDatFiles():
+def prepareDatFiles():      #init to make the dat files into usable folders for the main script to work on the xmls, no dmca infringement baby!
     datList = ["dat_files/core.dat",
                "dat_files/coregm.dat",
                "dat_files/ui_core_us.dat"
@@ -502,15 +504,13 @@ def prepareDatFiles():
                ]
     for str in datList:
         if os.path.isfile(str):
-            print("[Unpacking " + str + "]")
+            print(f"[Unpacking {str}]")
             newdattUn.main(str, "yamm_data/" + str)
         else:
-            print("[ERROR: PLEASE PUT VALID DAT FILES IN THE DAT FILES DIRECTORY]\n[]")
+            print("[ERROR: PLEASE PUT VALID DAT FILES IN THE DAT FILES DIRECTORY]\n")
             exit()
     for str in bxmList:
-        print("[Preparing XML File " + str + "]")
+        print(f"[Preparing XML File {str}]")
         bxm2xml.main(str)
-    print("[Prepating MCD]")
+    print("[Preparing MCD]")
     mcd.mcd_to_json("yamm_data/dat_files/ui_core_us.dat/messcore.mcd")
-
-

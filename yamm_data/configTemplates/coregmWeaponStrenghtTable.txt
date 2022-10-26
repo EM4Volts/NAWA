@@ -2,7 +2,7 @@
             <ObjID>newWPid</ObjID>
             <UniqueID>newUid</UniqueID>
             <lv>2</lv>
-            <cost>2500</cost>
+            <cost>250</cost>
             <Material1>
                 <UniqueID>530</UniqueID>
                 <Quantity>5</Quantity>
@@ -28,7 +28,7 @@
             <ObjID>newWPid</ObjID>
             <UniqueID>newUid</UniqueID>
             <lv>3</lv>
-            <cost>5000</cost>
+            <cost>500</cost>
             <Material1>
                 <UniqueID>610</UniqueID>
                 <Quantity>1</Quantity>
@@ -54,7 +54,7 @@
             <ObjID>newWPid</ObjID>
             <UniqueID>newUid</UniqueID>
             <lv>4</lv>
-            <cost>10000</cost>
+            <cost>1000</cost>
             <Material1>
                 <UniqueID>536</UniqueID>
                 <Quantity>1</Quantity>
