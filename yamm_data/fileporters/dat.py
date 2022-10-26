@@ -2,7 +2,9 @@ import os
 import sys
 import zlib
 import yamm_data.fileporters.utils.ioUtils as ioUtils
-
+"""
+god bless us all
+"""
 class HashInfo:
     def __init__(self, in_files, dupe):
         self.in_files = in_files
