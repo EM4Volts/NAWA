@@ -1,10 +1,11 @@
-import os, random, shutil, string
+import os, random, shutil, string, datetime
 import yamm_data.fileporters.mcd as mcd
 import nawa_tools as jout
 import yamm_data.fileporters.xmlToBxm as xml2Bxm
 import yamm_data.fileporters.newdat_unpacker as newdattUn
 import yamm_data.fileporters.dat as oneTrueDatPacker
 
+now = datetime.datetime.now()
 cfgFile = open("configs/config.ini", "r")
 data = cfgFile.read()
 config = data.split("\n")
@@ -137,3 +138,4 @@ def deploy():
     print("[Mods successfuly yamm_data/deployed!]")
     jout.write_last_wp()
     jout.cleanDeploy()
+    print(f"[{now}]")

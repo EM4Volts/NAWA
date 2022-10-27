@@ -6,7 +6,7 @@ import nawa_tools as jout
 
 
 
-nawmversion = "NAWA version 1.4.2a\nthanks to WoefulWolf and Grojdg"
+nawmversion = "NAWA version 2.0.77\nthanks to WoefulWolf and Grojdg"
 
 OUTPUT_PATH = Path(__file__).parent
 ASSETS_PATH = OUTPUT_PATH / Path("./assets")
@@ -186,6 +186,30 @@ button_1 = Button(
     command=lambda: updateConfigFile(dir),
     relief="flat"
 )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 variable = StringVar(window)
 variable.set("Small Sword") # default value
 
