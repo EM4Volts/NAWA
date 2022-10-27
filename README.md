@@ -18,10 +18,12 @@ You have to have Python 3.10 or higher installed
 
 ## Acknowledgements
 
- - [Woeful_Wolf](https://github.com/WoefulWolf) For the incredible work on Nier2Blender2Nier making this even possible
- - [RaiderB](https://github.com/ArthurHeitmann) Too, for the incredible work and tools making this possible
- - [grojdg](https://github.com/xxk-i) ...im repeating myself, for incredible tools
-
-
- 
-
+ - [Woeful_Wolf](https://github.com/WoefulWolf) everything that revolves around MCD files aswell as the other formats used in dat and dtt files.
+ - [RaiderB](https://github.com/ArthurHeitmann) for scripts relating to bxm > xml > bxm.
+ - [grojdg](https://github.com/xxk-i) for the patience with me lol, i can be incredibly dumb at times. oh yeah, and for his dat packer that just works.
+   
+   Special Thanks to:
+                Seek (Testing)
+                Baal (Testing)
+                Wolf's Fanclub(dont ask)
+                
