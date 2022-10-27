@@ -28,5 +28,5 @@ You have to have Python 3.10 or higher installed
    
                 Baal (Testing)
    
-                Wolf's Fanclub(dont ask)
+                Wolf's Fanboys(dont ask)
                 
