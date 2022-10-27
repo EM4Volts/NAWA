@@ -110,32 +110,33 @@ def deploy():
     nierDatDir= config[0]
     nierModsDir= config[1]
     print("[Starting yamm_data/deployment]\n[Unpacking supplemental dat files]")
-    jout.prepareDatFiles()
-
-    if not os.path.isdir("yamm_data/deploy"):
-        os.makedirs("yamm_data/deploy/wp", 0o666)
-        os.makedirs("yamm_data/deploy/core", 0o666)
-        os.makedirs("yamm_data/deploy/ui", 0o666)
-        os.makedirs("yamm_data/deploy/misctex", 0o666)
-    xmlList = ["yamm_data/dat_files/coregm.dat/WeaponInfoTable.xml",
-               "yamm_data/dat_files/coregm.dat/ItemInfoTable.xml",
-               "yamm_data/dat_files/coregm.dat/ShopInfoTable.xml",
-               "yamm_data/dat_files/coregm.dat/WeaponStrengthenTable.xml",
-               "yamm_data/dat_files/core.dat/WeaponStrengthenTable.xml"
-               ]
-    jout.cleanDeploy()
-    wpStaging()
-    finishMisctex()
-    print("\n[Converting new XML...]")
-    xml2Bxm.main(xmlList)
-    print("[Building MCD...]")
-    mcd.json_to_mcd("yamm_data/dat_files/ui_core_us.dat/messcore.json", "yamm_data/dat_files/ui_core_us.dat/messcore.mcd")
-    print("[Packing essential .dat's...]")
-    oneTrueDatPacker.main("yamm_data/dat_files/core.dat/", "yamm_data/deploy/core/core.dat")
-    oneTrueDatPacker.main("yamm_data/dat_files/coregm.dat/", "yamm_data/deploy/core/coregm.dat")
-    oneTrueDatPacker.main("yamm_data/dat_files/ui_core_us.dat/", "yamm_data/deploy/ui/ui_core_us.dat")
-    shutil.copytree("yamm_data/deploy/", nierDatDir, copy_function=shutil.move, dirs_exist_ok=True)
-    print("[Mods successfuly yamm_data/deployed!]")
-    jout.write_last_wp()
-    jout.cleanDeploy()
-    print(f"[{now}]")
+    if jout.prepareDatFiles() == False:
+        print("[ERROR: PLEASE PUT VALID DAT FILES IN THE DAT FILES DIRECTORY]\n")
+    else:
+        if not os.path.isdir("yamm_data/deploy"):
+            os.makedirs("yamm_data/deploy/wp", 0o666)
+            os.makedirs("yamm_data/deploy/core", 0o666)
+            os.makedirs("yamm_data/deploy/ui", 0o666)
+            os.makedirs("yamm_data/deploy/misctex", 0o666)
+        xmlList = ["yamm_data/dat_files/coregm.dat/WeaponInfoTable.xml",
+                   "yamm_data/dat_files/coregm.dat/ItemInfoTable.xml",
+                   "yamm_data/dat_files/coregm.dat/ShopInfoTable.xml",
+                   "yamm_data/dat_files/coregm.dat/WeaponStrengthenTable.xml",
+                   "yamm_data/dat_files/core.dat/WeaponStrengthenTable.xml"
+                   ]
+        jout.cleanDeploy()
+        wpStaging()
+        finishMisctex()
+        print("\n[Converting new XML...]")
+        xml2Bxm.main(xmlList)
+        print("[Building MCD...]")
+        mcd.json_to_mcd("yamm_data/dat_files/ui_core_us.dat/messcore.json", "yamm_data/dat_files/ui_core_us.dat/messcore.mcd")
+        print("[Packing essential .dat's...]")
+        oneTrueDatPacker.main("yamm_data/dat_files/core.dat/", "yamm_data/deploy/core/core.dat")
+        oneTrueDatPacker.main("yamm_data/dat_files/coregm.dat/", "yamm_data/deploy/core/coregm.dat")
+        oneTrueDatPacker.main("yamm_data/dat_files/ui_core_us.dat/", "yamm_data/deploy/ui/ui_core_us.dat")
+        shutil.copytree("yamm_data/deploy/", nierDatDir, copy_function=shutil.move, dirs_exist_ok=True)
+        print("[Mods successfuly yamm_data/deployed!]")
+        jout.write_last_wp()
+        jout.cleanDeploy()
+        print(f"[{now}]")

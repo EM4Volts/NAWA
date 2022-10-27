@@ -188,28 +188,6 @@ button_1 = Button(
 )
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 variable = StringVar(window)
 variable.set("Small Sword") # default value
 

@@ -508,7 +508,7 @@ def prepareDatFiles():      #init to make the dat files into usable folders for 
             newdattUn.main(str, "yamm_data/" + str)
         else:
             print("[ERROR: PLEASE PUT VALID DAT FILES IN THE DAT FILES DIRECTORY]\n")
-            exit()
+            return False
     for str in bxmList:
         print(f"[Preparing XML File {str}]")
         bxm2xml.main(str)
