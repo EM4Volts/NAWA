@@ -1291,8 +1291,10 @@ def check_ifCfg(startDeploy):
         nierDataConfirm.config(text = "✓", fg='green')
         if startDeploy:
             del_wp()
-            nawa.deploy()
-            alertBox("Mods successfully deployed!")
+            if nawa.deploy() == True:
+                alertBox("Mods successfully deployed!")
+            else:
+                alertBox("Error occured, refer to console window")
 
 window.iconbitmap("yamm_data/namc.ico")
 check_ifCfg(False)

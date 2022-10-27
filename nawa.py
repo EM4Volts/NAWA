@@ -140,3 +140,4 @@ def deploy():
         jout.write_last_wp()
         jout.cleanDeploy()
         print(f"[{now}]")
+        return True
