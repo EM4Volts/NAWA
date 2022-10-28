@@ -12,7 +12,7 @@ You have to have Python 3.10 or higher installed
 
 
     
-### PLEASE REFER TO THE WIKI PAGE TO KNOW HOW TO USE NAWA
+### PLEASE REFER TO THE [WIKI](https://github.com/EM4Volts/NAWA/wiki) PAGE TO KNOW HOW TO USE NAWA
 
 
 
