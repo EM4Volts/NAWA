@@ -1,3 +1,4 @@
+import shutil
 from pathlib import Path
 import os, tkinter.messagebox
 from tkinter import *
@@ -236,7 +237,7 @@ def del_wp():
         os.remove(f"{nierDatDir}/core/coregm.dat")
         os.remove(f"{nierDatDir}/ui/ui_core_us.dat")
     except:
-        print("core file not found, bruv wtf u doin?")
+        print(" ")
 
 def delConfirm():
     msg_box = tkinter.messagebox.askquestion('Remove NAWA', 'Are you sure you want to remove all mods added by NAWA from the game?',
@@ -1292,6 +1293,7 @@ def check_ifCfg(startDeploy):
         if startDeploy:
             del_wp()
             if nawa.deploy() == True:
+                shutil.rmtree("yamm_data/dat_files")
                 alertBox("Mods successfully deployed!")
             else:
                 alertBox("Error occured, refer to console window")

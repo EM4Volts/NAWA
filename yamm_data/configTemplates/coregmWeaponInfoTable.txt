@@ -3,7 +3,7 @@
             <UniqueID>newUid</UniqueID>
 			<Category>newCat</Category>
 			<Special1>3</Special1>
-			<Special2>00f1</Special2>
+			<Special2>1877</Special2>
 			<Lv_1>
 				<Attack>100</Attack>
 				<Increase>0</Increase>
