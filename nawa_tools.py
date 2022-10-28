@@ -271,6 +271,22 @@ def readwpConfig(cfDir): #reads the weapon config cfDir and returns it as a list
     return wpName, wpDescS, wpDescL, wpType, wpconfJson, lvl1dmgl, lvl1dmgr, lvl1cmbl, lvl1cmbr, lvl1spd, lvl1end, lvl1stun, lvl1crit, lvl2dmgl, lvl2dmgr, lvl2cmbl, lvl2cmbr, lvl2spd, lvl2end, lvl2stun, lvl2crit, lvl3dmgl, lvl3dmgr, lvl3cmbl, lvl3cmbr, lvl3spd, lvl3end, lvl3stun, lvl3crit, lvl4dmgl, lvl4dmgr, lvl4cmbl, lvl4cmbr, lvl4spd, lvl4end, lvl4stun, lvl4crit
 
 
+
+def checkStringFont(str, font):
+    if font == 36:
+        font_char_list = [" ", "#", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ":", "?", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "[", "]", "_", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "!"]
+    if font == 5:
+        font_char_list = [" ", "%", "&", "'", "(", ")", "+", "-", ".", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ":", "A", "B", "C", "D", "E", "F", "G", "H", "I", "K", "L", "M", "N", "O", "P", "R", "S", "T", "U", "V", "W", "Y", "a", "b", "c", "d", "e", "f", "g", "h", "i", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    newStr = ""
+    invalidCharList = []
+    for i in str:
+        if i in font_char_list:
+            newStr += i
+        else:
+            invalidCharList.append(i)
+    print(f"[Removed invalid characters {invalidCharList}]")
+    return newStr
+
 #writes the weapons config to a file... dont judge me again
 def writewpConfig(cfDir, wpName, wpDescS, wpDescL, wpType, lvl1dmgl, lvl1dmgr, lvl1cmbl, lvl1cmbr, lvl1spd, lvl1end, lvl1stun, lvl1crit, lvl2dmgl, lvl2dmgr, lvl2cmbl, lvl2cmbr, lvl2spd, lvl2end, lvl2stun, lvl2crit, lvl3dmgl, lvl3dmgr, lvl3cmbl, lvl3cmbr, lvl3spd, lvl3end, lvl3stun, lvl3crit, lvl4dmgl, lvl4dmgr, lvl4cmbl, lvl4cmbr, lvl4spd, lvl4end, lvl4stun, lvl4crit):
     if not os.path.isfile(cfDir):
@@ -280,9 +296,10 @@ def writewpConfig(cfDir, wpName, wpDescS, wpDescL, wpType, lvl1dmgl, lvl1dmgr, l
     with open(cfDir, 'r') as file:
         wpconf = file.read()
     newCfg = json.loads(wpconf)
-    newCfg["weaponname"] = wpName
-    newCfg["weapondescshort"] = wpDescS
-    newCfg["weapondesclong"] = wpDescL
+    dual_check_name = checkStringFont(wpName, 5)
+    newCfg["weaponname"] = checkStringFont(dual_check_name, 36)
+    newCfg["weapondescshort"] = checkStringFont(wpDescS, 36)
+    newCfg["weapondesclong"] = checkStringFont(wpDescL, 36)
     newCfg["weapontype"] = wpType
     newCfg["lvl1dmgl"] = lvl1dmgl
     newCfg["lvl1dmgr"] = lvl1dmgr

@@ -513,24 +513,3 @@ def json_to_mcd(json_file, mcd_file):
     outfile = os.path.splitext(json_file)[0] + ".mcd"
     with open(outfile, "wb") as file:
         mcd.write_file(file)
-
-
-
-if __name__ == "__main__":
-    in_file = sys.argv[1]
-
-    in_file = os.path.normpath(in_file)
-    in_file_ext = os.path.splitext(in_file)[1]
-
-    if in_file_ext == ".mcd":
-        mcd_to_json(in_file)
-    
-    if in_file_ext == ".json":
-        if len(sys.argv) < 3:
-            mcd_file = input("Please specify the MCD file to use as a base for fonts/glyphs:\n")
-        else:
-            mcd_file = sys.argv[2]
-
-        mcd_file = mcd_file.replace('"', "")
-        mcd_file = os.path.normpath(mcd_file)
-        json_to_mcd(in_file, mcd_file)
