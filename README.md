@@ -30,3 +30,8 @@ You have to have Python 3.10 or higher installed
    
                 Wolf's Fanboys(dont ask)
                 
+
+
+
+
+https://github.com/EM4Volts/NAWA/blob/master/docs/nawa.png
