@@ -33,5 +33,5 @@ You have to have Python 3.10 or higher installed
 
 
 
+![nawa gui](https://github.com/EM4Volts/NAWA/blob/master/docs/nawa.png)
 
-https://github.com/EM4Volts/NAWA/blob/master/docs/nawa.png
