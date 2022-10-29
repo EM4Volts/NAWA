@@ -14,6 +14,8 @@ You have to have Python 3.10 or higher installed
     
 ### PLEASE REFER TO THE [WIKI](https://github.com/EM4Volts/NAWA/wiki) PAGE TO KNOW HOW TO USE NAWA
 
+[Example Weapon Pack 1: Arcane Hextech Weapons](https://www.nexusmods.com/nierautomata/mods/352/)
+
 
 
 ## Acknowledgements
