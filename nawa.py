@@ -17,6 +17,7 @@ def wpStaging():
     for filename in os.scandir(nierModsDir):
         wp_Files_Folder = nierModsDir + "/" + filename.name + "/wp"
         misctex_files_folder = nierModsDir + "/" + filename.name + "/misctex"
+        effects_files_folder = nierModsDir + "/" + filename.name + "/effect"
         wpCFGdata = jout.readwpConfig(nierModsDir + "/" + filename.name + "/config.json")
         internalWeaponID = 'weapon_' + ''.join(random.choice(string.ascii_lowercase) for _ in range(11))
         wpId = jout.getWPfileName(wpCFGdata[3])
@@ -55,15 +56,24 @@ def wpStaging():
                 shutil.rmtree(unpack_dat_path)
                 shutil.rmtree(unpack_dtt_path)
 
+        misctex_dat_finished = False
+        misctex_dtt_finished = False
         if os.path.isdir(misctex_files_folder):
-            print("[Misctex found...]")
+            print("[Misctex folder found...]")
             for filename in os.scandir(misctex_files_folder):
                 mt_Path = misctex_files_folder + "/" + filename.name
                 if mt_Path.endswith(".dat"):
                     shutil.copyfile(mt_Path, "yamm_data/deploy/misctex/misctex_" + new_wp_name + ".dat")
+                    misctex_dat_finished = True
                 if mt_Path.endswith(".dtt"):
                     shutil.copyfile(mt_Path, "yamm_data/deploy/misctex/misctex_" + new_wp_name + ".dtt")
-        else:
+                    misctex_dtt_finished = True
+
+        if not misctex_dat_finished or not misctex_dtt_finished:
+            print("[Misctex files incomplete/not existing, fallback to default]")
+            print(f"[misctex dat exitsts: {misctex_dat_finished}]\n[misctex dtt exitsts: {misctex_dtt_finished}]")
+
+        if misctex_dtt_finished == False or misctex_dat_finished == False:
             if wpCFGdata[3] == "0":
                 mTexSName = "misctex_smallsword"
             if wpCFGdata[3] == "1":
@@ -74,6 +84,13 @@ def wpStaging():
                 mTexSName = "misctex_bracers"
             shutil.copyfile(f"yamm_data\configTemplates/{mTexSName}.dat", f"yamm_data/deploy/misctex/misctex_{new_wp_name}.dat")
             shutil.copyfile(f"yamm_data\configTemplates/{mTexSName}.dtt", f"yamm_data/deploy/misctex/misctex_{new_wp_name}.dtt")
+
+        if os.path.isdir(effects_files_folder):
+            print("[Effect folder found...]")
+            for filename in os.scandir(effects_files_folder):
+                effect_Path = effects_files_folder + "/" + filename.name
+                if effect_Path.endswith(".eff"):
+                    shutil.copyfile(effect_Path, "yamm_data/deploy/effect/" + new_wp_name + ".eff")
 
 def finishMisctex():
     for filename in os.scandir("yamm_data/deploy/misctex"):
@@ -109,7 +126,7 @@ def deploy():
     global nierModsDir, nierDatDir
     nierDatDir= config[0]
     nierModsDir= config[1]
-    print("[Starting yamm_data/deployment]\n[Unpacking supplemental dat files]")
+    print("[Starting deployment]\n[Unpacking supplemental dat files]")
     if jout.prepareDatFiles() == False:
         print("[ERROR: PLEASE PUT VALID DAT FILES IN THE DAT FILES DIRECTORY]\n")
     else:
@@ -118,6 +135,7 @@ def deploy():
             os.makedirs("yamm_data/deploy/core", 0o666)
             os.makedirs("yamm_data/deploy/ui", 0o666)
             os.makedirs("yamm_data/deploy/misctex", 0o666)
+            os.makedirs("yamm_data/deploy/effect", 0o666)
         xmlList = ["yamm_data/dat_files/coregm.dat/WeaponInfoTable.xml",
                    "yamm_data/dat_files/coregm.dat/ItemInfoTable.xml",
                    "yamm_data/dat_files/coregm.dat/ShopInfoTable.xml",
@@ -125,6 +143,8 @@ def deploy():
                    "yamm_data/dat_files/core.dat/WeaponStrengthenTable.xml"
                    ]
         jout.cleanDeploy()
+        import time
+        time.sleep(15)
         wpStaging()
         finishMisctex()
         print("\n[Converting new XML...]")

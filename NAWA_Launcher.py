@@ -3,6 +3,7 @@ from pathlib import Path
 import os, tkinter.messagebox
 from tkinter import *
 from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage, filedialog
+from tkinter.colorchooser import askcolor
 import nawa_tools as jout
 
 
@@ -230,6 +231,7 @@ def del_wp():
             os.remove(f"{nierDatDir}/wp/wp{str}.dtt")
             os.remove(f"{nierDatDir}/misctex/misctex_wp{str}.dat")
             os.remove(f"{nierDatDir}/misctex/misctex_wp{str}.dtt")
+            os.remove(f"{nierDatDir}/effect/wp{str}.eff")
         except:
             print("skipping file")
     try:

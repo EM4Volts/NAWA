@@ -76,8 +76,8 @@ def regenBlacklists():
 regenBlacklists()
 defaultWPConf = {
 "weaponname": "Mysterious Weapon",
-"weapondescshort": "Descended upon the world\\nfrom a different one",
-"weapondesclong": "Descended upon the world from a different one",
+"weapondescshort": "How did this get here?",
+"weapondesclong": "How did this get here?",
 "weapontype": "0",
 "lvl1dmgl": "160",
 "lvl1dmgr": "190",
@@ -296,8 +296,7 @@ def writewpConfig(cfDir, wpName, wpDescS, wpDescL, wpType, lvl1dmgl, lvl1dmgr, l
     with open(cfDir, 'r') as file:
         wpconf = file.read()
     newCfg = json.loads(wpconf)
-    dual_check_name = checkStringFont(wpName, 5)
-    newCfg["weaponname"] = checkStringFont(dual_check_name, 36)
+    newCfg["weaponname"] = checkStringFont(checkStringFont(wpName, 5), 36)
     newCfg["weapondescshort"] = checkStringFont(wpDescS, 36)
     newCfg["weapondesclong"] = checkStringFont(wpDescL, 36)
     newCfg["weapontype"] = wpType
