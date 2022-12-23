@@ -8,7 +8,7 @@ import nawa_tools as jout
 
 
 
-nawmversion = "NAWA version 2.3.1a\nthanks to WoefulWolf and Grojdg"
+nawmversion = "NAWA version 2.4.4a\nthanks to WoefulWolf and Grojdg"
 
 OUTPUT_PATH = Path(__file__).parent
 ASSETS_PATH = OUTPUT_PATH / Path("./assets")
