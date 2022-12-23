@@ -384,15 +384,15 @@ def writeToTable(crispSel, iName, UID, wpName, igName, igDescs, igDescl, wpCat, 
     if crispSel == 3:
         crispPart = coregmWeaponInfoTableCrisp
         tablePath = "yamm_data/dat_files/coregm.dat/weaponinfotable.xml"
-        lineOffset = 10
+        lineOffset = sum(1 for line in open(tablePath)) - 2
     if crispSel == 4:
         crispPart = coregmWeaponStrenghtenTableCrisp
         tablePath = "yamm_data/dat_files/coregm.dat/WeaponStrengthenTable.xml"
-        lineOffset = 3
+        lineOffset = sum(1 for line in open(tablePath)) - 2
     if crispSel == 5:
         crispPart = coreWeaponStrenghtTableCrisp
         tablePath = "yamm_data/dat_files/core.dat/WeaponStrengthenTable.xml"
-        lineOffset = 3
+        lineOffset = sum(1 for line in open(tablePath)) - 2
     if crispSel == 6:
         crispPart = uimesscoreCrisp
         tablePath = "yamm_data/dat_files/ui_core_us.dat/messcore.json"
@@ -401,6 +401,8 @@ def writeToTable(crispSel, iName, UID, wpName, igName, igDescs, igDescl, wpCat, 
         crispPart = weaponParamCrisp
         tablePath = "yamm_data/dat_files/core.dat/WeaponParam.csv"
         lineOffset = 40
+
+    print(lineOffset)
 
     #REPLACE ALL PLACEHOLDER NAMES IN LOADED TEMPLATE TO GIVEN STRINGS
     crispPart = crispPart.replace("newWPid", wpName)
