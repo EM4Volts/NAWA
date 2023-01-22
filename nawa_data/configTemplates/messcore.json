@@ -1,0 +1,39 @@
+        {
+            "event_name": "CORE_WP_HELP_S_newUid",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "newIGDescs"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_HELP_newUid",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "newIGDescl"
+                }
+            ]
+        },
+        {
+            "event_name": "CORE_WP_NAME_newUid",
+            "texts": [
+                {
+                    "vpos": 0,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "newIGname"
+                },
+                {
+                    "vpos": 1,
+                    "hpos": 0,
+                    "font": 36,
+                    "line": "newIGname"
+                }
+            ]
+        },
