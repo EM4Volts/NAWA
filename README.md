@@ -8,9 +8,6 @@ A NieR: Automata Weapon Assembler allowing to add completely custom weapons to t
 
 ## Dependencies
 
-You have to have Python 3.10 or higher installed
-
-### IF YOU USED NAWA BEFORE 2.4.4a PLEASE PRESS THE REMOVE BUTTON, LAUNCH THE GAME AND SAVE WITHOUT MOD WEAPONS, THEN USE THE NEW NAWA VERSION TO FIX WEAPON ORDER
     
 ### PLEASE REFER TO THE [WIKI](https://github.com/EM4Volts/NAWA/wiki) PAGE TO KNOW HOW TO USE NAWA
 
@@ -24,10 +21,6 @@ You have to have Python 3.10 or higher installed
  - [RaiderB](https://github.com/ArthurHeitmann) for scripts relating to bxm > xml > bxm.
  - [grojdg](https://github.com/xxk-i) for the patience with me lol, i can be incredibly dumb at times. oh yeah, and for his dat packer that just works.
    
-
-                
-
-
 
 ![nawa gui](https://github.com/EM4Volts/NAWA/blob/master/docs/nawa.png)
 
