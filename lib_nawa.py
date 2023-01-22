@@ -75,6 +75,24 @@ def regenBlacklists():
 
 regenBlacklists()
 
+
+
+def checkStringFont(str, font):
+    if font == 36:
+        font_char_list = [" ", "#", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ":", "?", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "[", "]", "_", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "!"]
+    if font == 5:
+        font_char_list = [" ", "%", "&", "'", "(", ")", "+", "-", ".", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ":", "A", "B", "C", "D", "E", "F", "G", "H", "I", "K", "L", "M", "N", "O", "P", "R", "S", "T", "U", "V", "W", "Y", "a", "b", "c", "d", "e", "f", "g", "h", "i", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    newStr = ""
+    invalidCharList = []
+    for i in str:
+        if i in font_char_list:
+            newStr += i
+        else:
+            invalidCharList.append(i)
+    print(f"[Removed invalid characters {invalidCharList}]")
+    return 
+
+
 logDelList = []
 def getWPfileName(wpC):
     global logDelList

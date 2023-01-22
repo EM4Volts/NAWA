@@ -203,6 +203,9 @@ class WEAPON_PACKAGE:           #A package of all contents of a weapons mod fold
         if self.weapon_model_dat_count == 1 and self.weapon_model_dtt_count == 1: #checks if only 1 dat and dtt exists in the folder, if yes weapon is valid else it isnt
             self.weapon_valid = True
         if self.weapon_valid:   # if valid prepare config, aswell as get information for later usage in infotables
+            if not os.path.isfile(f"{weapon_pack_root}/config.json"):
+                with open(f"{weapon_pack_root}/config.json", 'w') as f:
+                    json.dump(default_weapon_config, f, ensure_ascii=False, indent=4)
             self.weapon_config              =   WEAPON_CONFIG(f"{weapon_pack_root}/config.json")
             self.weapon_type                =   self.weapon_config.weapon_type
             self.ids                        =   lib_nawa.getWPfileName(self.weapon_config.weapon_type)
@@ -344,3 +347,5 @@ def nawa_deploy():
         print(f"[{datetime.datetime.now()}]")                                               #print the finished time
 
         return True #AAAND its done... shorturl.at/fklQ4
+
+

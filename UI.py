@@ -5,7 +5,7 @@ from tkinter import *
 from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage, filedialog
 from tkinter.colorchooser import askcolor
 import lib_nawa as jout
-import nawa, save
+import nawa, save, json
 
 
 
@@ -1168,6 +1168,9 @@ config5.place(
 )
 
 def updateConfigWindow(dir):
+    if not os.path.isfile(dir):
+        with open(dir, 'w') as f:
+            json.dump(nawa.default_weapon_config, f, ensure_ascii=False, indent=4)
     config_data = nawa.WEAPON_CONFIG(dir)
     config1.delete(0, END)
     config1.insert(END, config_data.weapon_name)
@@ -1246,10 +1249,13 @@ def updateConfigWindow(dir):
 def updateConfigFile():
     global new
     conDir = nierModsDir + "/" + new + "/config.json"
+    if not os.path.isfile(conDir):
+        with open(conDir, 'w') as f:
+            json.dump(nawa.default_weapon_config, f, ensure_ascii=False, indent=4)
     config_data = nawa.WEAPON_CONFIG(conDir)
-    config_data.weapon_name             = config1.get()
-    config_data.short_description       = config2.get()
-    config_data.long_description        = config3.get()
+    config_data.weapon_name             = jout.checkStringFont(jout.checkStringFont(config1.get(), 5), 36)
+    config_data.short_description       = jout.checkStringFont(jout.checkStringFont(config2.get(), 5), 36)
+    config_data.long_description        = jout.checkStringFont(jout.checkStringFont(config3.get(), 5), 36)
     config_data.weapon_type             = jout.conWeaponType(variable.get())
     config_data.level_1_left_damage     = config5.get()
     config_data.level_1_right_damage    = config6.get()
