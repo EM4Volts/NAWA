@@ -7,14 +7,19 @@ import lib_nawa, save
 
 
 
-cfgFile = open("configs/config.ini", "r") #loads filePath configs for mods and data dir
-data = cfgFile.read()
-config = data.split("\n")
-cfgFile.close()
-nierDatDir= config[0]
-nierModsDir= config[1]
-save_file= config[2]
+def reload_config(): #loads filePath configs for mods and data dir
+    global nierDatDir
+    global nierModsDir
+    global save_file
+    cfgFile = open("configs/config.ini", "r")
+    data = cfgFile.read()
+    config = data.split("\n")
+    cfgFile.close()
+    nierDatDir= config[0]
+    nierModsDir= config[1]
+    save_file= config[2]
 
+reload_config()
 
 default_weapon_config = {
     "weapon_name":          "Mysterious Weapon", 
@@ -292,7 +297,7 @@ class WEAPON_MODS_FOLDER:       #Class for mods folder itself
 
 
 def nawa_deploy():
-    global save_file
+    reload_config()                                                                           #load the config file
     print(f"[{datetime.datetime.now()}]")                                                   #print the starting time
 
     global nierModsDir, nierDatDir                                                          # get global config vars
