@@ -17,7 +17,6 @@ class INVENTORY_WEAPON:
         write_Int32(f, self.weapon_new_story)
         write_Int32(f, self.weapon_enemies_defeated)
 
-cus = [123,12313,241,324]
 class SAVE_FILE:
     def __init__(self, slot_data, custom_weapons = []):
         self.save_file = open(slot_data, "r+b")
